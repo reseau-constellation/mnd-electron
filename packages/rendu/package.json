@@ -1,0 +1,32 @@
+{
+  "name": "@constl/mandataire-electron-rendu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "nettoyer": "rimraf dist",
+    "compiler": "pnpm versioner && pnpm nettoyer && pnpm ttsc -p tsconfig.build.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "couverture": "pnpm test -- --coverage",
+    "couverture:tous": "pnpm test:tous -- --coverage --bail",
+    "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
+    "publier": "pnpm versioner && pnpm compiler && git commit -a -m 'version' && pnpm publish",
+    "versioner": "pnpm genversion  --es6 --semi src/version.ts"
+  },
+  "keywords": [],
+  "author": "julienmalard",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@constl/mandataire": "^0.1.1",
+    "events": "^3.3.0"
+  },
+  "devDependencies": {
+    "@constl/ipa": "^0.5.8",
+    "@constl/mandataire-electron-principal": "workspace:*",
+    "genversion": "^3.1.1",
+    "rimraf": "^3.0.2",
+    "ttypescript": "^1.5.15",
+    "typescript": "^4.9.4",
+    "typescript-transform-paths": "^3.4.4"
+  }
+}
