@@ -2,26 +2,27 @@ import {EventEmitter, once} from 'events';
 import type {
     messageInitServeur,
     messageFermerServeur,
-    préchargeur,
+    messageÀServeurConstellation,
+    écouterMessagesDeServeurConstellation
 } from "@constl/mandataire-electron-principal";
 
 const CODE_PRÊT = "prêt";
 
 export class GestionnaireServeur {
-    messageÀServeurConstellation: préchargeur.messageÀServeurConstellation;
+    messageÀServeurConstellation: typeof messageÀServeurConstellation;
     événements: EventEmitter;
   
     constructor({
-        écouterMessagesDeServeurConstellation,
-        messageÀServeurConstellation
+        fÉcouterMessagesDeServeurConstellation,
+        fMessageÀServeurConstellation
     }: {
-        écouterMessagesDeServeurConstellation: préchargeur.écouterMessagesDeServeurConstellation;
-        messageÀServeurConstellation: préchargeur.messageÀServeurConstellation;
+        fÉcouterMessagesDeServeurConstellation: typeof écouterMessagesDeServeurConstellation;
+        fMessageÀServeurConstellation: typeof messageÀServeurConstellation;
     }) {
       this.événements = new EventEmitter();
-      this.messageÀServeurConstellation = messageÀServeurConstellation;
+      this.messageÀServeurConstellation = fMessageÀServeurConstellation;
 
-      écouterMessagesDeServeurConstellation(message => {
+      fÉcouterMessagesDeServeurConstellation(message => {
         if (message.type === 'prêt') this.événements.emit(CODE_PRÊT, message.port);
       });
     }

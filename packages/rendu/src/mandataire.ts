@@ -1,6 +1,7 @@
 import type {proxy} from '@constl/ipa';
 import type { 
-  préchargeur
+  messageÀConstellation,
+  écouterMessagesDeConstellation,
 } from "@constl/mandataire-electron-principal"
 
 import { 
@@ -10,19 +11,19 @@ import {
 
 
 export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
-  messageÀConstellation: préchargeur.messageÀConstellation;
+  messageÀConstellation: typeof messageÀConstellation;
 
   constructor({
-    écouterMessagesDeConstellation,
-    messageÀConstellation
+    fÉcouterMessagesDeConstellation,
+    fMessageÀConstellation
   }: {
-    écouterMessagesDeConstellation: préchargeur.écouterMessagesDeConstellation;
-    messageÀConstellation: préchargeur.messageÀConstellation;
+    fÉcouterMessagesDeConstellation: typeof écouterMessagesDeConstellation;
+    fMessageÀConstellation: typeof messageÀConstellation;
   }) {
     super();
-    this.messageÀConstellation = messageÀConstellation
+    this.messageÀConstellation = fMessageÀConstellation
 
-    écouterMessagesDeConstellation((m: proxy.messages.MessageDeTravailleur) => {
+    fÉcouterMessagesDeConstellation((m: proxy.messages.MessageDeTravailleur) => {
       this.événements.emit('message', m);
     });
   }
@@ -33,14 +34,14 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
 }
 
 export const générerMandataireÉlectronPrincipal = ({
-  écouterMessagesDeConstellation,
-  messageÀConstellation
+  fÉcouterMessagesDeConstellation,
+  fMessageÀConstellation
 }: {
-  écouterMessagesDeConstellation: préchargeur.écouterMessagesDeConstellation;
-  messageÀConstellation: préchargeur.messageÀConstellation;
+  fÉcouterMessagesDeConstellation: typeof écouterMessagesDeConstellation;
+  fMessageÀConstellation: typeof messageÀConstellation;
 }) => {
   return générerMandataire(new MandataireClientÉlectronPrincipal({
-    écouterMessagesDeConstellation,
-    messageÀConstellation
+    fÉcouterMessagesDeConstellation,
+    fMessageÀConstellation
   }))
 }

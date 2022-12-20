@@ -3,10 +3,10 @@ const CODE_PRÊT = "prêt";
 export class GestionnaireServeur {
     messageÀServeurConstellation;
     événements;
-    constructor({ écouterMessagesDeServeurConstellation, messageÀServeurConstellation }) {
+    constructor({ fÉcouterMessagesDeServeurConstellation, fMessageÀServeurConstellation }) {
         this.événements = new EventEmitter();
-        this.messageÀServeurConstellation = messageÀServeurConstellation;
-        écouterMessagesDeServeurConstellation(message => {
+        this.messageÀServeurConstellation = fMessageÀServeurConstellation;
+        fÉcouterMessagesDeServeurConstellation(message => {
             if (message.type === 'prêt')
                 this.événements.emit(CODE_PRÊT, message.port);
         });

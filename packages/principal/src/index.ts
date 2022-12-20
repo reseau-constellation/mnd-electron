@@ -14,6 +14,12 @@ export {
     GestionnaireFenêtres,
 } from "@/fenêtres.js";
 
+export {
+    messageÀConstellation,
+    écouterMessagesDeConstellation,
+    messageÀServeurConstellation,
+    écouterMessagesDeServeurConstellation,
+} from "@/préchargeur.js"
 export * as préchargeur from "@/préchargeur.js";
 
 export { version } from "@/version.js";

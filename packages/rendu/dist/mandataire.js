@@ -1,10 +1,10 @@
 import { ClientMandatairifiable, générerMandataire, } from "@constl/mandataire";
 export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
     messageÀConstellation;
-    constructor({ écouterMessagesDeConstellation, messageÀConstellation }) {
+    constructor({ fÉcouterMessagesDeConstellation, fMessageÀConstellation }) {
         super();
-        this.messageÀConstellation = messageÀConstellation;
-        écouterMessagesDeConstellation((m) => {
+        this.messageÀConstellation = fMessageÀConstellation;
+        fÉcouterMessagesDeConstellation((m) => {
             this.événements.emit('message', m);
         });
     }
@@ -12,10 +12,10 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
         this.messageÀConstellation(message);
     }
 }
-export const générerMandataireÉlectronPrincipal = ({ écouterMessagesDeConstellation, messageÀConstellation }) => {
+export const générerMandataireÉlectronPrincipal = ({ fÉcouterMessagesDeConstellation, fMessageÀConstellation }) => {
     return générerMandataire(new MandataireClientÉlectronPrincipal({
-        écouterMessagesDeConstellation,
-        messageÀConstellation
+        fÉcouterMessagesDeConstellation,
+        fMessageÀConstellation
     }));
 };
 //# sourceMappingURL=mandataire.js.map
