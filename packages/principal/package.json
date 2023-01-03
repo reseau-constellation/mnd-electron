@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "semaphore-async-await": "^1.5.1",
+    "tslib": "^2.4.1",
     "uuid": "^9.0.0"
   },
   "gitHead": "42faf0951829604b21fdd434fd72fcf22507dfba"
