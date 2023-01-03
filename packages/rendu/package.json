@@ -14,7 +14,7 @@
     "versioner": "pnpm genversion  --es6 --semi src/version.ts"
   },
   "keywords": [],
-  "author": "julienmalard",
+  "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
     "@constl/mandataire": "^0.1.1",
