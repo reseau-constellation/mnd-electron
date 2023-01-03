@@ -37,5 +37,6 @@
   "dependencies": {
     "semaphore-async-await": "^1.5.1",
     "uuid": "^9.0.0"
-  }
+  },
+  "gitHead": "49899937956066305bd98a749e08b57c363fb765"
 }
