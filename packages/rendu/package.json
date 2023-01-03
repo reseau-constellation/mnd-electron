@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-rendu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@constl/ipa": "^0.5.8",
-    "@constl/mandataire-electron-principal": "^0.0.3",
+    "@constl/mandataire-electron-principal": "^0.0.4",
     "genversion": "^3.1.1",
     "rimraf": "^3.0.2",
     "ttypescript": "^1.5.15",
