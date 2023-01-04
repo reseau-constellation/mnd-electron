@@ -16,13 +16,13 @@ import {
   CODE_CLIENT_PRÊT, 
 } from '@/messages.js';
 
-const promesseIPA = import('@constl/ipa');
-const promesseServeur = import('@constl/serveur');
-
 const CODE_PRÊT = "prêt"
 
 export class GestionnaireFenêtres {
   enDéveloppement: boolean;
+  importationIPA: Promise<typeof import("@constl/ipa")>;
+  importationServeur?: Promise<typeof import("@constl/serveur")>;
+
   fenêtres: {[key: string]: BrowserWindow};
   clientConstellation: proxy.gestionnaireClient.default | undefined;
   verrouServeur: Lock;
@@ -30,8 +30,18 @@ export class GestionnaireFenêtres {
   oublierServeur?: utils.schémaFonctionOublier;
   port?: number;
 
-  constructor({ enDéveloppement }: { enDéveloppement: boolean }) {
+  constructor({ 
+    enDéveloppement,
+    importationIPA,
+    importationServeur,
+  }: { 
+    enDéveloppement: boolean;
+    importationIPA: Promise<typeof import("@constl/ipa")>;
+    importationServeur?: Promise<typeof import("@constl/serveur")>;
+  }) {
     this.enDéveloppement = enDéveloppement;
+    this.importationIPA = importationIPA;
+    this.importationServeur = importationServeur
 
     this.fenêtres = {};
     this.verrouServeur = new Lock();
@@ -40,7 +50,7 @@ export class GestionnaireFenêtres {
   }
 
   async initialiser() {
-    const {gestionnaireClient} = (await promesseIPA).proxy;
+    const {gestionnaireClient} = (await this.importationIPA).proxy;
     const opts: client.optsConstellation = {
       orbite: {
         sfip: {
@@ -160,6 +170,7 @@ export class GestionnaireFenêtres {
 
   async initialiserServeur(port?: number): Promise<number> {
     if (!this.clientConstellation) await this.prêt();
+    if (!this.importationServeur) throw new Error("Le GestionnaireFenêtres n'a pas été initialisé avec le module @constl/serveur.")
 
     await this.verrouServeur.acquire();
 
@@ -172,7 +183,7 @@ export class GestionnaireFenêtres {
     if (!this.port) {
       if (!this.clientConstellation) throw new Error("Erreur d'initialisation de Constellation");
 
-      const constlServeur = await promesseServeur;  
+      const constlServeur = await this.importationServeur;
       const {fermerServeur, port: portServeur} = await constlServeur.lancerServeur({
         port,
         optsConstellation: this.clientConstellation,

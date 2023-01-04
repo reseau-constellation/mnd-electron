@@ -17,7 +17,7 @@ export const attendreFenêtreAttachée = (): Promise<void> => {
     });
 };
   
-export const messageÀConstellation = async (message: proxy.messages.MessagePourTravailleur) => {
+export const envoyerMessageÀConstellation = async (message: proxy.messages.MessagePourTravailleur) => {
     // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
     await attendreFenêtreAttachée();
     ipcRenderer.send(CODE_MESSAGE_POUR_CLIENT, message);
@@ -33,7 +33,7 @@ f: (message: proxy.messages.MessageDeTravailleur) => void,
     return () => ipcRenderer.off(CODE_MESSAGE_DE_CLIENT, écouteur);
 };
 
-export const messageÀServeurConstellation = (message: messagePourServeur) => {
+export const envoyerMessageÀServeurConstellation = (message: messagePourServeur) => {
     ipcRenderer.send(CODE_MESSAGE_POUR_SERVEUR, message);
 };
 

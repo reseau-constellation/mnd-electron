@@ -2,27 +2,27 @@ import {EventEmitter, once} from 'events';
 import type {
     messageInitServeur,
     messageFermerServeur,
-    messageÀServeurConstellation,
-    écouterMessagesDeServeurConstellation
+    envoyerMessageÀServeurConstellation as _envoyerMessageÀServeurConstellation,
+    écouterMessagesDeServeurConstellation as _écouterMessagesDeServeurConstellation,
 } from "@constl/mandataire-electron-principal";
 
 const CODE_PRÊT = "prêt";
 
 export class GestionnaireServeur {
-    messageÀServeurConstellation: typeof messageÀServeurConstellation;
+    envoyerMessageÀServeurConstellation: typeof _envoyerMessageÀServeurConstellation;
     événements: EventEmitter;
   
     constructor({
-        fÉcouterMessagesDeServeurConstellation,
-        fMessageÀServeurConstellation
+        écouterMessagesDeServeurConstellation,
+        envoyerMessageÀServeurConstellation
     }: {
-        fÉcouterMessagesDeServeurConstellation: typeof écouterMessagesDeServeurConstellation;
-        fMessageÀServeurConstellation: typeof messageÀServeurConstellation;
+        écouterMessagesDeServeurConstellation: typeof _écouterMessagesDeServeurConstellation;
+        envoyerMessageÀServeurConstellation: typeof _envoyerMessageÀServeurConstellation;
     }) {
       this.événements = new EventEmitter();
-      this.messageÀServeurConstellation = fMessageÀServeurConstellation;
+      this.envoyerMessageÀServeurConstellation = envoyerMessageÀServeurConstellation;
 
-      fÉcouterMessagesDeServeurConstellation(message => {
+      écouterMessagesDeServeurConstellation(message => {
         if (message.type === 'prêt') this.événements.emit(CODE_PRÊT, message.port);
       });
     }
@@ -36,7 +36,7 @@ export class GestionnaireServeur {
             this.événements, 
             CODE_PRÊT
         ) as unknown as Promise<number>;
-        this.messageÀServeurConstellation(messageInit);
+        this.envoyerMessageÀServeurConstellation(messageInit);
   
         return await promessePort;
     }
@@ -45,6 +45,6 @@ export class GestionnaireServeur {
       const messageFermer: messageFermerServeur = {
         type: 'fermer',
       };
-      this.messageÀServeurConstellation(messageFermer);
+      this.envoyerMessageÀServeurConstellation(messageFermer);
     }
   }

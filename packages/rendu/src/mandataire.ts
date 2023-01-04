@@ -1,7 +1,7 @@
 import type {proxy} from '@constl/ipa';
 import type { 
-  messageÀConstellation,
-  écouterMessagesDeConstellation,
+  envoyerMessageÀConstellation as _envoyerMessageÀConstellation,
+  écouterMessagesDeConstellation as _écouterMessagesDeConstellation,
 } from "@constl/mandataire-electron-principal"
 
 import { 
@@ -11,37 +11,37 @@ import {
 
 
 export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
-  messageÀConstellation: typeof messageÀConstellation;
+  envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
 
   constructor({
-    fÉcouterMessagesDeConstellation,
-    fMessageÀConstellation
+    écouterMessagesDeConstellation,
+    envoyerMessageÀConstellation
   }: {
-    fÉcouterMessagesDeConstellation: typeof écouterMessagesDeConstellation;
-    fMessageÀConstellation: typeof messageÀConstellation;
+    écouterMessagesDeConstellation: typeof _écouterMessagesDeConstellation;
+    envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
   }) {
     super();
-    this.messageÀConstellation = fMessageÀConstellation
+    this.envoyerMessageÀConstellation = envoyerMessageÀConstellation
 
-    fÉcouterMessagesDeConstellation((m: proxy.messages.MessageDeTravailleur) => {
+    écouterMessagesDeConstellation((m: proxy.messages.MessageDeTravailleur) => {
       this.événements.emit('message', m);
     });
   }
 
   envoyerMessage(message: proxy.messages.MessagePourTravailleur): void {
-    this.messageÀConstellation(message);
+    this.envoyerMessageÀConstellation(message);
   }
 }
 
 export const générerMandataireÉlectronPrincipal = ({
-  fÉcouterMessagesDeConstellation,
-  fMessageÀConstellation
+  écouterMessagesDeConstellation,
+  envoyerMessageÀConstellation
 }: {
-  fÉcouterMessagesDeConstellation: typeof écouterMessagesDeConstellation;
-  fMessageÀConstellation: typeof messageÀConstellation;
+  écouterMessagesDeConstellation: typeof _écouterMessagesDeConstellation;
+  envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
 }) => {
   return générerMandataire(new MandataireClientÉlectronPrincipal({
-    fÉcouterMessagesDeConstellation,
-    fMessageÀConstellation
+    écouterMessagesDeConstellation,
+    envoyerMessageÀConstellation
   }))
 }
