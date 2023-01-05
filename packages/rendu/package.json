@@ -10,7 +10,7 @@
     "couverture": "pnpm test -- --coverage",
     "couverture:tous": "pnpm test:tous -- --coverage --bail",
     "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
-    "prepublish": "pnpm formatter && pnpm versioner && pnpm compiler",
+    "prepublish": "pnpm versioner && pnpm compiler",
     "versioner": "pnpm genversion  --es6 --semi src/version.ts"
   },
   "keywords": [],
@@ -29,5 +29,5 @@
     "typescript": "^4.9.4",
     "typescript-transform-paths": "^3.4.4"
   },
-  "gitHead": "b16d7f3e410800ba805439806b205a6de4183db9"
+  "gitHead": "fe503eb2555aebf8db1bf93a7d4dd9aefd525f50"
 }
