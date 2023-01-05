@@ -9,7 +9,7 @@
   "scripts": {
     "compiler": "pnpm lerna run compiler",
     "tester": "pnpm lerna run tester",
-    "publier": "pnpm lerna run publier"
+    "publier": "pnpm lerna publish"
   },
   "devDependencies": {
     "lerna": "^6.1.0"
