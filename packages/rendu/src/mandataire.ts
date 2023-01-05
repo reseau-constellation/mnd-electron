@@ -2,12 +2,12 @@ import type {proxy} from '@constl/ipa';
 import type { 
   envoyerMessageÀConstellation as _envoyerMessageÀConstellation,
   écouterMessagesDeConstellation as _écouterMessagesDeConstellation,
-} from "@constl/mandataire-electron-principal"
+} from "@constl/mandataire-electron-principal";
 
 import { 
   ClientMandatairifiable,
   générerMandataire,
-} from "@constl/mandataire"
+} from "@constl/mandataire";
 
 
 export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {

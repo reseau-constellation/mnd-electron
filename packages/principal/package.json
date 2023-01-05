@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-principal",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "couverture": "pnpm test -- --coverage",
     "couverture:tous": "pnpm test:tous -- --coverage --bail",
     "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
-    "publish": "pnpm formatter && pnpm versioner && pnpm compiler",
+    "prepublish": "pnpm formatter && pnpm versioner && pnpm compiler",
     "versioner": "pnpm genversion  --es6 --semi src/version.ts"
   },
   "keywords": [],
@@ -40,5 +40,5 @@
     "tslib": "^2.4.1",
     "uuid": "^9.0.0"
   },
-  "gitHead": "42faf0951829604b21fdd434fd72fcf22507dfba"
+  "gitHead": "b16d7f3e410800ba805439806b205a6de4183db9"
 }
