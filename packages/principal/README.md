@@ -6,8 +6,7 @@
 
 ## Utilisation : processus principal
 
-Dans un fichier séparé, initialisez le gestionnaire qui connectra les fenêtres de votre appli Éllectron à
-Constellation.
+Dans un fichier séparé, initialisez le gestionnaire qui connectra les fenêtres de votre appli Éllectron à Constellation.
 
 ```TypeScript
 // constellation.ts
@@ -41,6 +40,21 @@ Et surtout, n'oubliez pas de fermer Constellation lorsqu'on a fini.
 app.on('will-quit', async () => {
   await gestionnaireFenêtres.fermerConstellation();
 });
+```
+
+## Utilisation : préchargeur
+
+Dans votre code préchargeur, vous devez exposer les fonctions suivantes avec `electron.contextBridge.exposeInMainWorld`. Nous recommandons [unplugin-auto-expose](https://www.npmjs.com/package/unplugin-auto-expose), qui simplifie grandement la tâche.
+
+```TypeScript
+// preload.ts
+
+export {
+  envoyerMessageÀConstellation,
+  écouterMessagesDeConstellation,
+  envoyerMessageÀServeurConstellation,  // Uniquement si vous voulez inclure le serveur WS
+  écouterMessagesDeServeurConstellation,  // Uniquement si vous voulez inclure le serveur WS
+} from '@constl/mandataire-electron-principal';
 ```
 
 ## Utilisation : préchargeur

@@ -1,4 +1,4 @@
-import type {proxy} from '@constl/ipa';
+import type {mandataire} from '@constl/ipa';
 import type { 
   envoyerMessageÀConstellation as _envoyerMessageÀConstellation,
   écouterMessagesDeConstellation as _écouterMessagesDeConstellation,
@@ -23,12 +23,12 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
     super();
     this.envoyerMessageÀConstellation = envoyerMessageÀConstellation
 
-    écouterMessagesDeConstellation((m: proxy.messages.MessageDeTravailleur) => {
+    écouterMessagesDeConstellation((m: mandataire.messages.MessageDeTravailleur) => {
       this.événements.emit('message', m);
     });
   }
 
-  envoyerMessage(message: proxy.messages.MessagePourTravailleur): void {
+  envoyerMessage(message: mandataire.messages.MessagePourTravailleur): void {
     this.envoyerMessageÀConstellation(message);
   }
 }

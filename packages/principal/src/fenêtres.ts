@@ -1,4 +1,4 @@
-import type {client, proxy, utils} from '@constl/ipa';
+import type {client, mandataire, utils} from '@constl/ipa';
 import type {BrowserWindow} from 'electron';
 import {ipcMain, app} from 'electron';
 import {join} from 'path';
@@ -24,7 +24,7 @@ export class GestionnaireFenêtres {
   importationServeur?: Promise<typeof import("@constl/serveur")>;
 
   fenêtres: {[key: string]: BrowserWindow};
-  clientConstellation: proxy.gestionnaireClient.default | undefined;
+  clientConstellation: mandataire.gestionnaireClient.default | undefined;
   verrouServeur: Lock;
   événements: EventEmitter;
   oublierServeur?: utils.schémaFonctionOublier;
@@ -50,7 +50,7 @@ export class GestionnaireFenêtres {
   }
 
   async initialiser() {
-    const {gestionnaireClient} = (await this.importationIPA).proxy;
+    const {gestionnaireClient} = (await this.importationIPA).mandataire;
     const opts: client.optsConstellation = {
       orbite: {
         sfip: {
@@ -60,7 +60,7 @@ export class GestionnaireFenêtres {
       },
     };
     this.clientConstellation = new gestionnaireClient.default(
-      (m: proxy.messages.MessageDeTravailleur) => this.envoyerMessageDuClient(m),
+      (m: mandataire.messages.MessageDeTravailleur) => this.envoyerMessageDuClient(m),
       (e: string) => this.envoyerErreur(e),
       opts,
     );
@@ -105,7 +105,7 @@ export class GestionnaireFenêtres {
     Object.values(this.fenêtres).forEach(f => f.webContents.send(CODE_MESSAGE_DE_SERVEUR, m));
   }
 
-  envoyerMessageDuClient(m: proxy.messages.MessageDeTravailleur) {
+  envoyerMessageDuClient(m: mandataire.messages.MessageDeTravailleur) {
     if (m.id) {
       const idFenêtre = m.id.split(':')[0];
       m.id = m.id.split(':').slice(1).join(':');
@@ -117,7 +117,7 @@ export class GestionnaireFenêtres {
     }
   }
 
-  envoyerMessage(m: proxy.messages.MessageDeTravailleur) {
+  envoyerMessage(m: mandataire.messages.MessageDeTravailleur) {
     if (m.id) {
       const idFenêtre = m.id.split(':')[0];
       m.id = m.id.split(':').slice(1).join(':');
@@ -132,7 +132,7 @@ export class GestionnaireFenêtres {
   }
 
   envoyerErreur(e: string) {
-    const messageErreur: proxy.messages.MessageErreurDeTravailleur = {
+    const messageErreur: mandataire.messages.MessageErreurDeTravailleur = {
       type: 'erreur',
       erreur: e,
     };
@@ -146,7 +146,7 @@ export class GestionnaireFenêtres {
 
     const fSuivreMessagesPourConstellation = async (
       _event: Event,
-      message: proxy.messages.MessagePourTravailleur,
+      message: mandataire.messages.MessagePourTravailleur,
     ): Promise<void> => {
       await this.prêt();
 

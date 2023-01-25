@@ -1,6 +1,6 @@
 import { ipcRenderer, IpcRendererEvent } from "electron";
 
-import type { proxy } from '@constl/ipa';
+import type { mandataire } from '@constl/ipa';
 import { 
     CODE_CLIENT_PRÊT,
     CODE_MESSAGE_DE_CLIENT,
@@ -17,16 +17,16 @@ export const attendreFenêtreAttachée = (): Promise<void> => {
     });
 };
   
-export const envoyerMessageÀConstellation = async (message: proxy.messages.MessagePourTravailleur) => {
+export const envoyerMessageÀConstellation = async (message: mandataire.messages.MessagePourTravailleur) => {
     // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
     await attendreFenêtreAttachée();
     ipcRenderer.send(CODE_MESSAGE_POUR_CLIENT, message);
 };
 
 export const écouterMessagesDeConstellation = (
-f: (message: proxy.messages.MessageDeTravailleur) => void,
+f: (message: mandataire.messages.MessageDeTravailleur) => void,
 ): (() => void) => {
-    const écouteur = (_event: IpcRendererEvent, ...args: [proxy.messages.MessageDeTravailleur]) => {
+    const écouteur = (_event: IpcRendererEvent, ...args: [mandataire.messages.MessageDeTravailleur]) => {
         f(...args);
     };
     ipcRenderer.on(CODE_MESSAGE_DE_CLIENT, écouteur);

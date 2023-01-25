@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-principal",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -17,17 +17,17 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@constl/ipa": "^0.5.8",
-    "@constl/mandataire": "^0.1.1",
-    "@constl/serveur": "^0.1.10",
+    "@constl/ipa": "^0.6.6",
+    "@constl/mandataire": "^0.1.4",
+    "@constl/serveur": "^0.2.1",
     "@types/uuid": "^9.0.0",
-    "electron": "^22.0.0",
+    "electron": "^22.0.3",
     "genversion": "^3.1.1",
-    "rimraf": "^3.0.2",
-    "rollup": "^3.9.1",
+    "rimraf": "^4.1.2",
+    "rollup": "^3.10.1",
     "ttypescript": "^1.5.15",
     "typescript": "^4.9.4",
-    "typescript-transform-paths": "^3.4.4"
+    "typescript-transform-paths": "^3.4.6"
   },
   "peerDependencies": {
     "@constl/ipa": "^0.5.8",
