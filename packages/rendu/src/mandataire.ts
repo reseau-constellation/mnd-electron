@@ -1,31 +1,29 @@
-import type {mandataire} from '@constl/ipa';
-import type { 
+import type { mandataire } from "@constl/ipa";
+import type {
   envoyerMessageÀConstellation as _envoyerMessageÀConstellation,
   écouterMessagesDeConstellation as _écouterMessagesDeConstellation,
 } from "@constl/mandataire-electron-principal";
 
-import { 
-  ClientMandatairifiable,
-  générerMandataire,
-} from "@constl/mandataire";
-
+import { ClientMandatairifiable, générerMandataire } from "@constl/mandataire";
 
 export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
   envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
 
   constructor({
     écouterMessagesDeConstellation,
-    envoyerMessageÀConstellation
+    envoyerMessageÀConstellation,
   }: {
     écouterMessagesDeConstellation: typeof _écouterMessagesDeConstellation;
     envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
   }) {
     super();
-    this.envoyerMessageÀConstellation = envoyerMessageÀConstellation
+    this.envoyerMessageÀConstellation = envoyerMessageÀConstellation;
 
-    écouterMessagesDeConstellation((m: mandataire.messages.MessageDeTravailleur) => {
-      this.événements.emit('message', m);
-    });
+    écouterMessagesDeConstellation(
+      (m: mandataire.messages.MessageDeTravailleur) => {
+        this.événements.emit("message", m);
+      }
+    );
   }
 
   envoyerMessage(message: mandataire.messages.MessagePourTravailleur): void {
@@ -35,13 +33,15 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
 
 export const générerMandataireÉlectronPrincipal = ({
   écouterMessagesDeConstellation,
-  envoyerMessageÀConstellation
+  envoyerMessageÀConstellation,
 }: {
   écouterMessagesDeConstellation: typeof _écouterMessagesDeConstellation;
   envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
 }) => {
-  return générerMandataire(new MandataireClientÉlectronPrincipal({
-    écouterMessagesDeConstellation,
-    envoyerMessageÀConstellation
-  }))
-}
+  return générerMandataire(
+    new MandataireClientÉlectronPrincipal({
+      écouterMessagesDeConstellation,
+      envoyerMessageÀConstellation,
+    })
+  );
+};
