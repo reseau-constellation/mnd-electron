@@ -11,9 +11,15 @@ import {
   messagePourServeur,
 } from "@/messages.js";
 
+let attachée = false  // À faire: selon l'ID de la fenêtre
+
 export const attendreFenêtreAttachée = (): Promise<void> => {
   return new Promise<void>((résoudre) => {
-    ipcRenderer.once(CODE_CLIENT_PRÊT, () => résoudre());
+    if (attachée) résoudre();
+    ipcRenderer.once(CODE_CLIENT_PRÊT, () => {
+      attachée = true;
+      résoudre()
+    });
   });
 };
 
