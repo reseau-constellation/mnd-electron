@@ -22,6 +22,7 @@ export class GestionnaireFenêtres {
   enDéveloppement: boolean;
   importationIPA: Promise<typeof import("@constl/ipa")>;
   importationServeur?: Promise<typeof import("@constl/serveur")>;
+  journal?: (msg: string) => void;
 
   fenêtres: { [key: string]: BrowserWindow };
   clientConstellation: mandataire.gestionnaireClient.default | undefined;
@@ -34,14 +35,17 @@ export class GestionnaireFenêtres {
     enDéveloppement,
     importationIPA,
     importationServeur,
+    journal,
   }: {
     enDéveloppement: boolean;
     importationIPA: Promise<typeof import("@constl/ipa")>;
     importationServeur?: Promise<typeof import("@constl/serveur")>;
+    journal?: (msg: string) => void;
   }) {
     this.enDéveloppement = enDéveloppement;
     this.importationIPA = importationIPA;
     this.importationServeur = importationServeur;
+    this.journal = journal;
 
     this.fenêtres = {};
     this.verrouServeur = new Lock();
@@ -68,12 +72,14 @@ export class GestionnaireFenêtres {
     this.clientConstellation = new gestionnaireClient.default(
       (m: mandataire.messages.MessageDeTravailleur) =>
         this.envoyerMessageDuClient(m),
-      (e: string) => this.envoyerErreur(e),
+      (e: string) => this.envoyerErreurDuClient(e),
       opts
     );
     ipcMain.on(
       CODE_MESSAGE_POUR_SERVEUR,
       async (_event, message: messagePourServeur) => {
+        if (this.journal) this.journal(`${CODE_MESSAGE_POUR_SERVEUR} : ${JSON.stringify(message)}`);
+
         switch (message.type) {
           case "init": {
             const port = await this.initialiserServeur(message.port);
@@ -109,12 +115,16 @@ export class GestionnaireFenêtres {
   }
 
   envoyerMessageDuServeur(m: messageDeServeur) {
+    if (this.journal) this.journal(`${CODE_MESSAGE_DE_SERVEUR} : ${JSON.stringify(m)}`);
+    
     Object.values(this.fenêtres).forEach((f) =>
       f.webContents.send(CODE_MESSAGE_DE_SERVEUR, m)
     );
   }
 
   envoyerMessageDuClient(m: mandataire.messages.MessageDeTravailleur) {
+    if (this.journal) this.journal(`${CODE_MESSAGE_DE_CLIENT} : ${JSON.stringify(m)}`);
+
     if (m.id) {
       const idFenêtre = m.id.split(":")[0];
       m.id = m.id.split(":").slice(1).join(":");
@@ -128,24 +138,14 @@ export class GestionnaireFenêtres {
     }
   }
 
-  envoyerMessage(m: mandataire.messages.MessageDeTravailleur) {
-    if (m.id) {
-      const idFenêtre = m.id.split(":")[0];
-      m.id = m.id.split(":").slice(1).join(":");
-      const fenêtre = this.fenêtres[idFenêtre];
-      fenêtre.webContents.send(CODE_MESSAGE_DE_CLIENT, m);
-    } else {
-      Object.values(this.fenêtres).forEach((f) =>
-        f.webContents.send(CODE_MESSAGE_DE_CLIENT, m)
-      );
-    }
-  }
-
-  envoyerErreur(e: string) {
+  envoyerErreurDuClient(e: string) {
     const messageErreur: mandataire.messages.MessageErreurDeTravailleur = {
       type: "erreur",
       erreur: e,
     };
+    
+    if (this.journal) this.journal(`${CODE_MESSAGE_DE_CLIENT} : ${JSON.stringify(messageErreur)}`);
+    
     Object.values(this.fenêtres).forEach((f) =>
       f.webContents.send(CODE_MESSAGE_DE_CLIENT, messageErreur)
     );
@@ -158,6 +158,8 @@ export class GestionnaireFenêtres {
       _event: Event,
       message: mandataire.messages.MessagePourTravailleur
     ): Promise<void> => {
+      if (this.journal) this.journal(`${CODE_MESSAGE_POUR_CLIENT} : ${JSON.stringify(message)}`);
+
       await this.prêt();
 
       if (!this.clientConstellation)
@@ -188,7 +190,7 @@ export class GestionnaireFenêtres {
 
     await this.verrouServeur.acquire();
 
-    // Fermer le serveur si on chage de port
+    // Fermer le serveur si on change de port
     if (port !== undefined && this.port !== undefined && port !== this.port) {
       if (this.oublierServeur) await this.oublierServeur();
       this.port = undefined;
