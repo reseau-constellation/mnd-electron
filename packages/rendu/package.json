@@ -21,12 +21,17 @@
     "events": "^3.3.0"
   },
   "devDependencies": {
-    "@constl/ipa": "^0.6.6",
+    "@constl/ipa": "^0.6.32",
     "@constl/mandataire-electron-principal": "workspace:^0.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
     "genversion": "^3.1.1",
+    "prettier": "^2.8.4",
     "rimraf": "^4.1.2",
     "ttypescript": "^1.5.15",
-    "typescript": "^4.9.4",
+    "typescript": "^4.9.5",
     "typescript-transform-paths": "^3.4.6"
   },
   "gitHead": "fe503eb2555aebf8db1bf93a7d4dd9aefd525f50"
