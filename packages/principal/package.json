@@ -17,21 +17,21 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@constl/ipa": "^0.6.6",
+    "@constl/ipa": "^0.6.32",
     "@constl/mandataire": "^0.1.4",
     "@constl/serveur": "^0.2.1",
     "@types/uuid": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
-    "electron": "^22.0.3",
+    "electron": "^23.0.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "genversion": "^3.1.1",
     "prettier": "^2.8.4",
     "rimraf": "^4.1.2",
-    "rollup": "^3.10.1",
+    "rollup": "^3.15.0",
     "ttypescript": "^1.5.15",
-    "typescript": "^4.9.4",
+    "typescript": "^4.9.5",
     "typescript-transform-paths": "^3.4.6"
   },
   "peerDependencies": {
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "semaphore-async-await": "^1.5.1",
-    "tslib": "^2.4.1",
+    "tslib": "^2.5.0",
     "uuid": "^9.0.0"
   },
   "gitHead": "fe503eb2555aebf8db1bf93a7d4dd9aefd525f50"
