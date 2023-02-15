@@ -55,7 +55,7 @@ importers:
     specifiers:
       '@constl/ipa': ^0.6.32
       '@constl/mandataire': ^0.1.4
-      '@constl/mandataire-electron-principal': workspace:^0.2.3
+      '@constl/mandataire-electron-principal': workspace:^0.2.4
       '@typescript-eslint/eslint-plugin': ^5.52.0
       '@typescript-eslint/parser': ^5.52.0
       eslint: ^8.34.0
