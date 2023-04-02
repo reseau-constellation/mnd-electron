@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-principal",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@constl/ipa": "^0.6.32",
+    "@constl/ipa": "^0.6.41",
     "@constl/mandataire": "^0.1.4",
     "@constl/serveur": "^0.2.1",
     "@types/uuid": "^9.0.0",

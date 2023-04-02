@@ -46,7 +46,7 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
 export const générerMandataireÉlectronPrincipal = ({
   écouterMessagesDeConstellation,
   envoyerMessageÀConstellation,
-  journal
+  journal,
 }: {
   écouterMessagesDeConstellation: typeof _écouterMessagesDeConstellation;
   envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;

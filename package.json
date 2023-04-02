@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "license": "AGPL-3.0-or-later",
   "private": false,
   "workspaces": [
@@ -13,6 +13,6 @@
     "publier": "pnpm lerna publish"
   },
   "devDependencies": {
-    "lerna": "^6.5.1"
+    "lerna": "^6.6.1"
   }
 }

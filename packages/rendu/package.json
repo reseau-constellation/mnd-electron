@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-rendu",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "events": "^3.3.0"
   },
   "devDependencies": {
-    "@constl/ipa": "^0.6.32",
+    "@constl/ipa": "^0.6.41",
     "@constl/mandataire-electron-principal": "^0.2.7",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
