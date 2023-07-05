@@ -22,7 +22,7 @@ importers:
     devDependencies:
       '@constl/ipa':
         specifier: ^0.7.3
-        version: 0.7.3(electron@25.2.0)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
+        version: 0.7.3(electron@23.3.9)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
       '@constl/mandataire':
         specifier: ^0.1.11
         version: 0.1.11
@@ -30,7 +30,7 @@ importers:
         specifier: ^0.3.1
         version: 0.3.1(@constl/ipa@0.7.3)
       '@types/uuid':
-        specifier: ^9.0.2
+        specifier: ^9.0.0
         version: 9.0.2
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.61.0
@@ -39,8 +39,8 @@ importers:
         specifier: ^5.61.0
         version: 5.61.0(eslint@8.44.0)(typescript@5.1.6)
       electron:
-        specifier: ^25.2.0
-        version: 25.2.0
+        specifier: ^23.0.0
+        version: 23.3.9
       eslint:
         specifier: ^8.44.0
         version: 8.44.0
@@ -82,7 +82,7 @@ importers:
         specifier: ^0.7.3
         version: 0.7.3(electron@23.3.9)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
       '@constl/mandataire-electron-principal':
-        specifier: ^0.2.8
+        specifier: ^0.2.9
         version: link:../principal
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.61.0
@@ -357,67 +357,6 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@constl/ipa@0.7.3(electron@25.2.0)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7):
-    resolution: {integrity: sha512-CQQLgTtgJJQWRIWrS+5QA0aA3J5AZRC4JPPXuK8ozyIVBhLJF7W8Eh0RQ7hCcMq3uQA3ROnt+LThZNPbq9HhEA==}
-    engines: {node: '>=16'}
-    peerDependencies:
-      electron: ^23.0.0
-      wrtc: ^0.4.7
-    dependencies:
-      '@achingbrain/nat-port-mapper': 1.0.8
-      '@chainsafe/libp2p-gossipsub': 7.0.0
-      '@chainsafe/libp2p-noise': 11.0.4
-      '@chriscdn/promise-semaphore': 1.0.9
-      '@constl/electron-webrtc-relay': 0.2.1
-      '@constl/mandataire': 0.1.11
-      '@libp2p/interface-transport': 4.0.3
-      '@libp2p/mplex': 8.0.4
-      '@libp2p/tcp': 7.0.3
-      '@libp2p/webrtc-direct': 6.0.0
-      '@libp2p/webrtc-star': 7.0.0
-      '@libp2p/websockets': 5.0.10
-      '@libp2p/webtransport': 1.0.11
-      '@localfirst/auth': 1.0.1
-      adm-zip: 0.5.10
-      approx-string-match: 2.0.0
-      axios: 1.4.0
-      chokidar: 3.5.3
-      crypto-js: 4.1.1
-      deep-equal: 2.2.1
-      deepcopy: 2.1.0
-      electron: 25.2.0
-      events: 3.3.0
-      file-saver: 2.0.5
-      genversion: 3.1.1
-      geojson-validation: 1.0.2
-      ipfs-core: 0.18.1
-      iso-constants: github.com/inverted-capital/iso-constants/2af6fdfb2cacaa03ebd58543703918783e62649f
-      it-to-buffer: 3.0.1
-      jszip: 3.10.1
-      lodash: 4.17.21
-      merge-options: 3.0.4
-      multiformats: 9.9.0
-      orbit-db: 0.29.0(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)
-      orbit-db-access-controllers: 0.4.0(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)
-      prom-client: 14.2.0
-      ssim: 0.0.0
-      tslib: 2.6.0
-      uint8arrays: 4.0.4
-      uuid: 9.0.0
-      wherearewe: 2.0.1
-      wrtc: 0.4.7
-      xlsx: '@cdn.sheetjs.com/xlsx-0.19.1/xlsx-0.19.1.tgz'
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - encoding
-      - go-ipfs
-      - ipfs
-      - ipfsd-ctl
-      - supports-color
-      - utf-8-validate
-    dev: true
-
   /@constl/mandataire@0.1.11:
     resolution: {integrity: sha512-patOQmep4rAnamoBSzbQiln8QpJUyNjnr6uFy1TRdQQtNOTQJmZi7G9kUV6JVzSeITO0i1HrPYh4YgVqpTp36Q==}
     dependencies:
@@ -431,7 +370,7 @@ packages:
     peerDependencies:
       '@constl/ipa': ^0.6.50
     dependencies:
-      '@constl/ipa': 0.7.3(electron@25.2.0)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
+      '@constl/ipa': 0.7.3(electron@23.3.9)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
       bufferutil: 4.0.7
       chalk: 5.3.0
       core-js: 3.31.0
@@ -3243,7 +3182,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.1
       '@types/keyv': 3.1.4
-      '@types/node': 18.16.19
+      '@types/node': 20.3.3
       '@types/responselike': 1.0.0
     dev: true
 
@@ -3264,7 +3203,7 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 18.16.19
+      '@types/node': 20.3.3
     dev: true
 
   /@types/long@4.0.2:
@@ -3310,7 +3249,7 @@ packages:
   /@types/responselike@1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 18.16.19
+      '@types/node': 20.3.3
     dev: true
 
   /@types/retry@0.12.1:
@@ -3339,7 +3278,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 18.16.19
+      '@types/node': 20.3.3
     dev: true
     optional: true
 
@@ -4208,7 +4147,7 @@ packages:
     resolution: {integrity: sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==}
     dependencies:
       pascal-case: 3.1.2
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /camelcase-keys@6.2.2:
@@ -4243,7 +4182,7 @@ packages:
     resolution: {integrity: sha512-ds37W8CytHgwnhGGTi88pcPyR15qoNkOpYwmMMfnWqqWgESapLqvDx6huFjQ5vqWSn2Z06173XNA7LtMOeUh1A==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
       upper-case-first: 2.0.2
     dev: true
 
@@ -4322,7 +4261,7 @@ packages:
       path-case: 3.0.4
       sentence-case: 3.0.4
       snake-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /chardet@0.7.0:
@@ -4579,7 +4518,7 @@ packages:
     resolution: {integrity: sha512-I2hSBi7Vvs7BEuJDr5dDHfzb/Ruj3FyvFyh7KLilAjNQw3Be+xgqUBA2W6scVEcL0hL1dwPRtIqEPVUCKkSsyQ==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
       upper-case: 2.0.2
     dev: true
 
@@ -5118,7 +5057,7 @@ packages:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /dot-prop@5.3.0:
@@ -5251,19 +5190,6 @@ packages:
     dependencies:
       '@electron/get': 2.0.2
       '@types/node': 16.18.38
-      extract-zip: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /electron@25.2.0:
-    resolution: {integrity: sha512-I/rhcW2sV2fyiveVSBr2N7v5ZiCtdGY0UiNCDZgk2fpSC+irQjbeh7JT2b4vWmJ2ogOXBjqesrN9XszTIG6DHg==}
-    engines: {node: '>= 12.20.55'}
-    hasBin: true
-    requiresBuild: true
-    dependencies:
-      '@electron/get': 2.0.2
-      '@types/node': 18.16.19
       extract-zip: 2.0.1
     transitivePeerDependencies:
       - supports-color
@@ -5587,7 +5513,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       cross-spawn: 7.0.3
-      get-stream: 6.0.0
+      get-stream: 6.0.1
       human-signals: 2.1.0
       is-stream: 2.0.0
       merge-stream: 2.0.0
@@ -6561,7 +6487,7 @@ packages:
     resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
     dependencies:
       capital-case: 1.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /hexoid@1.0.0:
@@ -8874,7 +8800,7 @@ packages:
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
     dependencies:
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /lowercase-keys@2.0.0:
@@ -9394,7 +9320,7 @@ packages:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
     dependencies:
       lower-case: 2.0.2
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /node-addon-api@3.2.1:
@@ -10323,7 +10249,7 @@ packages:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /parent-module@1.0.1:
@@ -10382,7 +10308,7 @@ packages:
     resolution: {integrity: sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /path-browserify@1.0.1:
@@ -10393,7 +10319,7 @@ packages:
     resolution: {integrity: sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /path-exists@2.1.0:
@@ -11389,7 +11315,7 @@ packages:
     resolution: {integrity: sha512-8LS0JInaQMCRoQ7YUytAo/xUu5W2XnQxV2HI/6uM6U7CITS1RqPElr30V6uIqyMKM9lJGRVFy5/4CuzcixNYSg==}
     dependencies:
       no-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
       upper-case-first: 2.0.2
     dev: true
 
@@ -11512,7 +11438,7 @@ packages:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
     dependencies:
       dot-case: 3.0.4
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /socket.io-client@4.6.1:
@@ -12129,6 +12055,7 @@ packages:
 
   /tslib@2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+    dev: false
 
   /tslib@2.6.0:
     resolution: {integrity: sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==}
@@ -12393,13 +12320,13 @@ packages:
   /upper-case-first@2.0.2:
     resolution: {integrity: sha512-514ppYHBaKwfJRK/pNC6c/OxfGa0obSnAl106u97Ed0I625Nin96KAjttZF6ZL3e1XLtphxnqrOi9iWgm+u+bg==}
     dependencies:
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /upper-case@2.0.2:
     resolution: {integrity: sha512-KgdgDGJt2TpuwBUIjgG6lzw2GWFRCW9Qkfkiv0DxqHHLYJHmtmdUIKcZd8rHgFSjopVTlw6ggzCm1b8MFQwikg==}
     dependencies:
-      tslib: 2.5.0
+      tslib: 2.6.0
     dev: true
 
   /uri-js@4.4.1:
