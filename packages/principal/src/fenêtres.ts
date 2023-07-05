@@ -1,5 +1,5 @@
 import type { client, mandataire, utils } from "@constl/ipa";
-import type { optsConstellation } from "@constl/ipa/dist/src/client";
+
 import type { BrowserWindow } from "electron";
 import { ipcMain, app } from "electron";
 import { join } from "path";
@@ -24,7 +24,7 @@ export class GestionnaireFenêtres {
   importationIPA: Promise<typeof import("@constl/ipa")>;
   importationServeur?: Promise<typeof import("@constl/serveur")>;
   journal?: (msg: string) => void;
-  opts?: optsConstellation;
+  opts?: client.optsConstellation;
 
   fenêtres: { [key: string]: BrowserWindow };
   clientConstellation: mandataire.gestionnaireClient.default | undefined;
@@ -44,7 +44,7 @@ export class GestionnaireFenêtres {
     importationIPA: Promise<typeof import("@constl/ipa")>;
     importationServeur?: Promise<typeof import("@constl/serveur")>;
     journal?: (msg: string) => void;
-    opts?: optsConstellation;
+    opts?: client.optsConstellation;
   }) {
     this.enDéveloppement = enDéveloppement;
     this.importationIPA = importationIPA;
@@ -60,7 +60,7 @@ export class GestionnaireFenêtres {
 
   async initialiser() {
     const { gestionnaireClient } = (await this.importationIPA).mandataire;
-    const opts: optsConstellation = {
+    const opts: client.optsConstellation = {
       orbite: {
         sfip: {
           dossier: join(
