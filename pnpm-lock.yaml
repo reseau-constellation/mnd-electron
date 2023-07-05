@@ -27,8 +27,8 @@ importers:
         specifier: ^0.1.11
         version: 0.1.11
       '@constl/serveur':
-        specifier: ^0.3.1
-        version: 0.3.1(@constl/ipa@0.7.3)
+        specifier: ^0.3.2
+        version: 0.3.2(@constl/ipa@0.7.3)
       '@types/uuid':
         specifier: ^9.0.0
         version: 9.0.2
@@ -82,7 +82,7 @@ importers:
         specifier: ^0.7.3
         version: 0.7.3(electron@23.3.9)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
       '@constl/mandataire-electron-principal':
-        specifier: ^0.2.9
+        specifier: ^0.2.10
         version: link:../principal
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.61.0
@@ -363,12 +363,12 @@ packages:
       events: 3.3.0
       uuid: 9.0.0
 
-  /@constl/serveur@0.3.1(@constl/ipa@0.7.3):
-    resolution: {integrity: sha512-RcNRBazR4l397d9o3t8UDIV1VT3lITO1qLq2dObU9ziTzkhDk8NZrzFm4LgwK9sosfv+qgSCHedMvvR1Hst67w==}
+  /@constl/serveur@0.3.2(@constl/ipa@0.7.3):
+    resolution: {integrity: sha512-HXMqGssdoAXvBeFDh9luMwp6GMuLGPLGdJZLI9a41c6TO1FdvT2C2HzkDSWyhkgOjx46JtFUEYX8e2Fzsf09tw==}
     engines: {node: '>=16'}
     hasBin: true
     peerDependencies:
-      '@constl/ipa': ^0.6.50
+      '@constl/ipa': ^0.7.3
     dependencies:
       '@constl/ipa': 0.7.3(electron@23.3.9)(go-ipfs@0.21.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
       bufferutil: 4.0.7
