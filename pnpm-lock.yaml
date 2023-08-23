@@ -86,7 +86,7 @@ importers:
         specifier: ^0.8.1
         version: 0.8.1(go-ipfs@0.22.0)(ipfs@0.66.1)(ipfsd-ctl@13.0.0)(wrtc@0.4.7)
       '@constl/mandataire-electron-principal':
-        specifier: ^0.2.11
+        specifier: ^0.2.12
         version: link:../principal
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.4.1
