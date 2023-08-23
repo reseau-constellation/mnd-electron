@@ -1,6 +1,6 @@
-import type { client, mandataire, utils } from "@constl/ipa";
+import type { client, mandataire, types } from "@constl/ipa";
 
-import type { BrowserWindow } from "electron";
+import type { BrowserWindow, IpcMainEvent } from "electron";
 import { ipcMain, app } from "electron";
 import { join } from "path";
 import { v4 as uuidv4 } from "uuid";
@@ -30,7 +30,7 @@ export class GestionnaireFenêtres {
   clientConstellation: mandataire.gestionnaireClient.default | undefined;
   verrouServeur: Lock;
   événements: EventEmitter;
-  oublierServeur?: utils.schémaFonctionOublier;
+  oublierServeur?: types.schémaFonctionOublier;
   port?: number;
 
   constructor({
@@ -169,7 +169,7 @@ export class GestionnaireFenêtres {
     this.connecterFenêtre(fenêtre, id);
 
     const fSuivreMessagesPourConstellation = async (
-      _event: Event,
+      _event: IpcMainEvent,
       message: mandataire.messages.MessagePourTravailleur
     ): Promise<void> => {
       await this.prêt();
