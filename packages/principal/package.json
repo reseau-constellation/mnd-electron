@@ -26,7 +26,7 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@constl/ipa": "^0.8.1",
+    "@constl/ipa": "^0.9.0",
     "@constl/mandataire": "^0.1.13",
     "@constl/serveur": "^0.3.2",
     "@types/uuid": "^9.0.0",
