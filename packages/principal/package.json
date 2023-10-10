@@ -47,7 +47,7 @@
     "@constl/ipa": "^0.8.1 || ^0.9.0",
     "@constl/mandataire": "^0.1.13",
     "@constl/serveur": "^0.3.2",
-    "electron": "^26.0.0"
+    "electron": "^26.0.0 || ^27.0.0"
   },
   "dependencies": {
     "semaphore-async-await": "^1.5.1",
