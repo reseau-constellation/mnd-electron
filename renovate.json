@@ -3,6 +3,7 @@
   "extends": [
     "config:base"
   ],
+  "baseBranches": ["principale"],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
