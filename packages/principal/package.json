@@ -26,33 +26,33 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@constl/ipa": "^0.9.0",
-    "@constl/mandataire": "^0.1.13",
-    "@constl/serveur": "^0.3.2",
-    "@types/uuid": "^9.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.4.1",
-    "@typescript-eslint/parser": "^6.4.1",
-    "electron": "^27.0.0",
-    "eslint": "^8.47.0",
+    "@constl/ipa": "^0.9.16",
+    "@constl/mandataire": "^0.1.15",
+    "@constl/serveur": "^0.3.5",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "electron": "^27.0.4",
+    "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "genversion": "^3.1.1",
-    "prettier": "^3.0.2",
-    "rimraf": "^5.0.1",
-    "rollup": "^4.0.0",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.4.1",
     "ts-patch": "^3.0.2",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "typescript-transform-paths": "^3.4.6"
   },
   "peerDependencies": {
-    "@constl/ipa": "^0.8.1 || ^0.9.0",
-    "@constl/mandataire": "^0.1.13",
-    "@constl/serveur": "^0.3.2",
-    "electron": "^26.0.0 || ^27.0.0"
+    "@constl/ipa": "^0.9.16",
+    "@constl/mandataire": "^0.1.15",
+    "@constl/serveur": "^0.3.5",
+    "electron": "^27.0.4"
   },
   "dependencies": {
     "semaphore-async-await": "^1.5.1",
     "tslib": "^2.6.2",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   },
   "gitHead": "a0fd78aed6b58c808dd2036f7832246fd67f95dc"
 }
