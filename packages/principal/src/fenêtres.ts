@@ -28,7 +28,7 @@ export class GestionnaireFenêtres {
   opts?: client.optsConstellation;
 
   fenêtres: { [key: string]: BrowserWindow };
-  clientConstellation: mandataire.gestionnaireClient.default | undefined;
+  clientConstellation: mandataire.gestionnaireClient.GestionnaireClient | undefined;
   verrouServeur: Lock;
   événements: EventEmitter;
   oublierServeur?: types.schémaFonctionOublier;
@@ -71,7 +71,7 @@ export class GestionnaireFenêtres {
       ),
       ...this.opts,
     };
-    this.clientConstellation = new gestionnaireClient.default(
+    this.clientConstellation = new gestionnaireClient.GestionnaireClient(
       (m: mandataire.messages.MessageDeTravailleur) =>
         this.envoyerMessageDuClient(m),
       (e: string) => this.envoyerErreur(e),

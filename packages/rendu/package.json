@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-rendu",
-  "version": "0.2.14",
+  "version": "0.3.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -17,14 +17,14 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "@constl/mandataire": "^0.1.15",
+    "@constl/mandataire": "^0.1.16",
     "events": "^3.3.0"
   },
   "devDependencies": {
-    "@constl/ipa": "1.0.1-ec2b9d2da.0",
+    "@constl/ipa": "1.0.0",
     "@constl/mandataire-electron-principal": "workspace:^",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "genversion": "^3.2.0",
