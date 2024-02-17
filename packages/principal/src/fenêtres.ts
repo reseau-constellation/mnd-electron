@@ -1,7 +1,8 @@
 import type { client, mandataire, types } from "@constl/ipa";
 
 import type { BrowserWindow, IpcMainEvent } from "electron";
-import { app, ipcMain } from "electron";
+import pkg from 'electron';
+const { app, ipcMain } = pkg;
 import { join } from "path";
 import { v4 as uuidv4 } from "uuid";
 import { Lock } from "semaphore-async-await";
