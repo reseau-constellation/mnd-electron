@@ -5,7 +5,7 @@ import { app, ipcMain } from "electron";
 import { join } from "path";
 import { v4 as uuidv4 } from "uuid";
 import { Lock } from "semaphore-async-await";
-import { EventEmitter, once } from "stream";
+import { EventEmitter, once } from "events";
 import {
   messageDeServeur,
   messagePourServeur,
