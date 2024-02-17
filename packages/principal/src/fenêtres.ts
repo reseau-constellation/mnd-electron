@@ -1,7 +1,7 @@
 import type { client, mandataire, types } from "@constl/ipa";
 
 import type { BrowserWindow, IpcMainEvent } from "electron";
-import { ipcMain } from "electron";
+import { app, ipcMain } from "electron";
 import { join } from "path";
 import { v4 as uuidv4 } from "uuid";
 import { Lock } from "semaphore-async-await";
@@ -21,7 +21,6 @@ const CODE_PRÊT = "prêt";
 
 export class GestionnaireFenêtres {
   enDéveloppement: boolean;
-  dossierAppli: string;
   importationIPA: Promise<typeof import("@constl/ipa")>;
   importationServeur?: Promise<typeof import("@constl/serveur")>;
   journal?: (msg: string) => void;
@@ -36,14 +35,12 @@ export class GestionnaireFenêtres {
 
   constructor({
     enDéveloppement,
-    dossierAppli="constl",
     importationIPA,
     importationServeur,
     journal,
     opts,
   }: {
     enDéveloppement: boolean;
-    dossierAppli?: string;
     importationIPA: Promise<typeof import("@constl/ipa")>;
     importationServeur?: Promise<typeof import("@constl/serveur")>;
     journal?: (msg: string) => void;
@@ -52,7 +49,6 @@ export class GestionnaireFenêtres {
     this.enDéveloppement = enDéveloppement;
     this.importationIPA = importationIPA;
     this.importationServeur = importationServeur;
-    this.dossierAppli = dossierAppli;
     this.journal = journal;
     this.opts = opts;
 
@@ -66,7 +62,7 @@ export class GestionnaireFenêtres {
     const { gestionnaireClient } = (await this.importationIPA).mandataire;
     const opts: client.optsConstellation = {
       dossier: join(
-        this.dossierAppli,
+        app.getPath("userData"),
         this.enDéveloppement ? "dév" : ""
       ),
       ...this.opts,
