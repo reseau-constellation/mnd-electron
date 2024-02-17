@@ -1,4 +1,5 @@
-import { ipcRenderer, IpcRendererEvent } from "electron";
+import pkg, { type IpcRendererEvent } from 'electron';
+const { ipcRenderer } = pkg;
 
 import type { mandataire } from "@constl/ipa";
 import {
