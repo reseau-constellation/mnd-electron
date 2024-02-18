@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-principal",
-  "version": "0.3.2",
+  "version": "0.4.4",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

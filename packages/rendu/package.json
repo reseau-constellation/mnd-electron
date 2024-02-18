@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-rendu",
-  "version": "0.3.2",
+  "version": "0.4.4",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
