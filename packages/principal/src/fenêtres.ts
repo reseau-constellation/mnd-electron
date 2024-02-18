@@ -63,7 +63,7 @@ export class GestionnaireFenêtres {
     const opts: client.optsConstellation = {
       dossier: join(
         app.getPath("userData"),
-        this.enDéveloppement ? "dév" : ""
+        this.enDéveloppement ? "constl-dév" : "constl"
       ),
       ...this.opts,
     };
