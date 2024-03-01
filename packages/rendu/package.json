@@ -21,7 +21,7 @@
     "events": "^3.3.0"
   },
   "devDependencies": {
-    "@constl/ipa": "1.0.2",
+    "@constl/ipa": "1.0.3",
     "@constl/mandataire-electron-principal": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",

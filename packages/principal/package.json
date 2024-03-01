@@ -26,7 +26,7 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@constl/ipa": "1.0.2",
+    "@constl/ipa": "1.0.3",
     "@constl/mandataire": "^0.1.15",
     "@constl/serveur": "^0.3.5",
     "@types/uuid": "^9.0.8",
@@ -44,7 +44,7 @@
     "typescript-transform-paths": "^3.4.6"
   },
   "peerDependencies": {
-    "@constl/ipa": "1.0.2",
+    "@constl/ipa": "1.0.3",
     "@constl/mandataire": "^0.1.15",
     "@constl/serveur": "^0.3.5",
     "electron": "^27.0.4 || ^28.0.0"
