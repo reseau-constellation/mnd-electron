@@ -28,7 +28,7 @@
   "devDependencies": {
     "@constl/ipa": "1.0.4",
     "@constl/mandataire": "^1.0.0",
-    "@constl/serveur": "^0.3.5",
+    "@constl/serveur": "^1.0.0",
     "@types/uuid": "^9.0.8",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
