@@ -28,8 +28,8 @@ importers:
         specifier: 1.0.4
         version: 1.0.4(react-native@0.73.5)(wrtc@0.4.7)
       '@constl/mandataire':
-        specifier: ^0.1.15
-        version: 0.1.16
+        specifier: ^1.0.0
+        version: 1.0.1
       '@constl/serveur':
         specifier: ^0.3.5
         version: 0.3.7(@constl/ipa@1.0.4)
@@ -76,8 +76,8 @@ importers:
   packages/rendu:
     dependencies:
       '@constl/mandataire':
-        specifier: ^0.1.16
-        version: 0.1.16
+        specifier: ^1.0.0
+        version: 1.0.1
       events:
         specifier: ^3.3.0
         version: 3.3.0
@@ -1822,6 +1822,13 @@ packages:
 
   /@constl/mandataire@0.1.16:
     resolution: {integrity: sha512-cOOgRR9KB86JRi873/KoTnMsxeUVJg4rODgRJxoc9Ar6XUArzLinEZVYHu9KchcNWZpDCQbZdIPvvW4F9oG7kA==}
+    dependencies:
+      events: 3.3.0
+      uuid: 9.0.1
+    dev: true
+
+  /@constl/mandataire@1.0.1:
+    resolution: {integrity: sha512-pXFP2ha5llHEgTF21cLjpoJrRKzBoqtTB/z55krTnxvexagHRHM810iSBv4DbfwJwRkRWhbeIbgoXaXCYrl/xg==}
     dependencies:
       events: 3.3.0
       uuid: 9.0.1
