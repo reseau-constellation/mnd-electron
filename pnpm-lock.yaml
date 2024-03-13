@@ -25,14 +25,14 @@ importers:
         version: 9.0.1
     devDependencies:
       '@constl/ipa':
-        specifier: 1.0.5
-        version: 1.0.5(react-native@0.73.6)(wrtc@0.4.7)
+        specifier: 1.0.6
+        version: 1.0.6(react-native@0.73.6)(wrtc@0.4.7)
       '@constl/mandataire':
         specifier: ^1.0.0
         version: 1.0.1
       '@constl/serveur':
         specifier: ^1.0.0
-        version: 1.0.0(@constl/ipa@1.0.5)
+        version: 1.0.0(@constl/ipa@1.0.6)
       '@types/uuid':
         specifier: ^9.0.8
         version: 9.0.8
@@ -83,8 +83,8 @@ importers:
         version: 3.3.0
     devDependencies:
       '@constl/ipa':
-        specifier: 1.0.5
-        version: 1.0.5(react-native@0.73.6)(wrtc@0.4.7)
+        specifier: 1.0.6
+        version: 1.0.6(react-native@0.73.6)(wrtc@0.4.7)
       '@constl/mandataire-electron-principal':
         specifier: workspace:^
         version: link:../principal
@@ -1757,8 +1757,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@constl/ipa@1.0.5(react-native@0.73.6)(wrtc@0.4.7):
-    resolution: {integrity: sha512-ROscF4zQHIAJueNnQYZ4IUcYsMe+KjgvZXxfMEJCb5ykzFksQKZ7b0cFQkuAXOy7sBZSQkIZpmZfWeSVzqPDIw==}
+  /@constl/ipa@1.0.6(react-native@0.73.6)(wrtc@0.4.7):
+    resolution: {integrity: sha512-MUeh3GBEzrbf7Z84aFLyMMCKEt9+gJ33/RHiobCJqSk0HvLFsQF6NBUTJOPdpGYTaxZ8fGbZ350OozrqWGjFoQ==}
     engines: {node: '>=20'}
     peerDependencies:
       wrtc: ^0.4.7
@@ -1773,7 +1773,7 @@ packages:
       '@helia/block-brokers': 2.0.2
       '@helia/unixfs': 3.0.1
       '@ipld/dag-cbor': 9.2.0
-      '@lassi-js/kili': 0.3.9(@constl/ipa@1.0.5)
+      '@lassi-js/kili': 0.3.9(@constl/ipa@1.0.6)
       '@libp2p/autonat': 1.0.13
       '@libp2p/bootstrap': 10.0.16
       '@libp2p/circuit-relay-v2': 1.0.16
@@ -1803,7 +1803,7 @@ packages:
       crypto-js: 4.2.0
       deep-equal: 2.2.3
       deepcopy: 2.1.0
-      ennikkai: 2.2.7(@constl/ipa@1.0.5)
+      ennikkai: 2.2.7(@constl/ipa@1.0.6)
       env-paths: 3.0.0
       events: 3.3.0
       genversion: 3.2.0
@@ -1848,7 +1848,7 @@ packages:
       events: 3.3.0
       uuid: 9.0.1
 
-  /@constl/serveur@1.0.0(@constl/ipa@1.0.5):
+  /@constl/serveur@1.0.0(@constl/ipa@1.0.6):
     resolution: {integrity: sha512-RcYp3+la4JIoCnn8rQIXqmoGWVkbvstpWWlnu82cJVkc+oi0SMSWs5U8XqbLSDNgra+7jRpJLre13xsbFprdzA==}
     engines: {node: '>=20'}
     hasBin: true
@@ -1856,7 +1856,7 @@ packages:
       '@constl/ipa': ^1.0.0
     dependencies:
       '@achingbrain/nat-port-mapper': 1.0.13
-      '@constl/ipa': 1.0.5(react-native@0.73.6)(wrtc@0.4.7)
+      '@constl/ipa': 1.0.6(react-native@0.73.6)(wrtc@0.4.7)
       bufferutil: 4.0.8
       chalk: 5.3.0
       core-js: 3.36.0
@@ -2225,12 +2225,12 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@lassi-js/kili@0.3.9(@constl/ipa@1.0.5):
+  /@lassi-js/kili@0.3.9(@constl/ipa@1.0.6):
     resolution: {integrity: sha512-/EnrM0HUOUwt/gMNUa4ExqETD4QhDFPd4tQsMmwxXx2f1tJkulbHuPQk+B5w0CgHf1Qj71bskTgWDY9R70/xJw==}
     peerDependencies:
       '@constl/ipa': 1.0.0
     dependencies:
-      '@constl/ipa': 1.0.5(react-native@0.73.6)(wrtc@0.4.7)
+      '@constl/ipa': 1.0.6(react-native@0.73.6)(wrtc@0.4.7)
       '@constl/utils-ipa': 1.0.0
       '@orbitdb/core': 2.1.0
       deepcopy: 2.1.0
@@ -4223,14 +4223,14 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 20.11.25
+      '@types/node': 20.11.26
       '@types/responselike': 1.0.3
     dev: true
 
   /@types/dns-packet@5.6.5:
     resolution: {integrity: sha512-qXOC7XLOEe43ehtWJCMnQXvgcIpv6rPmQ1jXT98Ad8A3TB1Ue50jsCbSSSyuazScEuZ/Q026vHbrOTVkmwA+7Q==}
     dependencies:
-      '@types/node': 20.11.25
+      '@types/node': 20.11.26
     dev: true
 
   /@types/estree@1.0.5:
@@ -4264,7 +4264,7 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 20.11.25
+      '@types/node': 20.11.26
     dev: true
 
   /@types/lodash-es@4.17.12:
@@ -4289,17 +4289,11 @@ packages:
     resolution: {integrity: sha512-ib5K4cIDR4Ro5SR3Sx/LROkMDa0BHz0OPaCBL/OSPDsAXEGZ3/KQeS6poBKYVN7BfjXDL9lWNwzyHVgt/wkyCw==}
     dependencies:
       '@types/dns-packet': 5.6.5
-      '@types/node': 20.11.25
+      '@types/node': 20.11.26
     dev: true
 
   /@types/node@18.19.22:
     resolution: {integrity: sha512-p3pDIfuMg/aXBmhkyanPshdfJuX5c5+bQjYLIikPLXAUycEogij/c50n/C+8XOA5L93cU4ZRXtn+dNQGi0IZqQ==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: true
-
-  /@types/node@20.11.25:
-    resolution: {integrity: sha512-TBHyJxk2b7HceLVGFcpAUjsa5zIdsPWlR6XHfyGzd0SFu+/NFgQgMAl96MSDZgQDvJAvV6BKsFOrt6zIL09JDw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -4317,7 +4311,7 @@ packages:
   /@types/responselike@1.0.3:
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
     dependencies:
-      '@types/node': 20.11.25
+      '@types/node': 20.11.26
     dev: true
 
   /@types/retry@0.12.2:
@@ -4349,7 +4343,7 @@ packages:
   /@types/ws@8.5.10:
     resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
     dependencies:
-      '@types/node': 20.11.25
+      '@types/node': 20.11.26
     dev: true
 
   /@types/yargs-parser@21.0.3:
@@ -6126,13 +6120,13 @@ packages:
       once: 1.4.0
     dev: true
 
-  /ennikkai@2.2.7(@constl/ipa@1.0.5):
+  /ennikkai@2.2.7(@constl/ipa@1.0.6):
     resolution: {integrity: sha512-LfwBjW3IC4aOstvGLoHQ4rWeK9Y5OplHHfjsozbMbaplczn/kKnpXQ2gqZpfkZRYNOL5CSp9nYQb9XW5++nxFQ==}
     peerDependencies:
       '@constl/ipa': ^1.0.0
     dependencies:
-      '@constl/ipa': 1.0.5(react-native@0.73.6)(wrtc@0.4.7)
-      '@lassi-js/kili': 0.3.9(@constl/ipa@1.0.5)
+      '@constl/ipa': 1.0.6(react-native@0.73.6)(wrtc@0.4.7)
+      '@lassi-js/kili': 0.3.9(@constl/ipa@1.0.6)
       deepmerge: 4.3.1
       events: 3.3.0
     transitivePeerDependencies:
@@ -10690,7 +10684,7 @@ packages:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 20.11.25
+      '@types/node': 20.11.26
       long: 5.2.3
     dev: true
 
