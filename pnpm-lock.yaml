@@ -25,14 +25,14 @@ importers:
         version: 9.0.1
     devDependencies:
       '@constl/ipa':
-        specifier: 1.0.10
-        version: 1.0.10(react-native@0.73.6)(wrtc@0.4.7)
+        specifier: 1.0.11
+        version: 1.0.11(react-native@0.73.6)(wrtc@0.4.7)
       '@constl/mandataire':
         specifier: ^1.0.0
         version: 1.0.1
       '@constl/serveur':
         specifier: ^1.0.0
-        version: 1.0.0(@constl/ipa@1.0.10)
+        version: 1.0.0(@constl/ipa@1.0.11)
       '@types/uuid':
         specifier: ^9.0.8
         version: 9.0.8
@@ -83,8 +83,8 @@ importers:
         version: 3.3.0
     devDependencies:
       '@constl/ipa':
-        specifier: 1.0.10
-        version: 1.0.10(react-native@0.73.6)(wrtc@0.4.7)
+        specifier: 1.0.11
+        version: 1.0.11(react-native@0.73.6)(wrtc@0.4.7)
       '@constl/mandataire-electron-principal':
         specifier: workspace:^
         version: link:../principal
@@ -1771,8 +1771,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@constl/ipa@1.0.10(react-native@0.73.6)(wrtc@0.4.7):
-    resolution: {integrity: sha512-1dDCP/81aZJWRF3YhXeqnqGMUObzKweJNxK8JgWecnA7bdzeqt3eBUnG/g1fZHIBHeX2ibjWaX1EFdOhi4B98Q==}
+  /@constl/ipa@1.0.11(react-native@0.73.6)(wrtc@0.4.7):
+    resolution: {integrity: sha512-owTVkoVaagJ550N0UzX4A/86/K3l0NGKegZ+d00EjhyTe2++AEzg+OlMDj4vLVss207dq8fp6C/nsLDcu33Gpw==}
     engines: {node: '>=20'}
     peerDependencies:
       wrtc: ^0.4.7
@@ -1787,7 +1787,7 @@ packages:
       '@helia/block-brokers': 2.0.3
       '@helia/unixfs': 3.0.2
       '@ipld/dag-cbor': 9.2.0
-      '@lassi-js/kili': 0.3.10(@constl/ipa@1.0.10)
+      '@lassi-js/kili': 0.3.10(@constl/ipa@1.0.11)
       '@libp2p/autonat': 1.0.14
       '@libp2p/bootstrap': 10.0.17
       '@libp2p/circuit-relay-v2': 1.0.17
@@ -1817,7 +1817,7 @@ packages:
       crypto-js: 4.2.0
       deep-equal: 2.2.3
       deepcopy: 2.1.0
-      ennikkai: 2.2.7(@constl/ipa@1.0.10)
+      ennikkai: 2.2.7(@constl/ipa@1.0.11)
       env-paths: 3.0.0
       events: 3.3.0
       genversion: 3.2.0
@@ -1855,7 +1855,7 @@ packages:
       events: 3.3.0
       uuid: 9.0.1
 
-  /@constl/serveur@1.0.0(@constl/ipa@1.0.10):
+  /@constl/serveur@1.0.0(@constl/ipa@1.0.11):
     resolution: {integrity: sha512-RcYp3+la4JIoCnn8rQIXqmoGWVkbvstpWWlnu82cJVkc+oi0SMSWs5U8XqbLSDNgra+7jRpJLre13xsbFprdzA==}
     engines: {node: '>=20'}
     hasBin: true
@@ -1863,7 +1863,7 @@ packages:
       '@constl/ipa': ^1.0.0
     dependencies:
       '@achingbrain/nat-port-mapper': 1.0.13
-      '@constl/ipa': 1.0.10(react-native@0.73.6)(wrtc@0.4.7)
+      '@constl/ipa': 1.0.11(react-native@0.73.6)(wrtc@0.4.7)
       bufferutil: 4.0.8
       chalk: 5.3.0
       core-js: 3.36.0
@@ -2237,12 +2237,12 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@lassi-js/kili@0.3.10(@constl/ipa@1.0.10):
+  /@lassi-js/kili@0.3.10(@constl/ipa@1.0.11):
     resolution: {integrity: sha512-TC0dwRgPsK6AoVpTyTa7lgVZpkD5JH+W/Z/InoNc5pNSKHwfDONMc3+CphHvos5cB/KHV4cinCbuKrHOlkEthA==}
     peerDependencies:
       '@constl/ipa': ^1.0.5
     dependencies:
-      '@constl/ipa': 1.0.10(react-native@0.73.6)(wrtc@0.4.7)
+      '@constl/ipa': 1.0.11(react-native@0.73.6)(wrtc@0.4.7)
       '@constl/utils-ipa': 1.0.0
       '@orbitdb/core': 2.1.0
       deepcopy: 2.1.0
@@ -2549,19 +2549,6 @@ packages:
       - supports-color
     dev: true
 
-  /@libp2p/interface@1.1.4:
-    resolution: {integrity: sha512-gJXQycTF50tI02X/IlReAav4XoGPs3Yr917vNXsTUsZQRzQaPjbvKfXqA5hkLFpZ1lnxQ8wto/EVw4ca4XaL1A==}
-    dependencies:
-      '@multiformats/multiaddr': 12.1.14
-      it-pushable: 3.2.3
-      it-stream-types: 2.0.1
-      multiformats: 13.1.0
-      progress-events: 1.0.0
-      uint8arraylist: 2.4.8
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@libp2p/interface@1.1.5:
     resolution: {integrity: sha512-BjFgv/3VwEDNRcFKL4KW6g29IcUWUjaTJhyZVGWtodFuPjZsZHJgoQU7T/FFxDcfTdI90qpFbTREycOB+VL9NQ==}
     dependencies:
@@ -2661,7 +2648,7 @@ packages:
   /@libp2p/logger@4.0.7:
     resolution: {integrity: sha512-oyICns7G18S4eDhbFHUwZ7gLQnZTBVQtUMmMgEmrs8LnQu2GvXADxmQAPPkKtLNSCvRudg4hN3hP04Y+vNvlBQ==}
     dependencies:
-      '@libp2p/interface': 1.1.4
+      '@libp2p/interface': 1.1.5
       '@multiformats/multiaddr': 12.1.14
       debug: 4.3.4
       interface-datastore: 8.2.11
@@ -4290,7 +4277,7 @@ packages:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 18.19.31
+      '@types/node': 20.12.7
       '@types/responselike': 1.0.3
     dev: true
 
@@ -4331,7 +4318,7 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 18.19.31
+      '@types/node': 20.12.7
     dev: true
 
   /@types/lodash-es@4.17.12:
@@ -4378,7 +4365,7 @@ packages:
   /@types/responselike@1.0.3:
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
     dependencies:
-      '@types/node': 18.19.31
+      '@types/node': 20.12.7
     dev: true
 
   /@types/retry@0.12.2:
@@ -4917,16 +4904,6 @@ packages:
 
   /average@0.0.1:
     resolution: {integrity: sha512-rnSkP7Xnbxz3cKEHscefV2Uu6GdlDrCCameNIbzM8c3zCMTigfndi1NuOxuks4fK3ZC/FtXLIS3Y8f7N70ZBmQ==}
-    dev: true
-
-  /axios@1.6.7:
-    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
-    dependencies:
-      follow-redirects: 1.15.6
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
     dev: true
 
   /axios@1.6.8:
@@ -6190,13 +6167,13 @@ packages:
       once: 1.4.0
     dev: true
 
-  /ennikkai@2.2.7(@constl/ipa@1.0.10):
+  /ennikkai@2.2.7(@constl/ipa@1.0.11):
     resolution: {integrity: sha512-LfwBjW3IC4aOstvGLoHQ4rWeK9Y5OplHHfjsozbMbaplczn/kKnpXQ2gqZpfkZRYNOL5CSp9nYQb9XW5++nxFQ==}
     peerDependencies:
       '@constl/ipa': ^1.0.0
     dependencies:
-      '@constl/ipa': 1.0.10(react-native@0.73.6)(wrtc@0.4.7)
-      '@lassi-js/kili': 0.3.10(@constl/ipa@1.0.10)
+      '@constl/ipa': 1.0.11(react-native@0.73.6)(wrtc@0.4.7)
+      '@lassi-js/kili': 0.3.10(@constl/ipa@1.0.11)
       deepmerge: 4.3.1
       events: 3.3.0
     transitivePeerDependencies:
@@ -10028,7 +10005,7 @@ packages:
       '@yarnpkg/lockfile': 1.1.0
       '@yarnpkg/parsers': 3.0.0-rc.46
       '@zkochan/js-yaml': 0.0.6
-      axios: 1.6.7
+      axios: 1.6.8
       chalk: 4.1.2
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
