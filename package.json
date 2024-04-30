@@ -9,11 +9,14 @@
   "scripts": {
     "compiler": "pnpm lerna run compiler",
     "formatter": "pnpm lerna run formatter",
-    "test": "pnpm lerna run test",
+    "test": "pnpm compiler && pnpm vitest run",
     "publier": "pnpm lerna publish",
     "versionner": "pnpm lerna version"
   },
   "devDependencies": {
-    "lerna": "^8.1.2"
+    "@constl/utils-tests": "^1.2.5",
+    "lerna": "^8.1.2",
+    "playwright": "^1.43.1",
+    "vitest": "^1.5.0"
   }
 }
