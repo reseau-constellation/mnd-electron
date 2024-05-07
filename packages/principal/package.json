@@ -27,26 +27,26 @@
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
     "@constl/ipa": "1.0.12",
-    "@constl/mandataire": "^1.0.0",
+    "@constl/mandataire": "^1.0.2",
     "@constl/serveur": "^1.0.0",
     "@types/uuid": "^9.0.8",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "electron": "^28.2.1",
-    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "electron": "^28.3.1",
+    "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
     "genversion": "^3.2.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "rollup": "^4.9.6",
+    "rollup": "^4.17.2",
     "ts-patch": "^3.1.2",
-    "typescript": "^5.3.3",
-    "typescript-transform-paths": "^3.4.6"
+    "typescript": "^5.4.5",
+    "typescript-transform-paths": "^3.4.7"
   },
   "peerDependencies": {
-    "@constl/ipa": "^1.0.11",
-    "@constl/mandataire": "^0.1.15",
-    "@constl/serveur": "^0.3.5",
+    "@constl/ipa": "^1.0.12",
+    "@constl/mandataire": "^1.0.0",
+    "@constl/serveur": "^1.0.0",
     "electron": "^27.0.4 || ^28.0.0"
   },
   "dependencies": {
