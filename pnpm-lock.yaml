@@ -68,7 +68,7 @@ importers:
         version: 3.2.5
       rimraf:
         specifier: ^5.0.5
-        version: 5.0.6
+        version: 5.0.7
       rollup:
         specifier: ^4.17.2
         version: 4.17.2
@@ -117,7 +117,7 @@ importers:
         version: 3.2.5
       rimraf:
         specifier: ^5.0.5
-        version: 5.0.6
+        version: 5.0.7
       ts-patch:
         specifier: ^3.1.2
         version: 3.1.2
@@ -3542,9 +3542,9 @@ packages:
     resolution: {integrity: sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A==}
     engines: {node: '>=10.13.0'}
 
-  glob@10.3.14:
-    resolution: {integrity: sha512-4fkAqu93xe9Mk7le9v0y3VrPDqLKHarNi2s4Pv7f2yOvfhWfhc7hRPHC/JyqMqb8B/Dt/eGS4n7ykwf3fOsl8g==}
-    engines: {node: '>=16 || 14 >=14.17'}
+  glob@10.3.15:
+    resolution: {integrity: sha512-0c6RlJt1TICLyvJYIApxb8GsXoai0KUP7AxKKAtsYXdgJR1mGEUa7DgwShbdk1nly0PYoZj01xd4hzbq3fsjpw==}
+    engines: {node: '>=16 || 14 >=14.18'}
     hasBin: true
 
   glob@7.2.3:
@@ -5336,9 +5336,9 @@ packages:
     resolution: {integrity: sha512-Y30dB6rab1A/nfEKsZxmr01nUotHX0c/ZiIAsCTatEe1CmS5Pm5He7fZ195bPT7RdquoaL8lLxFCMQi/bS7IJg==}
     engines: {node: '>= 0.8.0'}
 
-  path-scurry@1.11.0:
-    resolution: {integrity: sha512-LNHTaVkzaYaLGlO+0u3rQTz7QrHTFOuKyba9JMTQutkmtNew8dw8wOD7mTU/5fCPZzCWpfW0XnQKzY61P0aTaw==}
-    engines: {node: '>=16 || 14 >=14.17'}
+  path-scurry@1.11.1:
+    resolution: {integrity: sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA==}
+    engines: {node: '>=16 || 14 >=14.18'}
 
   path-to-regexp@0.1.7:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
@@ -5796,9 +5796,9 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
-  rimraf@5.0.6:
-    resolution: {integrity: sha512-X72SgyOf+1lFnGM6gYcmZ4+jMOwuT4E4SajKQzUIlI7EoR5eFHMhS/wf8Ll0mN+w2bxcIVldrJQ6xT7HFQywjg==}
-    engines: {node: '>=14'}
+  rimraf@5.0.7:
+    resolution: {integrity: sha512-nV6YcJo5wbLW77m+8KjH8aB/7/rxQy9SZ0HY5shnwULfS+9nmTtVXAJET5NdZmCzA4fPI/Hm1wo/Po/4mopOdg==}
+    engines: {node: '>=14.18'}
     hasBin: true
 
   ripemd160@2.0.2:
@@ -7903,7 +7903,7 @@ snapshots:
       genversion: 3.2.0
       jszip: 3.10.1
       multiformats: 9.9.0
-      rimraf: 5.0.6
+      rimraf: 5.0.7
       uint8arrays: 4.0.10
       wherearewe: 2.0.1
     transitivePeerDependencies:
@@ -7925,7 +7925,7 @@ snapshots:
       os-browserify: 0.3.0
       process: 0.11.10
       read-package-up: 11.0.0
-      rimraf: 5.0.6
+      rimraf: 5.0.7
       stream-browserify: 3.0.0
       uint8arrays: 5.0.3
       uuid: 9.0.1
@@ -10548,7 +10548,7 @@ snapshots:
     dependencies:
       '@npmcli/fs': 3.1.0
       fs-minipass: 3.0.3
-      glob: 10.3.14
+      glob: 10.3.15
       lru-cache: 7.18.3
       minipass: 7.1.1
       minipass-collect: 1.0.2
@@ -10563,7 +10563,7 @@ snapshots:
     dependencies:
       '@npmcli/fs': 3.1.0
       fs-minipass: 3.0.3
-      glob: 10.3.14
+      glob: 10.3.15
       lru-cache: 10.2.2
       minipass: 7.1.1
       minipass-collect: 2.0.1
@@ -11758,13 +11758,13 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
-  glob@10.3.14:
+  glob@10.3.15:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.4
       minipass: 7.1.1
-      path-scurry: 1.11.0
+      path-scurry: 1.11.1
 
   glob@7.2.3:
     dependencies:
@@ -11788,7 +11788,7 @@ snapshots:
       fs.realpath: 1.0.0
       minimatch: 8.0.4
       minipass: 4.2.8
-      path-scurry: 1.11.0
+      path-scurry: 1.11.1
 
   global-agent@3.0.0:
     dependencies:
@@ -13647,7 +13647,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       exponential-backoff: 3.1.1
-      glob: 10.3.14
+      glob: 10.3.15
       graceful-fs: 4.2.11
       make-fetch-happen: 13.0.0
       nopt: 7.2.0
@@ -14138,7 +14138,7 @@ snapshots:
 
   path-platform@0.11.15: {}
 
-  path-scurry@1.11.0:
+  path-scurry@1.11.1:
     dependencies:
       lru-cache: 10.2.2
       minipass: 7.1.1
@@ -14483,14 +14483,14 @@ snapshots:
 
   read-package-json@6.0.4:
     dependencies:
-      glob: 10.3.14
+      glob: 10.3.15
       json-parse-even-better-errors: 3.0.1
       normalize-package-data: 5.0.0
       npm-normalize-package-bin: 3.0.1
 
   read-package-json@7.0.0:
     dependencies:
-      glob: 10.3.14
+      glob: 10.3.15
       json-parse-even-better-errors: 3.0.1
       normalize-package-data: 6.0.0
       npm-normalize-package-bin: 3.0.1
@@ -14677,9 +14677,9 @@ snapshots:
     dependencies:
       glob: 9.3.5
 
-  rimraf@5.0.6:
+  rimraf@5.0.7:
     dependencies:
-      glob: 10.3.14
+      glob: 10.3.15
 
   ripemd160@2.0.2:
     dependencies:
