@@ -19,7 +19,7 @@ importers:
         version: 1.44.1
       vitest:
         specifier: ^1.5.0
-        version: 1.6.0(@types/node@20.13.0)(terser@5.31.0)
+        version: 1.6.0(@types/node@20.14.0)(terser@5.31.0)
 
   packages/principal:
     dependencies:
@@ -74,7 +74,7 @@ importers:
         version: 4.18.0
       ts-patch:
         specifier: ^3.1.2
-        version: 3.1.2
+        version: 3.2.0
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -120,7 +120,7 @@ importers:
         version: 5.0.7
       ts-patch:
         specifier: ^3.1.2
-        version: 3.1.2
+        version: 3.2.0
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -2041,9 +2041,6 @@ packages:
   '@types/node@20.12.12':
     resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==}
 
-  '@types/node@20.13.0':
-    resolution: {integrity: sha512-FM6AOb3khNkNIXPnHFDYaHerSv8uN22C91z098AnGccVu+Pcdhi+pNUFDi0iLmPIsVE0JBD0KVS7mzUYt4nRzQ==}
-
   '@types/node@20.14.0':
     resolution: {integrity: sha512-5cHBxFGJx6L4s56Bubp4fglrEpmyJypsqI6RgzMfBHWUJQGWAAi8cWcgetEbZXHYXo9C2Fa4EEds/uSyS4cxmA==}
 
@@ -3675,10 +3672,6 @@ packages:
 
   hashlru@2.3.0:
     resolution: {integrity: sha512-0cMsjjIC8I+D3M44pOQdsy0OHXGLVz6Z0beRuufhKa0KfaD2wGwAev6jILzXsd3/vpnNQJmWyZtIILqM1N+n5A==}
-
-  hasown@2.0.0:
-    resolution: {integrity: sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==}
-    engines: {node: '>= 0.4'}
 
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
@@ -5912,11 +5905,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.6.0:
-    resolution: {integrity: sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.6.2:
     resolution: {integrity: sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==}
     engines: {node: '>=10'}
@@ -6335,8 +6323,8 @@ packages:
     peerDependencies:
       typescript: '>=4.2.0'
 
-  ts-patch@3.1.2:
-    resolution: {integrity: sha512-n58F5AqjUMdp9RAKq+E1YBkmONltPVbt1nN+wrmZXoYZek6QcvaTuqvKMhYhr5BxtC53kD/exxIPA1cP1RQxsA==}
+  ts-patch@3.2.0:
+    resolution: {integrity: sha512-fUGMkjGIlD4BFibDM+6pLYLXRguzCUY6fhP1KQzSnFJfAtTDT7DKyX0yHn3CJqfBv4mia/o3ZRte31UVf9Dl1A==}
     hasBin: true
 
   tsconfig-paths@4.2.0:
@@ -10048,11 +10036,6 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@20.13.0':
-    dependencies:
-      undici-types: 5.26.5
-    optional: true
-
   '@types/node@20.14.0':
     dependencies:
       undici-types: 5.26.5
@@ -12000,10 +11983,6 @@ snapshots:
 
   hashlru@2.3.0: {}
 
-  hasown@2.0.0:
-    dependencies:
-      function-bind: 1.1.2
-
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
@@ -12416,7 +12395,7 @@ snapshots:
 
   is-core-module@2.13.1:
     dependencies:
-      hasown: 2.0.0
+      hasown: 2.0.2
 
   is-date-object@1.0.5:
     dependencies:
@@ -14872,10 +14851,6 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.6.0:
-    dependencies:
-      lru-cache: 6.0.0
-
   semver@7.6.2: {}
 
   send@0.18.0:
@@ -15308,13 +15283,13 @@ snapshots:
     dependencies:
       typescript: 5.4.5
 
-  ts-patch@3.1.2:
+  ts-patch@3.2.0:
     dependencies:
       chalk: 4.1.2
       global-prefix: 3.0.0
       minimist: 1.2.8
       resolve: 1.22.8
-      semver: 7.6.0
+      semver: 7.6.2
       strip-ansi: 6.0.1
 
   tsconfig-paths@4.2.0:
@@ -15492,13 +15467,13 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-node@1.6.0(@types/node@20.13.0)(terser@5.31.0):
+  vite-node@1.6.0(@types/node@20.14.0)(terser@5.31.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.11(@types/node@20.13.0)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.14.0)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -15509,17 +15484,17 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.11(@types/node@20.13.0)(terser@5.31.0):
+  vite@5.2.11(@types/node@20.14.0)(terser@5.31.0):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.18.0
     optionalDependencies:
-      '@types/node': 20.13.0
+      '@types/node': 20.14.0
       fsevents: 2.3.3
       terser: 5.31.0
 
-  vitest@1.6.0(@types/node@20.13.0)(terser@5.31.0):
+  vitest@1.6.0(@types/node@20.14.0)(terser@5.31.0):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -15538,11 +15513,11 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.2.11(@types/node@20.13.0)(terser@5.31.0)
-      vite-node: 1.6.0(@types/node@20.13.0)(terser@5.31.0)
+      vite: 5.2.11(@types/node@20.14.0)(terser@5.31.0)
+      vite-node: 1.6.0(@types/node@20.14.0)(terser@5.31.0)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 20.13.0
+      '@types/node': 20.14.0
     transitivePeerDependencies:
       - less
       - lightningcss
