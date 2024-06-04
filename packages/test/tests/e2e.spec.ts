@@ -2,7 +2,7 @@ import type {ElectronApplication, Page} from 'playwright';
 
 import {afterAll, beforeAll, expect, test, describe} from 'vitest';
 
-import {constellationPrète, surNavig, surÉlectron} from './utils';
+import { surNavig, surÉlectron} from './utils';
 
 const environnement = process.env.ENVIRONNEMENT_TESTS;
 
