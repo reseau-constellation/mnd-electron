@@ -25,6 +25,7 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
 
     écouterMessagesDeConstellation(
       (m: mandataire.messages.MessageDeTravailleur) => {
+        console.log("ici")
         if (this.journal)
           this.journal(
             "Rendu : message de Constellation : " + JSON.stringify(m)
