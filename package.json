@@ -14,7 +14,6 @@
     "versionner": "pnpm lerna version"
   },
   "devDependencies": {
-    "@constl/utils-tests": "^1.2.5",
     "lerna": "^8.1.2",
     "playwright": "^1.43.1",
     "vitest": "^1.5.0"

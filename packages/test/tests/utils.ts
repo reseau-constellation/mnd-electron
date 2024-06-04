@@ -81,6 +81,6 @@ export const surNavig = async ({
   return {page, fermer};
 };
 
-export const constellationPrêt = async ({page}: {page: Page}) => {
-  return await page.waitForSelector('.v-btn--variant-outlined');
+export const constellationPrète = async ({page}: {page: Page}) => {
+  return await page.waitForSelector('#id-compte');
 };

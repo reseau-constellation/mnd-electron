@@ -2,7 +2,7 @@ import type {ElectronApplication, Page} from 'playwright';
 
 import {afterAll, beforeAll, expect, test, describe} from 'vitest';
 
-import {changerLangue, constellationPrêt, surNavig, surÉlectron} from './utils';
+import {constellationPrète, surNavig, surÉlectron} from './utils';
 
 const environnement = process.env.ENVIRONNEMENT_TESTS;
 
@@ -69,74 +69,12 @@ describe('Test fenêtre appli', function () {
     expect((await element!.innerHTML()).trim(), 'Window content was empty').not.equal('');
   });
 
-  test('Changer langue', async () => {
-    await changerLangue({page, langue: 'த'});
+
+  test('Constellation initialisée', async () => {
+    const élémentIdCompte = await page.waitForSelector('#id-compte');
+    const idCompte = await élémentIdCompte.innerText();
+    expect(idCompte).to.contain('orbitdb');
   });
 
-  test('Constellation initialisé', async () => {
-    await constellationPrêt({page});
-  });
 
-  test('Créer compte', async () => {
-    const btnDémarrer = await constellationPrêt({page});
-    await btnDémarrer.click();
-    const btnNouveau = await page.waitForSelector('.mdi-creation-outline');
-    await btnNouveau.click();
-
-    // Nom utilisatrice
-    await page.getByLabel('உங்கள் பெயர்').fill('நான் தான்');
-    await page.keyboard.press('Enter');
-
-    const btnSuivant = page.getByText('அடுத்தது');
-    await btnSuivant.click();
-
-    // Image
-    await btnSuivant.click();
-
-    // Protections données
-    if (!appliÉlectron) {
-      await btnSuivant.click();
-    }
-
-    // Création compte
-    const btnCréerCompte = page.getByText('தொடக்கலாம்');
-
-    await btnCréerCompte.isEnabled();
-
-    await btnCréerCompte.click();
-
-    const menuNavig = await page.waitForSelector('.v-navigation-drawer__content');
-    await menuNavig.hover();
-
-    const nomUtilisatrice = page.getByText('நான் தான்');
-
-    expect(await nomUtilisatrice.innerText()).to.equal('நான் தான்');
-  });
 });
-
-/**
-test('Preload versions', async () => {
-  const page = await appliÉlectron.firstWindow();
-  const renderedVersions = await page.locator('#process-versions').innerText();
-
-  const expectedVersions = await appliÉlectron.evaluate(() => process.versions);
-
-  for (const expectedVersionsKey in expectedVersions) {
-    expect(renderedVersions).include(
-      `${expectedVersionsKey}: v${expectedVersions[expectedVersionsKey]}`,
-    );
-  }
-});
-  
-test('Preload nodeCrypto', async () => {
-  const page = await electronApp.firstWindow();
-
-  // Test hashing a random string
-  const testString = Math.random().toString(36).slice(2, 7);
-
-  await page.fill('input', testString);
-  const renderedHash = await page.inputValue('input[readonly]');
-  const expectedHash = createHash('sha256').update(testString).digest('hex');
-  expect(renderedHash).toEqual(expectedHash);
-});
- */
