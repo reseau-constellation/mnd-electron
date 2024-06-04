@@ -2,12 +2,12 @@ name: Tests mandataire électron
 on:
   push:
     branches:
-      - main
+      - principale
     paths-ignore:
       - '**.md'
   pull_request:
     branches:
-      - main
+      - principale
     paths-ignore:
         - '**.md'
 
