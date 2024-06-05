@@ -27,7 +27,9 @@ export class GestionnaireFenêtres {
   opts?: client.optsConstellation;
 
   fenêtres: { [key: string]: BrowserWindow };
-  clientConstellation: mandataire.gestionnaireClient.GestionnaireClient | undefined;
+  clientConstellation:
+    | mandataire.gestionnaireClient.GestionnaireClient
+    | undefined;
   verrouServeur: Lock;
   événements: EventEmitter;
   oublierServeur?: types.schémaFonctionOublier;
@@ -63,7 +65,7 @@ export class GestionnaireFenêtres {
     const opts: client.optsConstellation = {
       dossier: join(
         app.getPath("userData"),
-        this.enDéveloppement ? "constl-dév" : "constl"
+        this.enDéveloppement ? "constl-dév" : "constl",
       ),
       ...this.opts,
     };
@@ -71,14 +73,14 @@ export class GestionnaireFenêtres {
       (m: mandataire.messages.MessageDeTravailleur) =>
         this.envoyerMessageDuClient(m),
       (e: string) => this.envoyerErreur(e),
-      opts
+      opts,
     );
     ipcMain.on(
       CODE_MESSAGE_POUR_SERVEUR,
       async (_event, message: messagePourServeur) => {
         if (this.journal)
           this.journal(
-            `${CODE_MESSAGE_POUR_SERVEUR} : ${JSON.stringify(message)}`
+            `${CODE_MESSAGE_POUR_SERVEUR} : ${JSON.stringify(message)}`,
           );
         switch (message.type) {
           case "init": {
@@ -96,7 +98,7 @@ export class GestionnaireFenêtres {
           default:
             throw new Error("Message inconnu : " + JSON.stringify(message));
         }
-      }
+      },
     );
     this.événements.emit(CODE_PRÊT);
   }
@@ -116,7 +118,7 @@ export class GestionnaireFenêtres {
 
   envoyerMessageDuServeur(m: messageDeServeur) {
     Object.values(this.fenêtres).forEach((f) =>
-      f.webContents.send(CODE_MESSAGE_DE_SERVEUR, m)
+      f.webContents.send(CODE_MESSAGE_DE_SERVEUR, m),
     );
   }
 
@@ -129,7 +131,7 @@ export class GestionnaireFenêtres {
       fenêtre.webContents.send(CODE_MESSAGE_DE_CLIENT, m);
     } else {
       Object.values(this.fenêtres).forEach((f) =>
-        f.webContents.send(CODE_MESSAGE_DE_CLIENT, m)
+        f.webContents.send(CODE_MESSAGE_DE_CLIENT, m),
       );
     }
   }
@@ -142,7 +144,7 @@ export class GestionnaireFenêtres {
       fenêtre.webContents.send(CODE_MESSAGE_DE_CLIENT, m);
     } else {
       Object.values(this.fenêtres).forEach((f) =>
-        f.webContents.send(CODE_MESSAGE_DE_CLIENT, m)
+        f.webContents.send(CODE_MESSAGE_DE_CLIENT, m),
       );
     }
   }
@@ -153,7 +155,7 @@ export class GestionnaireFenêtres {
       erreur: e,
     };
     Object.values(this.fenêtres).forEach((f) =>
-      f.webContents.send(CODE_MESSAGE_DE_CLIENT, messageErreur)
+      f.webContents.send(CODE_MESSAGE_DE_CLIENT, messageErreur),
     );
   }
   connecterFenêtreÀConstellation(fenêtre: BrowserWindow) {
@@ -162,7 +164,7 @@ export class GestionnaireFenêtres {
 
     const fSuivreMessagesPourConstellation = async (
       _event: IpcMainEvent,
-      message: mandataire.messages.MessagePourTravailleur
+      message: mandataire.messages.MessagePourTravailleur,
     ): Promise<void> => {
       await this.prêt();
 
@@ -189,7 +191,7 @@ export class GestionnaireFenêtres {
     if (!this.clientConstellation) await this.prêt();
     if (!this.importationServeur)
       throw new Error(
-        "Le GestionnaireFenêtres n'a pas été initialisé avec le module @constl/serveur."
+        "Le GestionnaireFenêtres n'a pas été initialisé avec le module @constl/serveur.",
       );
 
     await this.verrouServeur.acquire();

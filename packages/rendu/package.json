@@ -3,13 +3,14 @@
   "version": "1.0.1",
   "description": "",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "nettoyer": "rimraf dist",
     "compiler": "pnpm versioner && pnpm nettoyer && pnpm tspc -p tsconfig.build.json",
     "test": "echo \"Error: no test specified\" && exit 0",
     "couverture": "pnpm test -- --coverage",
     "couverture:tous": "pnpm test:tous -- --coverage --bail",
-    "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts src",
+    "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint src",
     "prepublish": "pnpm versioner && pnpm compiler",
     "versioner": "pnpm genversion  --es6 --semi src/version.ts"
   },

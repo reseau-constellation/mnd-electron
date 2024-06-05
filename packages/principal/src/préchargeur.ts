@@ -24,7 +24,7 @@ export const attendreFenêtreAttachée = (): Promise<void> => {
 };
 
 export const envoyerMessageÀConstellation = async (
-  message: mandataire.messages.MessagePourTravailleur
+  message: mandataire.messages.MessagePourTravailleur,
 ) => {
   // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
   await attendreFenêtreAttachée();
@@ -32,7 +32,7 @@ export const envoyerMessageÀConstellation = async (
 };
 
 export const écouterMessagesDeConstellation = (
-  f: (message: mandataire.messages.MessageDeTravailleur) => void
+  f: (message: mandataire.messages.MessageDeTravailleur) => void,
 ): (() => void) => {
   const écouteur = (
     _event: IpcRendererEvent,
@@ -45,13 +45,13 @@ export const écouterMessagesDeConstellation = (
 };
 
 export const envoyerMessageÀServeurConstellation = (
-  message: messagePourServeur
+  message: messagePourServeur,
 ) => {
   ipcRenderer.send(CODE_MESSAGE_POUR_SERVEUR, message);
 };
 
 export const écouterMessagesDeServeurConstellation = (
-  f: (message: messageDeServeur) => void
+  f: (message: messageDeServeur) => void,
 ): (() => void) => {
   const écouteur = (_event: IpcRendererEvent, ...args: [messageDeServeur]) => {
     f(...args);

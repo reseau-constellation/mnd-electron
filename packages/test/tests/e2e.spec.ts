@@ -2,7 +2,7 @@ import type {ElectronApplication, Page} from 'playwright';
 
 import {afterAll, beforeAll, expect, test, describe} from 'vitest';
 
-import { surNavig, surÉlectron} from './utils';
+import {surNavig, surÉlectron} from './utils';
 
 const environnement = process.env.ENVIRONNEMENT_TESTS;
 
@@ -69,12 +69,18 @@ describe('Test fenêtre appli', function () {
     expect((await element!.innerHTML()).trim(), 'Window content was empty').not.equal('');
   });
 
-
-  test('Constellation initialisée', async () => {
+  test('Obtenir valeur', async () => {
     const élémentIdCompte = await page.waitForSelector('#id-compte');
     const idCompte = await élémentIdCompte.innerText();
     expect(idCompte).to.contain('orbitdb');
   });
 
+  test('Suivi et modifier valeur', async () => {
+    const btnAjoutNom = await page.waitForSelector('#btn-ajout-nom');
+    await btnAjoutNom.click();
 
+    const élémentNomsProfil = await page.waitForSelector('#noms-profil');
+    const noms = JSON.parse(await élémentNomsProfil.innerText());
+    expect(noms['fr']).to.equal('moi');
+  });
 });

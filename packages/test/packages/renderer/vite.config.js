@@ -8,7 +8,6 @@ import {join} from 'node:path';
 const PACKAGE_ROOT = __dirname;
 const PROJECT_ROOT = join(PACKAGE_ROOT, '../..');
 
-
 // Pareil pour Électron ou non, parce qu'ici il s'agit de la partie interface (rendu)
 const dépendsÀExclure = ['chokidar', '@libp2p/tcp', '@libp2p/mdns', 'env-paths'];
 

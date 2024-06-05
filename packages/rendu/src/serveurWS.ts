@@ -36,7 +36,7 @@ export class GestionnaireServeur {
     };
     const promessePort = once(
       this.événements,
-      CODE_PRÊT
+      CODE_PRÊT,
     ) as unknown as Promise<number>;
     this.envoyerMessageÀServeurConstellation(messageInit);
 

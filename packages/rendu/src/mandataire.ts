@@ -27,17 +27,17 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
       (m: mandataire.messages.MessageDeTravailleur) => {
         if (this.journal)
           this.journal(
-            "Rendu : message de Constellation : " + JSON.stringify(m)
+            "Rendu : message de Constellation : " + JSON.stringify(m),
           );
         this.événements.emit("message", m);
-      }
+      },
     );
   }
 
   envoyerMessage(message: mandataire.messages.MessagePourTravailleur): void {
     if (this.journal)
       this.journal(
-        "Rendu : message pour Constellation : " + JSON.stringify(message)
+        "Rendu : message pour Constellation : " + JSON.stringify(message),
       );
     this.envoyerMessageÀConstellation(message);
   }
@@ -57,6 +57,6 @@ export const générerMandataireÉlectronPrincipal = ({
       écouterMessagesDeConstellation,
       envoyerMessageÀConstellation,
       journal,
-    })
+    }),
   );
 };
