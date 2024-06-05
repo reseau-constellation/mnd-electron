@@ -1,8 +1,8 @@
 {
-  "name": "constl",
-  "description": "Interface pour le réseau Constellation.",
+  "name": "@constl/mandataire-electron-test",
+  "description": "Appli électron pour tester le mandataire Constellation.",
   "repository": {
-    "url": "https://github.com/reseau-constellation/iug"
+    "url": "https://github.com/reseau-constellation/mandataire-electron"
   },
   "homepage": "https://réseau-constellation.ca",
   "author": {
@@ -17,7 +17,6 @@
     "build": "pnpm run build:main && pnpm run build:preload && pnpm run build:renderer",
     "build:main": "cd ./packages/main && vite build",
     "build:preload": "cd ./packages/preload && vite build",
-    
     "build:renderer": "cd ./packages/renderer && vite build",
     "compile": "cross-env MODE=production pnpm run build && electron-builder build --config .electron-builder.config.cjs",
     "test": "pnpm run build && vitest run",
