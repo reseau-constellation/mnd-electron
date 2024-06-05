@@ -10,7 +10,7 @@
     "compiler": "pnpm lerna run compiler",
     "formatter": "pnpm lerna run formatter",
     "publier": "pnpm lerna publish",
-    "test": "pnpm lerna run test",
+    "test": "pnpm compiler && pnpm lerna run test",
     "versionner": "pnpm lerna version"
   },
   "devDependencies": {
