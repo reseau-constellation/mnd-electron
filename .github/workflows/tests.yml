@@ -45,8 +45,13 @@ jobs:
       - name: Installer playwright
         run: npx playwright install
 
+      - name: Vérifier les tests (Ubuntu)
+        run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm test
+        if: matrix.os == 'ubuntu-latest'
+
       - name: Vérifier les tests
         run: pnpm test
+        if: matrix.os != 'ubuntu-latest'
 
       - name: Envoyer couverure à Codecov
         uses: codecov/codecov-action@v4
