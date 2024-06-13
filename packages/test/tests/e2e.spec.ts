@@ -81,6 +81,6 @@ describe('Test fenêtre appli', function () {
 
     const élémentNomsProfil = await page.waitForSelector('#noms-profil');
     const noms = JSON.parse(await élémentNomsProfil.innerText());
-    expect(noms['fr']).to.equal('moi');
+    expect(noms['fr']).to.equal('Moi');
   });
 });

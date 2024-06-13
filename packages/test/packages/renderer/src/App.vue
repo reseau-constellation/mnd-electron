@@ -27,7 +27,7 @@ const ajouterNom = async () => {
         <p>
           Noms:
           <span
-            v-if="noms"
+            v-if="noms && Object.keys(noms).length"
             id="noms-profil"
           >
             {{ noms }}
