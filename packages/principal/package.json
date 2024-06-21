@@ -48,7 +48,7 @@
   "peerDependencies": {
     "@constl/ipa": "^1.0.12",
     "@constl/mandataire": "^1.0.2",
-    "@constl/serveur": "^1.0.0",
+    "@constl/serveur": "^1.0.0 || ^2.0.0",
     "electron": "^30.0.9 || ^31.0.0"
   },
   "dependencies": {
