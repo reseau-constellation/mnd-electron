@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  node-datachannel: ^0.8.0
+  node-datachannel: ^0.9.0
 
 importers:
 
@@ -5817,8 +5817,8 @@ packages:
   node-addon-api@1.7.2:
     resolution: {integrity: sha512-ibPK3iA+vaY1eEjESkQkM0BbCqFOaZMiXRTtdB0u7b4djtY6JnsjvPdUHVMg6xQt3B8fpTTWHI9A+ADjM9frzg==}
 
-  node-datachannel@0.8.0:
-    resolution: {integrity: sha512-05vYthhjESfO5qumWRbqHI1PN71rc19DJjc14ofOLapJrTCnmhx0JYw0G5wcL56b57uHQP9WjEak3+XklrB+Og==}
+  node-datachannel@0.9.1:
+    resolution: {integrity: sha512-b6Uc6YN5We2/aZA6QGicxSdWUDSwlR+vcO/Dn44BY5gieF3AOwsL/zPD+Ril+1KvYDwVJkVbRIovbG76E4PpwA==}
     engines: {node: '>=16.0.0'}
 
   node-dir@0.1.17:
@@ -10221,7 +10221,7 @@ snapshots:
       it-stream-types: 2.0.1
       multiformats: 13.1.0
       multihashes: 4.0.3
-      node-datachannel: 0.8.0
+      node-datachannel: 0.9.1
       p-defer: 4.0.1
       p-event: 6.0.1
       p-timeout: 6.1.2
@@ -15791,11 +15791,10 @@ snapshots:
   node-addon-api@1.7.2:
     optional: true
 
-  node-datachannel@0.8.0:
+  node-datachannel@0.9.1:
     dependencies:
       node-domexception: 2.0.1
       prebuild-install: 7.1.2
-      rollup: 4.18.0
 
   node-dir@0.1.17:
     dependencies:
