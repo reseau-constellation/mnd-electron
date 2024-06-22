@@ -41,7 +41,7 @@ importers:
         version: 1.0.2
       '@constl/serveur':
         specifier: ^2.0.0
-        version: 2.0.1(@constl/ipa@1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+        version: 2.0.2(@constl/ipa@1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       '@eslint/js':
         specifier: ^9.5.0
         version: 9.5.0
@@ -153,7 +153,7 @@ importers:
         version: link:../rendu
       '@constl/serveur':
         specifier: ^1.0.0
-        version: 1.0.0(@constl/ipa@1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+        version: 2.0.2(@constl/ipa@1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       '@esbuild-plugins/node-globals-polyfill':
         specifier: ^0.2.3
         version: 0.2.3(esbuild@0.21.5)
@@ -1126,19 +1126,12 @@ packages:
   '@constl/mandataire@1.0.2':
     resolution: {integrity: sha512-L4HzTXWJOuoTVeGxGQBKOK0fT5hAmMoZan2SU3mCkz5dN1at8R5JOmW9A8lcFWg5TblMHRDj5FRxAqmtIdhBOA==}
 
-  '@constl/serveur@1.0.0':
-    resolution: {integrity: sha512-RcYp3+la4JIoCnn8rQIXqmoGWVkbvstpWWlnu82cJVkc+oi0SMSWs5U8XqbLSDNgra+7jRpJLre13xsbFprdzA==}
+  '@constl/serveur@2.0.2':
+    resolution: {integrity: sha512-EBqe2W3dRN9+q/cUa/f3+sUENu3D3AiijZSfeBSgUZZfEcuVNB4zhJKe1wLqTQ+5bfSEETXFozOT6acyFcgNSg==}
     engines: {node: '>=20'}
     hasBin: true
     peerDependencies:
-      '@constl/ipa': ^1.0.0
-
-  '@constl/serveur@2.0.1':
-    resolution: {integrity: sha512-r8M21hmUpA6GH5Mf/K5ab/MDe+M0GEe/mvfy7kzYiv0RpxJf6QklQOXGOvGa4ajkRk4+Q+gvM+XBJjExxQNuFg==}
-    engines: {node: '>=20'}
-    hasBin: true
-    peerDependencies:
-      '@constl/ipa': ^1.0.0
+      '@constl/ipa': ^1.0.25
 
   '@constl/utils-ipa@1.0.1':
     resolution: {integrity: sha512-BIbwqwZ3T1RWXBTm7ocHGP8HxIQZnA19PCjGnrfuNdDThMwOK51WUnI/yLQAMuj7ze1lsBC+AAfvzQzX+7DPLg==}
@@ -9257,25 +9250,7 @@ snapshots:
       events: 3.3.0
       uuid: 9.0.1
 
-  '@constl/serveur@1.0.0(@constl/ipa@1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))':
-    dependencies:
-      '@achingbrain/nat-port-mapper': 1.0.13
-      '@constl/ipa': 1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      bufferutil: 4.0.8
-      chalk: 5.3.0
-      core-js: 3.37.1
-      express: 4.19.2
-      find-free-port: 2.0.0
-      iso-constants: https://codeload.github.com/inverted-capital/iso-constants/tar.gz/2af6fdfb2cacaa03ebd58543703918783e62649f
-      isomorphic-ws: 5.0.0(ws@8.17.1(bufferutil@4.0.8))
-      ora: 8.0.1
-      ws: 8.17.1(bufferutil@4.0.8)
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - supports-color
-      - utf-8-validate
-
-  '@constl/serveur@2.0.1(@constl/ipa@1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))':
+  '@constl/serveur@2.0.2(@constl/ipa@1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))':
     dependencies:
       '@achingbrain/nat-port-mapper': 1.0.13
       '@constl/ipa': 1.0.25(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
@@ -16264,7 +16239,7 @@ snapshots:
   ora@5.3.0:
     dependencies:
       bl: 4.1.0
-      chalk: 4.1.2
+      chalk: 4.1.0
       cli-cursor: 3.1.0
       cli-spinners: 2.6.1
       is-interactive: 1.0.0
