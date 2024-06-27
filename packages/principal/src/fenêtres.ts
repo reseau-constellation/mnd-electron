@@ -23,8 +23,8 @@ import {
 const CODE_PRÊT = "prêt";
 
 type ÉvénementsGestionnaire = {
-  [CODE_PRÊT]: () => void,
-}
+  [CODE_PRÊT]: () => void;
+};
 
 export class GestionnaireFenêtres {
   enDéveloppement: boolean;
@@ -39,8 +39,15 @@ export class GestionnaireFenêtres {
     | undefined;
   verrouServeur: Lock;
   événements: TypedEmitter<ÉvénementsGestionnaire>;
-  connexionServeur?: Awaited<ReturnType<Exclude<Awaited<GestionnaireFenêtres["importationServeur"]>, undefined>["lancerServeur"]>>;
-  requètesServeur: {[idSuivi: string]: () => void};
+  connexionServeur?: Awaited<
+    ReturnType<
+      Exclude<
+        Awaited<GestionnaireFenêtres["importationServeur"]>,
+        undefined
+      >["lancerServeur"]
+    >
+  >;
+  requètesServeur: { [idSuivi: string]: () => void };
 
   constructor({
     enDéveloppement,
@@ -64,7 +71,8 @@ export class GestionnaireFenêtres {
     this.fenêtres = {};
     this.requètesServeur = {};
     this.verrouServeur = new Lock();
-    this.événements = new EventEmitter() as TypedEmitter<ÉvénementsGestionnaire>;
+    this.événements =
+      new EventEmitter() as TypedEmitter<ÉvénementsGestionnaire>;
     this.initialiser();
   }
 
@@ -92,7 +100,9 @@ export class GestionnaireFenêtres {
           );
         switch (message.type) {
           case "init": {
-            const { port, codeSecret } = await this.initialiserServeur(message.port);
+            const { port, codeSecret } = await this.initialiserServeur(
+              message.port,
+            );
             const messagePrêt: messagePrêtDeServeur = {
               type: "prêt",
               port,
@@ -101,15 +111,15 @@ export class GestionnaireFenêtres {
             this.envoyerMessageDuServeur(messagePrêt);
             break;
           }
-          
+
           case "auth":
             this.gérerMessageAuthServeur(message);
             break;
-          
+
           case "fermer":
             this.fermerServeur();
             break;
-          
+
           default:
             throw new Error("Message inconnu : " + JSON.stringify(message));
         }
@@ -190,7 +200,9 @@ export class GestionnaireFenêtres {
     fenêtre.on("close", déconnecter);
   }
 
-  async initialiserServeur(port?: number): Promise<{port: number, codeSecret: string}> {
+  async initialiserServeur(
+    port?: number,
+  ): Promise<{ port: number; codeSecret: string }> {
     if (!this.clientConstellation) await this.prêt();
     if (!this.importationServeur)
       throw new Error(
@@ -200,7 +212,11 @@ export class GestionnaireFenêtres {
     await this.verrouServeur.acquire();
 
     // Fermer le serveur si on chage de port
-    if (port !== undefined && this.connexionServeur?.port !== undefined && port !== this.connexionServeur.port) {
+    if (
+      port !== undefined &&
+      this.connexionServeur?.port !== undefined &&
+      port !== this.connexionServeur.port
+    ) {
       await this.fermerServeur();
     }
 
@@ -232,18 +248,20 @@ export class GestionnaireFenêtres {
         this.connexionServeur?.refuserRequète(message.contenu.idRequète);
         break;
 
-      case "suivreRequètes":
-        const fOublierSuivi = this.connexionServeur?.suivreRequètes((requètes) => {
-          const messageRetour: messageRequètesConnexion = {
-            type: "requètesConnexion",
-            requètes,
-          }
-          this.envoyerMessageDuServeur(messageRetour)
-        });
+      case "suivreRequètes": {
+        const fOublierSuivi = this.connexionServeur?.suivreRequètes(
+          (requètes) => {
+            const messageRetour: messageRequètesConnexion = {
+              type: "requètesConnexion",
+              requètes,
+            };
+            this.envoyerMessageDuServeur(messageRetour);
+          },
+        );
         if (fOublierSuivi)
-          this.requètesServeur[message.contenu.idSuivi] = fOublierSuivi
+          this.requètesServeur[message.contenu.idSuivi] = fOublierSuivi;
         break;
-
+      }
       case "oublierRequètes":
         this.requètesServeur[message.contenu.idSuivi]?.();
         delete this.requètesServeur[message.contenu.idSuivi];
