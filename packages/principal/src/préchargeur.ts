@@ -3,9 +3,9 @@ import { ipcRenderer, IpcRendererEvent } from "electron";
 import type { mandataire } from "@constl/ipa";
 import {
   CODE_CLIENT_PRÊT,
-  CODE_MESSAGE_DE_CLIENT,
+  CODE_MESSAGE_D_IPA,
   CODE_MESSAGE_DE_SERVEUR,
-  CODE_MESSAGE_POUR_CLIENT,
+  CODE_MESSAGE_POUR_IPA,
   CODE_MESSAGE_POUR_SERVEUR,
   messageDeServeur,
   messagePourServeur,
@@ -28,7 +28,7 @@ export const envoyerMessageÀConstellation = async (
 ) => {
   // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
   await attendreFenêtreAttachée();
-  ipcRenderer.send(CODE_MESSAGE_POUR_CLIENT, message);
+  ipcRenderer.send(CODE_MESSAGE_POUR_IPA, message);
 };
 
 export const écouterMessagesDeConstellation = (
@@ -40,8 +40,8 @@ export const écouterMessagesDeConstellation = (
   ) => {
     f(...args);
   };
-  ipcRenderer.on(CODE_MESSAGE_DE_CLIENT, écouteur);
-  return () => ipcRenderer.off(CODE_MESSAGE_DE_CLIENT, écouteur);
+  ipcRenderer.on(CODE_MESSAGE_D_IPA, écouteur);
+  return () => ipcRenderer.off(CODE_MESSAGE_D_IPA, écouteur);
 };
 
 export const envoyerMessageÀServeurConstellation = (

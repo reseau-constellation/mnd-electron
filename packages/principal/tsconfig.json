@@ -12,16 +12,12 @@
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
     "paths": {
       "@/*": ["src/*"]
     },
     "outDir": "./dist/cjs",
     "sourceMap": true,
     "strict": true,
-    "strictPropertyInitialization": false,
-    "strictNullChecks": false,
     "target": "esnext",
     "useUnknownInCatchVariables": false,
 

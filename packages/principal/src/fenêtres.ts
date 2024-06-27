@@ -1,4 +1,5 @@
-import type { client, mandataire, types } from "@constl/ipa";
+import type { client, mandataire } from "@constl/ipa";
+import TypedEmitter from "typed-emitter";
 
 import type { BrowserWindow, IpcMainEvent } from "electron";
 import { app, ipcMain } from "electron";
@@ -10,14 +11,20 @@ import {
   messageDeServeur,
   messagePourServeur,
   messagePrêtDeServeur,
-  CODE_MESSAGE_DE_CLIENT,
+  CODE_MESSAGE_D_IPA,
   CODE_MESSAGE_DE_SERVEUR,
-  CODE_MESSAGE_POUR_CLIENT,
+  CODE_MESSAGE_POUR_IPA,
   CODE_MESSAGE_POUR_SERVEUR,
   CODE_CLIENT_PRÊT,
+  messageAuthServeur,
+  messageRequètesConnexion,
 } from "@/messages.js";
 
 const CODE_PRÊT = "prêt";
+
+type ÉvénementsGestionnaire = {
+  [CODE_PRÊT]: () => void,
+}
 
 export class GestionnaireFenêtres {
   enDéveloppement: boolean;
@@ -31,9 +38,9 @@ export class GestionnaireFenêtres {
     | mandataire.gestionnaireClient.GestionnaireClient
     | undefined;
   verrouServeur: Lock;
-  événements: EventEmitter;
-  oublierServeur?: types.schémaFonctionOublier;
-  port?: number;
+  événements: TypedEmitter<ÉvénementsGestionnaire>;
+  connexionServeur?: Awaited<ReturnType<Exclude<Awaited<GestionnaireFenêtres["importationServeur"]>, undefined>["lancerServeur"]>>;
+  requètesServeur: {[idSuivi: string]: () => void};
 
   constructor({
     enDéveloppement,
@@ -55,8 +62,9 @@ export class GestionnaireFenêtres {
     this.opts = opts;
 
     this.fenêtres = {};
+    this.requètesServeur = {};
     this.verrouServeur = new Lock();
-    this.événements = new EventEmitter();
+    this.événements = new EventEmitter() as TypedEmitter<ÉvénementsGestionnaire>;
     this.initialiser();
   }
 
@@ -71,7 +79,7 @@ export class GestionnaireFenêtres {
     };
     this.clientConstellation = new gestionnaireClient.GestionnaireClient(
       (m: mandataire.messages.MessageDeTravailleur) =>
-        this.envoyerMessageDuClient(m),
+        this.envoyerMessageDIpa(m),
       (e: string) => this.envoyerErreur(e),
       opts,
     );
@@ -84,17 +92,24 @@ export class GestionnaireFenêtres {
           );
         switch (message.type) {
           case "init": {
-            const port = await this.initialiserServeur(message.port);
+            const { port, codeSecret } = await this.initialiserServeur(message.port);
             const messagePrêt: messagePrêtDeServeur = {
               type: "prêt",
               port,
+              codeSecret,
             };
             this.envoyerMessageDuServeur(messagePrêt);
             break;
           }
+          
+          case "auth":
+            this.gérerMessageAuthServeur(message);
+            break;
+          
           case "fermer":
             this.fermerServeur();
             break;
+          
           default:
             throw new Error("Message inconnu : " + JSON.stringify(message));
         }
@@ -122,29 +137,16 @@ export class GestionnaireFenêtres {
     );
   }
 
-  envoyerMessageDuClient(m: mandataire.messages.MessageDeTravailleur) {
+  envoyerMessageDIpa(m: mandataire.messages.MessageDeTravailleur) {
     if (m.id) {
       const idFenêtre = m.id.split(":")[0];
       m.id = m.id.split(":").slice(1).join(":");
 
       const fenêtre = this.fenêtres[idFenêtre];
-      fenêtre.webContents.send(CODE_MESSAGE_DE_CLIENT, m);
+      fenêtre.webContents.send(CODE_MESSAGE_D_IPA, m);
     } else {
       Object.values(this.fenêtres).forEach((f) =>
-        f.webContents.send(CODE_MESSAGE_DE_CLIENT, m),
-      );
-    }
-  }
-
-  envoyerMessage(m: mandataire.messages.MessageDeTravailleur) {
-    if (m.id) {
-      const idFenêtre = m.id.split(":")[0];
-      m.id = m.id.split(":").slice(1).join(":");
-      const fenêtre = this.fenêtres[idFenêtre];
-      fenêtre.webContents.send(CODE_MESSAGE_DE_CLIENT, m);
-    } else {
-      Object.values(this.fenêtres).forEach((f) =>
-        f.webContents.send(CODE_MESSAGE_DE_CLIENT, m),
+        f.webContents.send(CODE_MESSAGE_D_IPA, m),
       );
     }
   }
@@ -155,9 +157,10 @@ export class GestionnaireFenêtres {
       erreur: e,
     };
     Object.values(this.fenêtres).forEach((f) =>
-      f.webContents.send(CODE_MESSAGE_DE_CLIENT, messageErreur),
+      f.webContents.send(CODE_MESSAGE_D_IPA, messageErreur),
     );
   }
+
   connecterFenêtreÀConstellation(fenêtre: BrowserWindow) {
     const id = uuidv4();
     this.connecterFenêtre(fenêtre, id);
@@ -175,19 +178,19 @@ export class GestionnaireFenêtres {
       await this.clientConstellation.gérerMessage(message);
     };
 
-    ipcMain.on(CODE_MESSAGE_POUR_CLIENT, fSuivreMessagesPourConstellation);
+    ipcMain.on(CODE_MESSAGE_POUR_IPA, fSuivreMessagesPourConstellation);
 
     // Sigaler que la fenêtre est bien attachée
     fenêtre.webContents.send(CODE_CLIENT_PRÊT);
 
     const déconnecter = () => {
-      ipcMain.off(CODE_MESSAGE_POUR_CLIENT, fSuivreMessagesPourConstellation);
+      ipcMain.off(CODE_MESSAGE_POUR_IPA, fSuivreMessagesPourConstellation);
       this.déconnecterFenêtre(id);
     };
     fenêtre.on("close", déconnecter);
   }
 
-  async initialiserServeur(port?: number): Promise<number> {
+  async initialiserServeur(port?: number): Promise<{port: number, codeSecret: string}> {
     if (!this.clientConstellation) await this.prêt();
     if (!this.importationServeur)
       throw new Error(
@@ -197,31 +200,58 @@ export class GestionnaireFenêtres {
     await this.verrouServeur.acquire();
 
     // Fermer le serveur si on chage de port
-    if (port !== undefined && this.port !== undefined && port !== this.port) {
-      if (this.oublierServeur) await this.oublierServeur();
-      this.port = undefined;
+    if (port !== undefined && this.connexionServeur?.port !== undefined && port !== this.connexionServeur.port) {
+      await this.fermerServeur();
     }
 
-    if (!this.port) {
+    if (!this.connexionServeur) {
       if (!this.clientConstellation)
         throw new Error("Erreur d'initialisation de Constellation");
 
       const constlServeur = await this.importationServeur;
-      const { fermerServeur, port: portServeur } =
-        await constlServeur.lancerServeur({
-          port,
-          optsConstellation: this.clientConstellation,
-        });
-
-      this.oublierServeur = fermerServeur;
-      this.port = portServeur;
+      this.connexionServeur = await constlServeur.lancerServeur({
+        port,
+        optsConstellation: this.clientConstellation,
+      });
     }
 
     this.verrouServeur.release();
 
-    if (!this.port)
+    if (!this.connexionServeur)
       throw new Error("Erreur d'initialisation du serveur local Constellation");
-    return this.port;
+    return this.connexionServeur;
+  }
+
+  async gérerMessageAuthServeur(message: messageAuthServeur) {
+    switch (message.contenu.type) {
+      case "approuverRequète":
+        this.connexionServeur?.approuverRequète(message.contenu.idRequète);
+        break;
+
+      case "refuserRequète":
+        this.connexionServeur?.refuserRequète(message.contenu.idRequète);
+        break;
+
+      case "suivreRequètes":
+        const fOublierSuivi = this.connexionServeur?.suivreRequètes((requètes) => {
+          const messageRetour: messageRequètesConnexion = {
+            type: "requètesConnexion",
+            requètes,
+          }
+          this.envoyerMessageDuServeur(messageRetour)
+        });
+        if (fOublierSuivi)
+          this.requètesServeur[message.contenu.idSuivi] = fOublierSuivi
+        break;
+
+      case "oublierRequètes":
+        this.requètesServeur[message.contenu.idSuivi]?.();
+        delete this.requètesServeur[message.contenu.idSuivi];
+        break;
+
+      default:
+        break;
+    }
   }
 
   async fermerConstellation() {
@@ -232,8 +262,8 @@ export class GestionnaireFenêtres {
 
   async fermerServeur() {
     await this.verrouServeur.acquire();
-    if (this.oublierServeur) await this.oublierServeur();
-    this.port = undefined;
+    await this.connexionServeur?.fermerServeur?.();
+    this.connexionServeur = undefined;
     this.verrouServeur.release();
   }
 }
