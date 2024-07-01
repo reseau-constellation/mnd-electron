@@ -18,21 +18,21 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "@constl/mandataire": "^1.0.2",
+    "@constl/mandataire": "^2.0.3",
     "events": "^3.3.0"
   },
   "devDependencies": {
-    "@constl/ipa": "^1.0.25",
+    "@constl/ipa": "^1.0.30",
     "@constl/mandataire-electron-principal": "workspace:^",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
-    "eslint": "^9.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
     "genversion": "^3.2.0",
     "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
-    "ts-patch": "^3.2.0",
-    "typescript": "^5.4.5",
+    "ts-patch": "^3.2.1",
+    "typescript": "^5.5.2",
     "typescript-transform-paths": "^3.4.7"
   },
   "gitHead": "a0fd78aed6b58c808dd2036f7832246fd67f95dc"

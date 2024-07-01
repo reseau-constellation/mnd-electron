@@ -1,4 +1,7 @@
 import type { client, mandataire } from "@constl/ipa";
+import type {
+  MessageDIpa, MessageErreurDIpa, MessagePourIpa
+} from "@constl/mandataire"
 import TypedEmitter from "typed-emitter";
 
 import type { BrowserWindow, IpcMainEvent } from "electron";
@@ -34,7 +37,7 @@ export class GestionnaireFenêtres {
   opts?: client.optsConstellation;
 
   fenêtres: { [key: string]: BrowserWindow };
-  clientConstellation:
+  constellation:
     | mandataire.gestionnaireClient.GestionnaireClient
     | undefined;
   verrouServeur: Lock;
@@ -85,8 +88,8 @@ export class GestionnaireFenêtres {
       ),
       ...this.opts,
     };
-    this.clientConstellation = new gestionnaireClient.GestionnaireClient(
-      (m: mandataire.messages.MessageDeTravailleur) =>
+    this.constellation = new gestionnaireClient.GestionnaireClient(
+      (m: MessageDIpa) =>
         this.envoyerMessageDIpa(m),
       (e: string) => this.envoyerErreur(e),
       opts,
@@ -129,7 +132,7 @@ export class GestionnaireFenêtres {
   }
 
   async prêt() {
-    if (!this.clientConstellation) await once(this.événements, CODE_PRÊT);
+    if (!this.constellation) await once(this.événements, CODE_PRÊT);
   }
 
   private connecterFenêtre(fenêtre: BrowserWindow, id: string): string {
@@ -147,7 +150,7 @@ export class GestionnaireFenêtres {
     );
   }
 
-  envoyerMessageDIpa(m: mandataire.messages.MessageDeTravailleur) {
+  envoyerMessageDIpa(m: MessageDIpa) {
     if (m.id) {
       const idFenêtre = m.id.split(":")[0];
       m.id = m.id.split(":").slice(1).join(":");
@@ -162,7 +165,7 @@ export class GestionnaireFenêtres {
   }
 
   envoyerErreur(e: string) {
-    const messageErreur: mandataire.messages.MessageErreurDeTravailleur = {
+    const messageErreur: MessageErreurDIpa = {
       type: "erreur",
       erreur: e,
     };
@@ -177,15 +180,15 @@ export class GestionnaireFenêtres {
 
     const fSuivreMessagesPourConstellation = async (
       _event: IpcMainEvent,
-      message: mandataire.messages.MessagePourTravailleur,
+      message: MessagePourIpa,
     ): Promise<void> => {
       await this.prêt();
 
-      if (!this.clientConstellation)
+      if (!this.constellation)
         throw new Error("Constellation n'est pas initialisée.");
 
       if (message.id) message.id = id + ":" + message.id;
-      await this.clientConstellation.gérerMessage(message);
+      await this.constellation.gérerMessage(message);
     };
 
     ipcMain.on(CODE_MESSAGE_POUR_IPA, fSuivreMessagesPourConstellation);
@@ -203,7 +206,7 @@ export class GestionnaireFenêtres {
   async initialiserServeur(
     port?: number,
   ): Promise<{ port: number; codeSecret: string }> {
-    if (!this.clientConstellation) await this.prêt();
+    await this.prêt();
     if (!this.importationServeur)
       throw new Error(
         "Le GestionnaireFenêtres n'a pas été initialisé avec le module @constl/serveur.",
@@ -221,13 +224,13 @@ export class GestionnaireFenêtres {
     }
 
     if (!this.connexionServeur) {
-      if (!this.clientConstellation)
+      if (!this.constellation)
         throw new Error("Erreur d'initialisation de Constellation");
 
       const constlServeur = await this.importationServeur;
       this.connexionServeur = await constlServeur.lancerServeur({
         port,
-        optsConstellation: this.clientConstellation,
+        optsConstellation: this.constellation,
       });
     }
 
@@ -274,8 +277,8 @@ export class GestionnaireFenêtres {
 
   async fermerConstellation() {
     await this.fermerServeur();
-    if (this.clientConstellation) await this.clientConstellation.fermer();
-    this.clientConstellation = undefined;
+    if (this.constellation) await this.constellation.fermer();
+    this.constellation = undefined;
   }
 
   async fermerServeur() {

@@ -1,6 +1,6 @@
 import { ipcRenderer, IpcRendererEvent } from "electron";
+import type { MessageDIpa, MessagePourIpa } from "@constl/mandataire";
 
-import type { mandataire } from "@constl/ipa";
 import {
   CODE_CLIENT_PRÊT,
   CODE_MESSAGE_D_IPA,
@@ -24,7 +24,7 @@ export const attendreFenêtreAttachée = (): Promise<void> => {
 };
 
 export const envoyerMessageÀConstellation = async (
-  message: mandataire.messages.MessagePourTravailleur,
+  message: MessagePourIpa,
 ) => {
   // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
   await attendreFenêtreAttachée();
@@ -32,11 +32,11 @@ export const envoyerMessageÀConstellation = async (
 };
 
 export const écouterMessagesDeConstellation = (
-  f: (message: mandataire.messages.MessageDeTravailleur) => void,
+  f: (message: MessageDIpa) => void,
 ): (() => void) => {
   const écouteur = (
     _event: IpcRendererEvent,
-    ...args: [mandataire.messages.MessageDeTravailleur]
+    ...args: [MessageDIpa]
   ) => {
     f(...args);
   };

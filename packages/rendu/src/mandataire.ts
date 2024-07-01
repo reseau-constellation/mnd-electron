@@ -1,12 +1,14 @@
-import type { mandataire } from "@constl/ipa";
+import type {
+  MessageDIpa, MessagePourIpa
+} from "@constl/mandataire";
 import type {
   envoyerMessageÀConstellation as _envoyerMessageÀConstellation,
   écouterMessagesDeConstellation as _écouterMessagesDeConstellation,
 } from "@constl/mandataire-electron-principal";
 
-import { ClientMandatairifiable, générerMandataire } from "@constl/mandataire";
+import { Mandatairifiable, générerMandataire } from "@constl/mandataire";
 
-export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
+export class MandataireClientÉlectronPrincipal extends Mandatairifiable {
   envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
   journal?: (msg: string) => void;
 
@@ -24,7 +26,7 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
     this.journal = journal;
 
     écouterMessagesDeConstellation(
-      (m: mandataire.messages.MessageDeTravailleur) => {
+      (m: MessageDIpa) => {
         if (this.journal)
           this.journal(
             "Rendu : message de Constellation : " + JSON.stringify(m),
@@ -34,7 +36,7 @@ export class MandataireClientÉlectronPrincipal extends ClientMandatairifiable {
     );
   }
 
-  envoyerMessage(message: mandataire.messages.MessagePourTravailleur): void {
+  envoyerMessageÀIpa(message: MessagePourIpa): void {
     if (this.journal)
       this.journal(
         "Rendu : message pour Constellation : " + JSON.stringify(message),
