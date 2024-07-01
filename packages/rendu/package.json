@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@constl/ipa": "^1.0.30",
-    "@constl/mandataire-electron-principal": "workspace:^",
+    "@constl/mandataire-electron-principal": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.14.1",
     "eslint": "^9.6.0",
@@ -35,5 +35,5 @@
     "typescript": "^5.5.2",
     "typescript-transform-paths": "^3.4.7"
   },
-  "gitHead": "a0fd78aed6b58c808dd2036f7832246fd67f95dc"
+  "gitHead": "d61e43de820d894dfff6e9568112736273ad6675"
 }
