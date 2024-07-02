@@ -10,6 +10,7 @@
     "name": "Julien Jean Malard-Adam",
     "url": "https://github.com/julienmalard"
   },
+  "private": true, 
   "version": "2.1.0",
   "type": "module",
   "main": "packages/main/dist/index.cjs",
@@ -97,5 +98,5 @@
     "webfontloader": "^1.6.28",
     "wherearewe": "^2.0.1"
   },
-  "gitHead": "d61e43de820d894dfff6e9568112736273ad6675"
+  "gitHead": "685c2d66c3509fbff802c25985478938ad178956"
 }
