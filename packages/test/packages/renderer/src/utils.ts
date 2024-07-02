@@ -1,13 +1,13 @@
 import {type ComputedRef, type Ref, unref, type MaybeRef, type UnwrapRef, isRef} from 'vue';
-import type {types, ClientConstellation} from '@constl/ipa';
+import type {types, Constellation} from '@constl/ipa';
 
 import EventEmitter, {once} from 'events';
 import {computed, inject, onMounted, onUnmounted, ref, watch, watchEffect} from 'vue';
 import deepEqual from 'deep-equal';
 import type {கிளிமூக்கு as கிளிமூக்கு_வகை} from '@lassi-js/kilimukku';
 
-export const constellation = (): ClientConstellation => {
-  const constl = inject<ClientConstellation>('constl');
+export const constellation = (): Constellation => {
+  const constl = inject<Constellation>('constl');
   if (constl) return constl;
   throw new Error("Constellation n'est pas trouvable.");
 };

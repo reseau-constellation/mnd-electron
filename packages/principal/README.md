@@ -24,7 +24,7 @@ export const gestionnaireFenêtres = new GestionnaireFenêtres({
 });
 ```
 
-Connecter chaque nouvelle fenêtre de votre appli à Constellation au moment où vous la créez :
+Connecter chaque nouvelle fenêtre de votre appli à Constellation au moment où vous la créez :
 ```TypeScript
 // main.ts
 import {BrowserWindow} from 'electron';
@@ -57,17 +57,7 @@ export {
 } from '@constl/mandataire-electron-principal';
 ```
 
-## Utilisation : préchargeur
+## Utilisation : rendu
 
-Dans votre code préchargeur, vous devez exposer les fonctions suivantes avec `electron.contextBridge.exposeInMainWorld`. Nous recommandons [unplugin-auto-expose](https://www.npmjs.com/package/unplugin-auto-expose), qui simplifie grandement la tâche.
 
-```TypeScript
-// preload.ts
-
-export {
-  envoyerMessageÀConstellation,
-  écouterMessagesDeConstellation,
-  envoyerMessageÀServeurConstellation,  // Uniquement si vous voulez inclure le serveur WS
-  écouterMessagesDeServeurConstellation,  // Uniquement si vous voulez inclure le serveur WS
-} from '@constl/mandataire-electron-principal';
 ```

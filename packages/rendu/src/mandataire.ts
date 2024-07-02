@@ -29,9 +29,9 @@ export class MandataireClientÉlectronPrincipal extends Mandatairifiable {
       (m: MessageDIpa) => {
         if (this.journal)
           this.journal(
-            "Rendu : message de Constellation : " + JSON.stringify(m),
+            "Rendu : message reçu de Constellation : " + JSON.stringify(m),
           );
-        this.événements.emit("message", m);
+        this.recevoirMessageDIpa(m);
       },
     );
   }

@@ -91,7 +91,9 @@ export class GestionnaireFenêtres {
     this.constellation = new gestionnaireClient.GestionnaireClient(
       (m: MessageDIpa) =>
         this.envoyerMessageDIpa(m),
-      (e: string) => this.envoyerErreur(e),
+      ({erreur, idRequète, code}: {erreur: string, idRequète?: string; code?: string}) => this.envoyerErreur({
+        erreur, idRequète, code
+      }),
       opts,
     );
     ipcMain.on(
@@ -164,10 +166,12 @@ export class GestionnaireFenêtres {
     }
   }
 
-  envoyerErreur(e: string) {
+  envoyerErreur({erreur, idRequète, code}: {erreur: string, idRequète?: string, code?: string}) {
     const messageErreur: MessageErreurDIpa = {
       type: "erreur",
-      erreur: e,
+      erreur,
+      id: idRequète,
+      codeErreur: code,
     };
     Object.values(this.fenêtres).forEach((f) =>
       f.webContents.send(CODE_MESSAGE_D_IPA, messageErreur),
