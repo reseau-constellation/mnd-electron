@@ -38,7 +38,7 @@ importers:
         version: 1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^2.0.3
-        version: 2.0.3
+        version: 2.0.4
       '@constl/serveur':
         specifier: ^2.0.7
         version: 2.0.8(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
@@ -95,7 +95,7 @@ importers:
     dependencies:
       '@constl/mandataire':
         specifier: ^2.0.3
-        version: 2.0.3
+        version: 2.0.4
       events:
         specifier: ^3.3.0
         version: 3.3.0
@@ -105,7 +105,7 @@ importers:
         version: 1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire-electron-principal':
         specifier: ^2.0.0
-        version: 2.0.0(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@2.0.3)(@constl/serveur@2.0.8(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@31.1.0)
+        version: 2.0.0(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@2.0.4)(@constl/serveur@2.0.8(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@31.1.0)
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.14.1
         version: 7.15.0(@typescript-eslint/parser@7.15.0(eslint@9.6.0)(typescript@5.5.3))(eslint@9.6.0)(typescript@5.5.3)
@@ -147,10 +147,10 @@ importers:
         version: 1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^1.0.2
-        version: 1.0.2
+        version: 2.0.4
       '@constl/mandataire-electron-principal':
         specifier: ^2.0.0
-        version: 2.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@1.0.2)(@constl/serveur@1.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@30.0.8)
+        version: 2.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@2.0.4)(@constl/serveur@1.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@30.0.8)
       '@constl/mandataire-electron-rendu':
         specifier: ^2.0.0
         version: 2.0.0
@@ -1144,8 +1144,8 @@ packages:
   '@constl/mandataire@1.0.2':
     resolution: {integrity: sha512-L4HzTXWJOuoTVeGxGQBKOK0fT5hAmMoZan2SU3mCkz5dN1at8R5JOmW9A8lcFWg5TblMHRDj5FRxAqmtIdhBOA==}
 
-  '@constl/mandataire@2.0.3':
-    resolution: {integrity: sha512-fQhJ+p28yG6hM3QY95/hjBab6NHEb1fL1Oh9Ufq7FPCx2Q+9FHJ9qVX6xHmB2VRvlO84AIMROCpniJE5H/Z5Lg==}
+  '@constl/mandataire@2.0.4':
+    resolution: {integrity: sha512-pAzNqmAWaXwo+fcswvo0bPSdEwMnDfx0MMgXj1SKktuZMTblkQBl8CJCowGHPaUdsozw5fD/bXcquXHOz2RSng==}
 
   '@constl/serveur@1.0.0':
     resolution: {integrity: sha512-RcYp3+la4JIoCnn8rQIXqmoGWVkbvstpWWlnu82cJVkc+oi0SMSWs5U8XqbLSDNgra+7jRpJLre13xsbFprdzA==}
@@ -9244,7 +9244,7 @@ snapshots:
       '@chainsafe/libp2p-yamux': 6.0.2
       '@chriscdn/promise-semaphore': 2.0.9
       '@constl/bohr-db': 1.1.0(bufferutil@4.0.8)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@constl/mandataire': 2.0.3
+      '@constl/mandataire': 2.0.4
       '@constl/utils-ipa': 1.0.1
       '@helia/block-brokers': 1.0.0
       '@helia/unixfs': 3.0.6(encoding@0.1.13)
@@ -9308,20 +9308,20 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/mandataire-electron-principal@2.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@1.0.2)(@constl/serveur@1.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@30.0.8)':
+  '@constl/mandataire-electron-principal@2.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@2.0.4)(@constl/serveur@1.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@30.0.8)':
     dependencies:
       '@constl/ipa': 1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@constl/mandataire': 1.0.2
+      '@constl/mandataire': 2.0.4
       '@constl/serveur': 1.0.0(@constl/ipa@1.0.27(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       electron: 30.0.8
       semaphore-async-await: 1.5.1
       tslib: 2.6.3
       uuid: 10.0.0
 
-  '@constl/mandataire-electron-principal@2.0.0(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@2.0.3)(@constl/serveur@2.0.8(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@31.1.0)':
+  '@constl/mandataire-electron-principal@2.0.0(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(@constl/mandataire@2.0.4)(@constl/serveur@2.0.8(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))))(electron@31.1.0)':
     dependencies:
       '@constl/ipa': 1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@constl/mandataire': 2.0.3
+      '@constl/mandataire': 2.0.4
       '@constl/serveur': 2.0.8(@constl/ipa@1.0.30(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       electron: 31.1.0
       semaphore-async-await: 1.5.1
@@ -9330,7 +9330,7 @@ snapshots:
 
   '@constl/mandataire-electron-rendu@2.0.0':
     dependencies:
-      '@constl/mandataire': 2.0.3
+      '@constl/mandataire': 2.0.4
       events: 3.3.0
 
   '@constl/mandataire@1.0.2':
@@ -9338,7 +9338,7 @@ snapshots:
       events: 3.3.0
       uuid: 9.0.1
 
-  '@constl/mandataire@2.0.3':
+  '@constl/mandataire@2.0.4':
     dependencies:
       events: 3.3.0
       uuid: 10.0.0
