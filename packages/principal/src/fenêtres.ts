@@ -20,7 +20,7 @@ import {
   CODE_MESSAGE_POUR_SERVEUR,
   CODE_CLIENT_PRÊT,
   messageAuthServeur,
-  messageRequètesConnexion,
+  messageRequêtesConnexion,
 } from "@/messages.js";
 
 const CODE_PRÊT = "prêt";
@@ -50,7 +50,7 @@ export class GestionnaireFenêtres {
       >["lancerServeur"]
     >
   >;
-  requètesServeur: { [idSuivi: string]: () => void };
+  requêtesServeur: { [idSuivi: string]: () => void };
 
   constructor({
     enDéveloppement,
@@ -72,7 +72,7 @@ export class GestionnaireFenêtres {
     this.opts = opts;
 
     this.fenêtres = {};
-    this.requètesServeur = {};
+    this.requêtesServeur = {};
     this.verrouServeur = new Lock();
     this.événements =
       new EventEmitter() as TypedEmitter<ÉvénementsGestionnaire>;
@@ -91,8 +91,8 @@ export class GestionnaireFenêtres {
     this.constellation = new gestionnaireClient.GestionnaireClient(
       (m: MessageDIpa) =>
         this.envoyerMessageDIpa(m),
-      ({erreur, idRequète, code}: {erreur: string, idRequète?: string; code?: string}) => this.envoyerErreur({
-        erreur, idRequète, code
+      ({erreur, idRequête, code}: {erreur: string, idRequête?: string; code?: string}) => this.envoyerErreur({
+        erreur, idRequête, code
       }),
       opts,
     );
@@ -166,11 +166,11 @@ export class GestionnaireFenêtres {
     }
   }
 
-  envoyerErreur({erreur, idRequète, code}: {erreur: string, idRequète?: string, code?: string}) {
+  envoyerErreur({erreur, idRequête, code}: {erreur: string, idRequête?: string, code?: string}) {
     const messageErreur: MessageErreurDIpa = {
       type: "erreur",
       erreur,
-      id: idRequète,
+      id: idRequête,
       codeErreur: code,
     };
     Object.values(this.fenêtres).forEach((f) =>
@@ -247,31 +247,31 @@ export class GestionnaireFenêtres {
 
   async gérerMessageAuthServeur(message: messageAuthServeur) {
     switch (message.contenu.type) {
-      case "approuverRequète":
-        this.connexionServeur?.approuverRequète(message.contenu.idRequète);
+      case "approuverRequête":
+        this.connexionServeur?.approuverRequête(message.contenu.idRequête);
         break;
 
-      case "refuserRequète":
-        this.connexionServeur?.refuserRequète(message.contenu.idRequète);
+      case "refuserRequête":
+        this.connexionServeur?.refuserRequête(message.contenu.idRequête);
         break;
 
-      case "suivreRequètes": {
-        const fOublierSuivi = this.connexionServeur?.suivreRequètes(
-          (requètes) => {
-            const messageRetour: messageRequètesConnexion = {
-              type: "requètesConnexion",
-              requètes,
+      case "suivreRequêtes": {
+        const fOublierSuivi = this.connexionServeur?.suivreRequêtes(
+          (requêtes) => {
+            const messageRetour: messageRequêtesConnexion = {
+              type: "requêtesConnexion",
+              requêtes,
             };
             this.envoyerMessageDuServeur(messageRetour);
           },
         );
         if (fOublierSuivi)
-          this.requètesServeur[message.contenu.idSuivi] = fOublierSuivi;
+          this.requêtesServeur[message.contenu.idSuivi] = fOublierSuivi;
         break;
       }
-      case "oublierRequètes":
-        this.requètesServeur[message.contenu.idSuivi]?.();
-        delete this.requètesServeur[message.contenu.idSuivi];
+      case "oublierRequêtes":
+        this.requêtesServeur[message.contenu.idSuivi]?.();
+        delete this.requêtesServeur[message.contenu.idSuivi];
         break;
 
       default:

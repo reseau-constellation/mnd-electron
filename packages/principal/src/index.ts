@@ -4,6 +4,12 @@ export type {
   messageInitServeur,
   messagePourServeur,
   messagePrêtDeServeur,
+  messageAuthServeur,
+  contenuRequêteAuthServeur,
+  suivreRequêtesAuthServeur,
+  refuserRequêteAuthServeur,
+  oublierRequêtesAuthServeur,
+  approuverRequêteAuthServeur,
 } from "@/messages.js";
 
 export {

@@ -17,36 +17,37 @@ export type messageFermerServeur = {
   type: "fermer";
 };
 
-export type messageAuthServeur = {
+export type messageAuthServeur<T extends contenuRequêteAuthServeur = contenuRequêteAuthServeur> = {
   type: "auth";
-  contenu:
-    | suivreRequètesAuthServeur
-    | approuverRequèteAuthServeur
-    | refuserRequèteAuthServeur
-    | oublierRequètesAuthServeur;
+  contenu: T;
 };
 
-export type suivreRequètesAuthServeur = {
-  type: "suivreRequètes";
+export type contenuRequêteAuthServeur = suivreRequêtesAuthServeur
+| approuverRequêteAuthServeur
+| refuserRequêteAuthServeur
+| oublierRequêtesAuthServeur
+
+export type suivreRequêtesAuthServeur = {
+  type: "suivreRequêtes";
   idSuivi: string;
 };
 
-export type oublierRequètesAuthServeur = {
-  type: "oublierRequètes";
+export type oublierRequêtesAuthServeur = {
+  type: "oublierRequêtes";
   idSuivi: string;
 };
 
-export type approuverRequèteAuthServeur = {
-  type: "approuverRequète";
-  idRequète: string;
+export type approuverRequêteAuthServeur = {
+  type: "approuverRequête";
+  idRequête: string;
 };
 
-export type refuserRequèteAuthServeur = {
-  type: "refuserRequète";
-  idRequète: string;
+export type refuserRequêteAuthServeur = {
+  type: "refuserRequête";
+  idRequête: string;
 };
 
-export type messageDeServeur = messagePrêtDeServeur | messageRequètesConnexion;
+export type messageDeServeur = messagePrêtDeServeur | messageRequêtesConnexion;
 
 export type messagePrêtDeServeur = {
   type: "prêt";
@@ -54,7 +55,7 @@ export type messagePrêtDeServeur = {
   codeSecret: string;
 };
 
-export type messageRequètesConnexion = {
-  type: "requètesConnexion";
-  requètes: string[];
+export type messageRequêtesConnexion = {
+  type: "requêtesConnexion";
+  requêtes: string[];
 };
