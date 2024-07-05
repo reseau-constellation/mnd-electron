@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import type {
   messageInitServeur,
   messageFermerServeur,
-  messageAuthServeur, 
+  messageAuthServeur,
   suivreRequêtesAuthServeur,
   oublierRequêtesAuthServeur,
   refuserRequêteAuthServeur,
@@ -24,8 +24,8 @@ export class GestionnaireServeur {
   }) {
     this.envoyerMessageÀServeurConstellation =
       envoyerMessageÀServeurConstellation;
-    this.écouterMessagesDeServeurConstellation = écouterMessagesDeServeurConstellation
-
+    this.écouterMessagesDeServeurConstellation =
+      écouterMessagesDeServeurConstellation;
   }
 
   async initialiser(port?: number): Promise<number> {
@@ -35,70 +35,77 @@ export class GestionnaireServeur {
     };
 
     let oublierÉcoute: (() => void) | undefined = undefined;
-    const promessePort = new Promise<number>(résoudre => {
+    const promessePort = new Promise<number>((résoudre) => {
       oublierÉcoute = this.écouterMessagesDeServeurConstellation((message) => {
         if (message.type === "prêt") {
           oublierÉcoute?.();
           résoudre(message.port);
         }
       });
-    })
+    });
     this.envoyerMessageÀServeurConstellation(messageInit);
 
     return await promessePort;
   }
 
-  async suivreRequêtesAuthServeur ({f}: {f: (r: string[]) => void}): Promise<() => void> {
+  async suivreRequêtesAuthServeur({
+    f,
+  }: {
+    f: (r: string[]) => void;
+  }): Promise<() => void> {
     const idSuivi = uuidv4();
-    const messageSuivreRequêtes: messageAuthServeur<suivreRequêtesAuthServeur> = {
-      type: "auth",
-      contenu: {
-        type: "suivreRequêtes",
-        idSuivi,
-      }
-    }
-    this.envoyerMessageÀServeurConstellation(messageSuivreRequêtes)
-    
-    const oublierÉcoute = this.écouterMessagesDeServeurConstellation(
-      (message) => {
-        if (message.type === "requêtesConnexion")
-          f(message.requêtes);
-      }
-    )
-    const oublier = () => {
-      const messageOublierRequêtes: messageAuthServeur<oublierRequêtesAuthServeur> = {
+    const messageSuivreRequêtes: messageAuthServeur<suivreRequêtesAuthServeur> =
+      {
         type: "auth",
         contenu: {
-          type: "oublierRequêtes",
+          type: "suivreRequêtes",
           idSuivi,
-        }
-      }
+        },
+      };
+    this.envoyerMessageÀServeurConstellation(messageSuivreRequêtes);
+
+    const oublierÉcoute = this.écouterMessagesDeServeurConstellation(
+      (message) => {
+        if (message.type === "requêtesConnexion") f(message.requêtes);
+      },
+    );
+    const oublier = () => {
+      const messageOublierRequêtes: messageAuthServeur<oublierRequêtesAuthServeur> =
+        {
+          type: "auth",
+          contenu: {
+            type: "oublierRequêtes",
+            idSuivi,
+          },
+        };
       this.envoyerMessageÀServeurConstellation(messageOublierRequêtes);
       oublierÉcoute();
-    }
-    return oublier
+    };
+    return oublier;
   }
 
-  async approuverRequêteAuthServeur ({idRequête}: {idRequête: string}) {
-    const messageApprouverRequête: messageAuthServeur<approuverRequêteAuthServeur> = {
-      type: "auth",
-      contenu: {
-        type: "approuverRequête",
-        idRequête,
-      }
-    }
-    this.envoyerMessageÀServeurConstellation(messageApprouverRequête)
+  async approuverRequêteAuthServeur({ idRequête }: { idRequête: string }) {
+    const messageApprouverRequête: messageAuthServeur<approuverRequêteAuthServeur> =
+      {
+        type: "auth",
+        contenu: {
+          type: "approuverRequête",
+          idRequête,
+        },
+      };
+    this.envoyerMessageÀServeurConstellation(messageApprouverRequête);
   }
 
-  async refuserRequêteAuthServeur  ({idRequête}: {idRequête: string}) {
-    const messageRefuserRequête: messageAuthServeur<refuserRequêteAuthServeur> = {
-      type: "auth",
-      contenu: {
-        type: "refuserRequête",
-        idRequête,
-      }
-    }
-    this.envoyerMessageÀServeurConstellation(messageRefuserRequête)
+  async refuserRequêteAuthServeur({ idRequête }: { idRequête: string }) {
+    const messageRefuserRequête: messageAuthServeur<refuserRequêteAuthServeur> =
+      {
+        type: "auth",
+        contenu: {
+          type: "refuserRequête",
+          idRequête,
+        },
+      };
+    this.envoyerMessageÀServeurConstellation(messageRefuserRequête);
   }
 
   async fermer() {

@@ -1,6 +1,4 @@
-import type {
-  MessageDIpa, MessagePourIpa
-} from "@constl/mandataire";
+import type { MessageDIpa, MessagePourIpa } from "@constl/mandataire";
 import type {
   envoyerMessageÀConstellation as _envoyerMessageÀConstellation,
   écouterMessagesDeConstellation as _écouterMessagesDeConstellation,
@@ -25,15 +23,13 @@ export class MandataireConstellationÉlectronPrincipal extends Mandatairifiable 
     this.envoyerMessageÀConstellation = envoyerMessageÀConstellation;
     this.journal = journal;
 
-    écouterMessagesDeConstellation(
-      (m: MessageDIpa) => {
-        if (this.journal)
-          this.journal(
-            "Rendu : message reçu de Constellation : " + JSON.stringify(m),
-          );
-        this.recevoirMessageDIpa(m);
-      },
-    );
+    écouterMessagesDeConstellation((m: MessageDIpa) => {
+      if (this.journal)
+        this.journal(
+          "Rendu : message reçu de Constellation : " + JSON.stringify(m),
+        );
+      this.recevoirMessageDIpa(m);
+    });
   }
 
   envoyerMessageÀIpa(message: MessagePourIpa): void {
