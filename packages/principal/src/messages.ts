@@ -17,15 +17,18 @@ export type messageFermerServeur = {
   type: "fermer";
 };
 
-export type messageAuthServeur<T extends contenuRequêteAuthServeur = contenuRequêteAuthServeur> = {
+export type messageAuthServeur<
+  T extends contenuRequêteAuthServeur = contenuRequêteAuthServeur,
+> = {
   type: "auth";
   contenu: T;
 };
 
-export type contenuRequêteAuthServeur = suivreRequêtesAuthServeur
-| approuverRequêteAuthServeur
-| refuserRequêteAuthServeur
-| oublierRequêtesAuthServeur
+export type contenuRequêteAuthServeur =
+  | suivreRequêtesAuthServeur
+  | approuverRequêteAuthServeur
+  | refuserRequêteAuthServeur
+  | oublierRequêtesAuthServeur;
 
 export type suivreRequêtesAuthServeur = {
   type: "suivreRequêtes";

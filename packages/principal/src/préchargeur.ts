@@ -23,9 +23,7 @@ export const attendreFenêtreAttachée = (): Promise<void> => {
   });
 };
 
-export const envoyerMessageÀConstellation = async (
-  message: MessagePourIpa,
-) => {
+export const envoyerMessageÀConstellation = async (message: MessagePourIpa) => {
   // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
   await attendreFenêtreAttachée();
   ipcRenderer.send(CODE_MESSAGE_POUR_IPA, message);
@@ -34,10 +32,7 @@ export const envoyerMessageÀConstellation = async (
 export const écouterMessagesDeConstellation = (
   f: (message: MessageDIpa) => void,
 ): (() => void) => {
-  const écouteur = (
-    _event: IpcRendererEvent,
-    ...args: [MessageDIpa]
-  ) => {
+  const écouteur = (_event: IpcRendererEvent, ...args: [MessageDIpa]) => {
     f(...args);
   };
   ipcRenderer.on(CODE_MESSAGE_D_IPA, écouteur);

@@ -1,8 +1,10 @@
 import type { client, mandataire } from "@constl/ipa";
 import type {
   ErreurMandataire,
-  MessageDIpa, MessageErreurDIpa, MessagePourIpa
-} from "@constl/mandataire"
+  MessageDIpa,
+  MessageErreurDIpa,
+  MessagePourIpa,
+} from "@constl/mandataire";
 import TypedEmitter from "typed-emitter";
 
 import type { BrowserWindow, IpcMainEvent } from "electron";
@@ -38,9 +40,7 @@ export class GestionnaireFenêtres {
   opts?: client.optsConstellation;
 
   fenêtres: { [key: string]: BrowserWindow };
-  constellation:
-    | mandataire.EnveloppeIpa
-    | undefined;
+  constellation: mandataire.EnveloppeIpa | undefined;
   verrouServeur: Lock;
   événements: TypedEmitter<ÉvénementsGestionnaire>;
   connexionServeur?: Awaited<
@@ -90,11 +90,13 @@ export class GestionnaireFenêtres {
       ...this.opts,
     };
     this.constellation = new EnveloppeIpa(
-      (m: MessageDIpa) =>
-        this.envoyerMessageDIpa(m),
-      (e: ErreurMandataire) => this.envoyerErreur({
-        erreur: e.erreur, id: e.id, code: e.code
-      }),
+      (m: MessageDIpa) => this.envoyerMessageDIpa(m),
+      (e: ErreurMandataire) =>
+        this.envoyerErreur({
+          erreur: e.erreur,
+          id: e.id,
+          code: e.code,
+        }),
       opts,
     );
     ipcMain.on(
@@ -167,7 +169,15 @@ export class GestionnaireFenêtres {
     }
   }
 
-  envoyerErreur({erreur, id, code}: {erreur: string, id?: string, code: string}) {
+  envoyerErreur({
+    erreur,
+    id,
+    code,
+  }: {
+    erreur: string;
+    id?: string;
+    code: string;
+  }) {
     const messageErreur: MessageErreurDIpa = {
       type: "erreur",
       erreur,
