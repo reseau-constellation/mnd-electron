@@ -38,7 +38,7 @@ importers:
         version: 1.0.32(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^2.0.7
-        version: 2.0.7
+        version: 2.0.8
       '@constl/serveur':
         specifier: ^2.0.11
         version: 2.0.11(@constl/ipa@1.0.32(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
@@ -95,7 +95,7 @@ importers:
     dependencies:
       '@constl/mandataire':
         specifier: ^2.0.6
-        version: 2.0.7
+        version: 2.0.8
       events:
         specifier: ^3.3.0
         version: 3.3.0
@@ -147,7 +147,7 @@ importers:
         version: 1.0.32(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^2.0.7
-        version: 2.0.7
+        version: 2.0.8
       '@constl/mandataire-electron-principal':
         specifier: workspace:^
         version: link:../principal
@@ -1126,8 +1126,8 @@ packages:
     resolution: {integrity: sha512-3O3Rsktp6zdFzLqSOEjKNigDsEKSsmY4A9469hgQy+E5/sJYe/oH3W2yWIqsX9YI4Yrj048So1KDSEv5R1cFmQ==}
     engines: {node: '>=20'}
 
-  '@constl/mandataire@2.0.7':
-    resolution: {integrity: sha512-cw/uljyJeX2qaeIWHrW0iF0lhW2FyueSF2NIj9ZUB5qNSeiN9Hflk8nfvpHoPr50CdlGBB16HIlOZvzzgOud/g==}
+  '@constl/mandataire@2.0.8':
+    resolution: {integrity: sha512-EL+saxpjmh8uh7U3qz1kI2NXAG9dHVh9naokqKeGcdsmpS8MHdsY4qxwuamukAxlYp2I416QtyIyx3TSdhKNFA==}
 
   '@constl/serveur@2.0.11':
     resolution: {integrity: sha512-E+7gm+pZxqhw9+ckXji4oZNtydHZm2C8mTxv/juAcmDZyU0k7CgEEttwzzubBN+kXSCgjw2dQLKjVo4uBKvc4w==}
@@ -6499,8 +6499,8 @@ packages:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
 
-  react-devtools-core@5.3.0:
-    resolution: {integrity: sha512-IG3T+azv48Oc5VLdHR4XdBNKNZIUOKRtx0sJMRvb++Zom/uqtx73j6u37JCsIBNIaq6vA7RPH5Bbcf/Wj53KXA==}
+  react-devtools-core@5.3.1:
+    resolution: {integrity: sha512-7FSb9meX0btdBQLwdFOwt6bGqvRPabmVMMslv8fgoSPqXyuGpgQe36kx8gR86XPw7aV1yVouTp6fyZ0EH+NfUw==}
 
   react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
@@ -8980,7 +8980,7 @@ snapshots:
       '@chainsafe/libp2p-yamux': 6.0.2
       '@chriscdn/promise-semaphore': 2.0.9
       '@constl/bohr-db': 1.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@constl/mandataire': 2.0.7
+      '@constl/mandataire': 2.0.8
       '@constl/utils-ipa': 1.0.1
       '@helia/block-brokers': 1.0.0
       '@helia/unixfs': 3.0.6(encoding@0.1.13)
@@ -9044,7 +9044,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/mandataire@2.0.7':
+  '@constl/mandataire@2.0.8':
     dependencies:
       events: 3.3.0
       uuid: 10.0.0
@@ -16435,7 +16435,7 @@ snapshots:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
-  react-devtools-core@5.3.0(bufferutil@4.0.8):
+  react-devtools-core@5.3.1(bufferutil@4.0.8):
     dependencies:
       shell-quote: 1.8.1
       ws: 7.5.10(bufferutil@4.0.8)
@@ -16487,7 +16487,7 @@ snapshots:
       pretty-format: 26.6.2
       promise: 8.3.0
       react: 18.2.0
-      react-devtools-core: 5.3.0(bufferutil@4.0.8)
+      react-devtools-core: 5.3.1(bufferutil@4.0.8)
       react-refresh: 0.14.2
       react-shallow-renderer: 16.15.0(react@18.2.0)
       regenerator-runtime: 0.13.11
