@@ -1,6 +1,6 @@
 {
   "name": "@constl/mandataire-electron-rendu",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Pour utiliser Constellation dans le processus rendu d'Électron. Doit être utilisé conjointement avec @constl/mandataire-electron-principal.",
   "main": "dist/index.js",
   "type": "module",
