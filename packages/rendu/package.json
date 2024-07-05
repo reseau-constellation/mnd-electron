@@ -1,7 +1,7 @@
 {
   "name": "@constl/mandataire-electron-rendu",
   "version": "2.2.0",
-  "description": "",
+  "description": "Pour utiliser Constellation dans le processus rendu d'Électron. Doit être utilisé conjointement avec @constl/mandataire-electron-principal.",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -18,12 +18,14 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "@constl/mandataire": "^2.0.6",
-    "events": "^3.3.0"
+    "@constl/mandataire": "^2.0.8",
+    "events": "^3.3.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "@constl/ipa": "^1.0.31",
+    "@constl/ipa": "^1.1.1",
     "@constl/mandataire-electron-principal": "workspace:^",
+    "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^9.6.0",

@@ -8,7 +8,7 @@ import type {
 
 import { Mandatairifiable, générerMandataire } from "@constl/mandataire";
 
-export class MandataireClientÉlectronPrincipal extends Mandatairifiable {
+export class MandataireConstellationÉlectronPrincipal extends Mandatairifiable {
   envoyerMessageÀConstellation: typeof _envoyerMessageÀConstellation;
   journal?: (msg: string) => void;
 
@@ -55,7 +55,7 @@ export const générerMandataireÉlectronPrincipal = ({
   journal?: (msg: string) => void;
 }) => {
   return générerMandataire(
-    new MandataireClientÉlectronPrincipal({
+    new MandataireConstellationÉlectronPrincipal({
       écouterMessagesDeConstellation,
       envoyerMessageÀConstellation,
       journal,

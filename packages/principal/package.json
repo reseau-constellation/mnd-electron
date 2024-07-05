@@ -26,9 +26,9 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "@constl/ipa": "^1.0.31",
-    "@constl/mandataire": "^2.0.7",
-    "@constl/serveur": "^2.0.11",
+    "@constl/ipa": "^1.1.1",
+    "@constl/mandataire": "^2.0.8",
+    "@constl/serveur": "^2.0.13",
     "@eslint/js": "^9.6.0",
     "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",

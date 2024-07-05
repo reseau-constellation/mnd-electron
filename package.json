@@ -9,7 +9,7 @@
   "scripts": {
     "compiler": "pnpm lerna run compiler",
     "formatter": "pnpm lerna run formatter",
-    "publier": "pnpm test && pnpm lerna publish  --no-private",
+    "publier": "pnpm lerna run formatter && pnpm test && pnpm lerna publish  --no-private",
     "test": "pnpm compiler && pnpm lerna run test",
     "versionner": "pnpm lerna version"
   },

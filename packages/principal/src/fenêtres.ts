@@ -1,5 +1,6 @@
 import type { client, mandataire } from "@constl/ipa";
 import type {
+  ErreurMandataire,
   MessageDIpa, MessageErreurDIpa, MessagePourIpa
 } from "@constl/mandataire"
 import TypedEmitter from "typed-emitter";
@@ -38,7 +39,7 @@ export class GestionnaireFenêtres {
 
   fenêtres: { [key: string]: BrowserWindow };
   constellation:
-    | mandataire.gestionnaireClient.GestionnaireClient
+    | mandataire.EnveloppeIpa
     | undefined;
   verrouServeur: Lock;
   événements: TypedEmitter<ÉvénementsGestionnaire>;
@@ -80,7 +81,7 @@ export class GestionnaireFenêtres {
   }
 
   async initialiser() {
-    const { gestionnaireClient } = (await this.importationIPA).mandataire;
+    const { EnveloppeIpa } = (await this.importationIPA).mandataire;
     const opts: client.optsConstellation = {
       dossier: join(
         app.getPath("userData"),
@@ -88,11 +89,11 @@ export class GestionnaireFenêtres {
       ),
       ...this.opts,
     };
-    this.constellation = new gestionnaireClient.GestionnaireClient(
+    this.constellation = new EnveloppeIpa(
       (m: MessageDIpa) =>
         this.envoyerMessageDIpa(m),
-      ({erreur, idRequête, code}: {erreur: string, idRequête?: string; code?: string}) => this.envoyerErreur({
-        erreur, idRequête, code
+      (e: ErreurMandataire) => this.envoyerErreur({
+        erreur: e.erreur, id: e.id, code: e.code
       }),
       opts,
     );
@@ -166,11 +167,11 @@ export class GestionnaireFenêtres {
     }
   }
 
-  envoyerErreur({erreur, idRequête, code}: {erreur: string, idRequête?: string, code?: string}) {
+  envoyerErreur({erreur, id, code}: {erreur: string, id?: string, code: string}) {
     const messageErreur: MessageErreurDIpa = {
       type: "erreur",
       erreur,
-      id: idRequête,
+      id,
       codeErreur: code,
     };
     Object.values(this.fenêtres).forEach((f) =>
