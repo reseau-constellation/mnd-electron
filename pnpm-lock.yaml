@@ -89,7 +89,7 @@ importers:
         version: 8.0.0(eslint@9.9.0)(typescript@5.5.4)
       typescript-transform-paths:
         specifier: ^3.4.7
-        version: 3.4.10(typescript@5.5.4)
+        version: 3.4.11(typescript@5.5.4)
 
   packages/rendu:
     dependencies:
@@ -141,7 +141,7 @@ importers:
         version: 5.5.4
       typescript-transform-paths:
         specifier: ^3.4.7
-        version: 3.4.10(typescript@5.5.4)
+        version: 3.4.11(typescript@5.5.4)
 
   packages/test:
     dependencies:
@@ -283,7 +283,7 @@ importers:
         version: 7.0.3
       electron:
         specifier: 30.0.8
-        version: 31.4.0
+        version: 30.0.8
       electron-builder:
         specifier: 24.13.3
         version: 24.13.3(electron-builder-squirrel-windows@24.13.3(dmg-builder@24.13.3))
@@ -4056,11 +4056,16 @@ packages:
   electron-to-chromium@1.4.816:
     resolution: {integrity: sha512-EKH5X5oqC6hLmiS7/vYtZHZFTNdhsYG5NVPRN6Yn0kQHNBlT59+xSM8HBy66P5fxWpKgZbPqb+diC64ng295Jw==}
 
-  electron-to-chromium@1.5.7:
-    resolution: {integrity: sha512-6FTNWIWMxMy/ZY6799nBlPtF1DFDQ6VQJ7yyDP27SJNt5lwtQ5ufqVvHylb3fdQefvRcgA3fKcFMJi9OLwBRNw==}
+  electron-to-chromium@1.5.8:
+    resolution: {integrity: sha512-4Nx0gP2tPNBLTrFxBMHpkQbtn2hidPVr/+/FTtcCiBYTucqc70zRyVZiOLj17Ui3wTO7SQ1/N+hkHYzJjBzt6A==}
 
   electron-updater@6.1.8:
     resolution: {integrity: sha512-hhOTfaFAd6wRHAfUaBhnAOYc+ymSGCWJLtFkw4xJqOvtpHmIdNHnXDV9m1MHC+A6q08Abx4Ykgyz/R5DGKNAMQ==}
+
+  electron@30.0.8:
+    resolution: {integrity: sha512-ivzXJJ/9gdb4oOw+5SDuaZpSInz8C+Z021dKZfFLMltKbDa4sSqt5cRBiUg7J36Z2kdus+Jai0bdHWutYE9wAA==}
+    engines: {node: '>= 12.20.55'}
+    hasBin: true
 
   electron@31.4.0:
     resolution: {integrity: sha512-YTwKoAA+nrJMlI1TTHnIXLYWoQLKnhbkz0qxZcI7Hadcy0UaFMFs9xzwvH2MnrRpVJy7RKo49kVGuvSdRl8zMA==}
@@ -7779,8 +7784,8 @@ packages:
       typescript:
         optional: true
 
-  typescript-transform-paths@3.4.10:
-    resolution: {integrity: sha512-OPBjXDnwX/B4JzewvRAzEzcNK+hQn/JonCfUN93VARsFQcj/wk//4RJ3FPp/SgzsT1s1EJJhOass5grxy8Y2yA==}
+  typescript-transform-paths@3.4.11:
+    resolution: {integrity: sha512-yUEHc991mbXjrjcOSBat1yiwzlSOqRyzjzj/5txQ7jy21Up0/p9H7XQ1c2lYLxf+Aum9vMpW/tG86ajkNupsZA==}
     peerDependencies:
       typescript: '>=3.6.5'
 
@@ -13924,7 +13929,7 @@ snapshots:
   browserslist@4.23.3:
     dependencies:
       caniuse-lite: 1.0.30001651
-      electron-to-chromium: 1.5.7
+      electron-to-chromium: 1.5.8
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
@@ -14765,7 +14770,7 @@ snapshots:
 
   electron-to-chromium@1.4.816: {}
 
-  electron-to-chromium@1.5.7: {}
+  electron-to-chromium@1.5.8: {}
 
   electron-updater@6.1.8:
     dependencies:
@@ -14777,6 +14782,14 @@ snapshots:
       lodash.isequal: 4.5.0
       semver: 7.6.2
       tiny-typed-emitter: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+
+  electron@30.0.8:
+    dependencies:
+      '@electron/get': 2.0.3
+      '@types/node': 20.14.9
+      extract-zip: 2.0.1
     transitivePeerDependencies:
       - supports-color
 
@@ -19471,7 +19484,7 @@ snapshots:
       - eslint
       - supports-color
 
-  typescript-transform-paths@3.4.10(typescript@5.5.4):
+  typescript-transform-paths@3.4.11(typescript@5.5.4):
     dependencies:
       minimatch: 3.1.2
       typescript: 5.5.4
