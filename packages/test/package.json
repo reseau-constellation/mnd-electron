@@ -10,7 +10,7 @@
     "name": "Julien Jean Malard-Adam",
     "url": "https://github.com/julienmalard"
   },
-  "private": true, 
+  "private": true,
   "version": "2.1.0",
   "type": "module",
   "main": "packages/main/dist/index.cjs",
@@ -30,7 +30,7 @@
     "formatter": "pnpm lint && npx prettier --write \"**/*.{js,mjs,cjs,ts,mts,cts,vue,json}\""
   },
   "devDependencies": {
-    "@constl/utils-tests": "^1.2.6",
+    "@constl/utils-tests": "^1.4.2",
     "@eslint/js": "^9.4.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/d3": "^7.4.3",
@@ -70,8 +70,8 @@
   },
   "dependencies": {
     "@achingbrain/nat-port-mapper": "1.0.13",
-    "@constl/ipa": "^1.0.31",
-    "@constl/mandataire": "^2.0.7",
+    "@constl/ipa": "^1.2.3",
+    "@constl/mandataire": "^3.0.2",
     "@constl/mandataire-electron-principal": "workspace:^",
     "@constl/mandataire-electron-rendu": "workspace:^",
     "@constl/serveur": "^2.0.9",

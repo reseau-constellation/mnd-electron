@@ -91,12 +91,7 @@ export class GestionnaireFenêtres {
     };
     this.constellation = new EnveloppeIpa(
       (m: MessageDIpa) => this.envoyerMessageDIpa(m),
-      (e: ErreurMandataire) =>
-        this.envoyerErreur({
-          erreur: e.erreur,
-          id: e.id,
-          code: e.code,
-        }),
+      (e: ErreurMandataire) => this.envoyerErreur(e),
       opts,
     );
     ipcMain.on(
@@ -156,9 +151,9 @@ export class GestionnaireFenêtres {
   }
 
   envoyerMessageDIpa(m: MessageDIpa) {
-    if (m.id) {
-      const idFenêtre = m.id.split(":")[0];
-      m.id = m.id.split(":").slice(1).join(":");
+    if (m.idRequête) {
+      const idFenêtre = m.idRequête.split(":")[0];
+      m.idRequête = m.idRequête.split(":").slice(1).join(":");
 
       const fenêtre = this.fenêtres[idFenêtre];
       fenêtre.webContents.send(CODE_MESSAGE_D_IPA, m);
@@ -171,17 +166,17 @@ export class GestionnaireFenêtres {
 
   envoyerErreur({
     erreur,
-    id,
+    idRequête,
     code,
   }: {
     erreur: string;
-    id?: string;
+    idRequête?: string;
     code: string;
   }) {
     const messageErreur: MessageErreurDIpa = {
       type: "erreur",
       erreur,
-      id,
+      idRequête,
       codeErreur: code,
     };
     Object.values(this.fenêtres).forEach((f) =>
@@ -202,7 +197,7 @@ export class GestionnaireFenêtres {
       if (!this.constellation)
         throw new Error("Constellation n'est pas initialisée.");
 
-      if (message.id) message.id = id + ":" + message.id;
+      if (message.idRequête) message.idRequête = id + ":" + message.idRequête;
       await this.constellation.gérerMessage(message);
     };
 

@@ -18,12 +18,12 @@
   "author": "Julien Malard-Adam",
   "license": "AGPL-3.0-or-later",
   "dependencies": {
-    "@constl/mandataire": "^2.0.8",
+    "@constl/mandataire": "^3.0.2",
     "events": "^3.3.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
-    "@constl/ipa": "^1.1.1",
+    "@constl/ipa": "^1.2.3",
     "@constl/mandataire-electron-principal": "workspace:^",
     "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
