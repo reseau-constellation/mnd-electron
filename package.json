@@ -20,7 +20,7 @@
   },
   "pnpm": {
     "overrides": {
-      "node-datachannel": "^0.11.0"
+      "node-datachannel": "^0.12.0"
     }
   }
 }
