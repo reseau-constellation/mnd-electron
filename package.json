@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "license": "AGPL-3.0-or-later",
   "private": false,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "compiler": "pnpm lerna run compiler",
     "formatter": "pnpm lerna run formatter",
