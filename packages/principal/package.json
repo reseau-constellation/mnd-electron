@@ -33,7 +33,7 @@
     "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "electron": "^31.1.0",
+    "electron": "^32.0.0",
     "eslint": "^9.6.0",
     "eslint-config-prettier": "^9.1.0",
     "genversion": "^3.2.0",
@@ -50,7 +50,7 @@
     "@constl/ipa": "^1.0.31",
     "@constl/mandataire": "^2.0.7",
     "@constl/serveur": "^2.0.9",
-    "electron": "^30.0.9 || ^31.0.0"
+    "electron": "^30.0.9 || ^31.0.0 || ^32.0.0"
   },
   "dependencies": {
     "semaphore-async-await": "^1.5.1",
