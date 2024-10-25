@@ -48,6 +48,23 @@ export class GestionnaireServeur {
     return await promessePort;
   }
 
+  async suivreÉtatServeur({
+    f,
+  }: {
+    f: (r: "activé" | "désactivé") => void;
+  }): Promise<() => void> {
+    const oublierÉcoute = this.écouterMessagesDeServeurConstellation(
+      (message) => {
+        if (message.type === "prêt") {
+          f("activé");
+        } else if (message.type === "fermé") {
+          f("désactivé");
+        }
+      },
+    );
+    return oublierÉcoute;
+  }
+
   async suivreRequêtesAuthServeur({
     f,
   }: {

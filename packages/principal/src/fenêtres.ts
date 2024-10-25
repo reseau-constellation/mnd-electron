@@ -24,6 +24,7 @@ import {
   CODE_CLIENT_PRÊT,
   messageAuthServeur,
   messageRequêtesConnexion,
+  messageFerméDeServeur,
 } from "@/messages.js";
 
 const CODE_PRÊT = "prêt";
@@ -119,9 +120,14 @@ export class GestionnaireFenêtres {
             this.gérerMessageAuthServeur(message);
             break;
 
-          case "fermer":
-            this.fermerServeur();
+          case "fermer": {
+            await this.fermerServeur();
+            const messageFermé: messageFerméDeServeur = {
+              type: "fermé",
+            };
+            this.envoyerMessageDuServeur(messageFermé);
             break;
+          }
 
           default:
             throw new Error("Message inconnu : " + JSON.stringify(message));

@@ -50,7 +50,10 @@ export type refuserRequêteAuthServeur = {
   idRequête: string;
 };
 
-export type messageDeServeur = messagePrêtDeServeur | messageRequêtesConnexion;
+export type messageDeServeur =
+  | messagePrêtDeServeur
+  | messageRequêtesConnexion
+  | messageFerméDeServeur;
 
 export type messagePrêtDeServeur = {
   type: "prêt";
@@ -61,4 +64,8 @@ export type messagePrêtDeServeur = {
 export type messageRequêtesConnexion = {
   type: "requêtesConnexion";
   requêtes: string[];
+};
+
+export type messageFerméDeServeur = {
+  type: "fermé";
 };
