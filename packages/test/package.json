@@ -20,7 +20,7 @@
     "build:preload": "cd ./packages/preload && vite build",
     "build:renderer": "cd ./packages/renderer && vite build",
     "compile": "cross-env MODE=production pnpm run build && electron-builder build --config .electron-builder.config.cjs",
-    "test": "pnpm run build && vitest run",
+    "test": "pnpm run build && vitest run --coverage",
     "lint": "eslint . --fix",
     "typecheck:main": "tsc --noEmit -p packages/main/tsconfig.json",
     "typecheck:preload": "tsc --noEmit -p packages/preload/tsconfig.json",
