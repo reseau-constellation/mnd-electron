@@ -89,7 +89,7 @@ importers:
         version: 8.8.0(eslint@9.12.0)(typescript@5.5.3)
       typescript-transform-paths:
         specifier: ^3.4.7
-        version: 3.4.7(typescript@5.5.3)
+        version: 3.5.1(typescript@5.5.3)
 
   packages/rendu:
     dependencies:
@@ -141,7 +141,7 @@ importers:
         version: 5.5.3
       typescript-transform-paths:
         specifier: ^3.4.7
-        version: 3.4.7(typescript@5.5.3)
+        version: 3.5.1(typescript@5.5.3)
 
   packages/test:
     dependencies:
@@ -7930,8 +7930,8 @@ packages:
       typescript:
         optional: true
 
-  typescript-transform-paths@3.4.7:
-    resolution: {integrity: sha512-1Us1kdkdfKd2unbkBAOV2HHRmbRBYpSuk9nJ7cLD2hP4QmfToiM/VpxNlhJc1eezVwVqSKSBjNSzZsK/fWR/9A==}
+  typescript-transform-paths@3.5.1:
+    resolution: {integrity: sha512-nq+exuF+38rAby9zrP+S6t0HWuwv69jeFu0I5UwjdoCIDPmnKIAr6a7JfYkbft7h5OzYKEDRhT/jLvvtTvWF4Q==}
     peerDependencies:
       typescript: '>=3.6.5'
 
@@ -19672,9 +19672,9 @@ snapshots:
       - eslint
       - supports-color
 
-  typescript-transform-paths@3.4.7(typescript@5.5.3):
+  typescript-transform-paths@3.5.1(typescript@5.5.3):
     dependencies:
-      minimatch: 3.1.2
+      minimatch: 9.0.5
       typescript: 5.5.3
 
   typescript@5.4.5: {}
