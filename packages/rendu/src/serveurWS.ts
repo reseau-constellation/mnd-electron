@@ -9,7 +9,9 @@ import type {
   approuverRequêteAuthServeur,
   envoyerMessageÀServeurConstellation as _envoyerMessageÀServeurConstellation,
   écouterMessagesDeServeurConstellation as _écouterMessagesDeServeurConstellation,
+  messagePrêtDeServeur,
 } from "@constl/mandataire-electron-principal";
+import { ÉtatServeur, ÉtatServeurActif, ÉtatServeurFermé } from "./types";
 
 export class GestionnaireServeur {
   envoyerMessageÀServeurConstellation: typeof _envoyerMessageÀServeurConstellation;
@@ -28,37 +30,48 @@ export class GestionnaireServeur {
       écouterMessagesDeServeurConstellation;
   }
 
-  async initialiser(port?: number): Promise<number> {
+  async initialiser(port?: number): Promise<{port: number, codeSecret: string}> {
     const messageInit: messageInitServeur = {
       type: "init",
       port,
     };
 
     let oublierÉcoute: (() => void) | undefined = undefined;
-    const promessePort = new Promise<number>((résoudre) => {
+    const promesseServeur = new Promise<messagePrêtDeServeur>((résoudre) => {
       oublierÉcoute = this.écouterMessagesDeServeurConstellation((message) => {
         if (message.type === "prêt") {
           oublierÉcoute?.();
-          résoudre(message.port);
+          résoudre(message);
         }
       });
     });
     this.envoyerMessageÀServeurConstellation(messageInit);
 
-    return await promessePort;
+    const { port: portFinal, codeSecret } = await promesseServeur;
+    return { port: portFinal, codeSecret };
   }
 
   async suivreÉtatServeur({
     f,
   }: {
-    f: (r: "activé" | "désactivé") => void;
+    f: (r: ÉtatServeur) => void;
   }): Promise<() => void> {
     const oublierÉcoute = this.écouterMessagesDeServeurConstellation(
       (message) => {
         if (message.type === "prêt") {
-          f("activé");
+          const état: ÉtatServeurActif = {
+            état: 'actif',
+            détails: {
+              port: message.port,
+              codeSecret: message.codeSecret
+            }
+          }
+          f(état);
         } else if (message.type === "fermé") {
-          f("désactivé");
+          const état: ÉtatServeurFermé = {
+            état: 'fermé'
+          }
+          f(état);
         }
       },
     );
