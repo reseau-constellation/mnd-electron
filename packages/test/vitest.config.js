@@ -17,10 +17,6 @@ const config = {
      */
     testTimeout: 30_000,
     hookTimeout: 30_000,
-    coverage: {
-      provider: 'istanbul',
-      include: ["**/*.ts"]
-    }
   },
 };
 

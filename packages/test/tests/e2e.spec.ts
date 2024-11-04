@@ -1,6 +1,7 @@
-import type {ElectronApplication, Page} from 'playwright';
+import type {ElectronApplication, ElementHandle, Page} from 'playwright';
 
 import {afterAll, beforeAll, expect, test, describe} from 'vitest';
+import type {types} from '@constl/mandataire-electron-rendu';
 
 import {surNavig, surÉlectron} from './utils';
 
@@ -82,5 +83,24 @@ describe('Test fenêtre appli', function () {
     const élémentNomsProfil = await page.waitForSelector('#noms-profil');
     const noms = JSON.parse(await élémentNomsProfil.innerText());
     expect(noms['fr']).to.equal('Moi');
+  });
+
+  describe('Serveur local', function () {
+    let élémentÉtatServeur: ElementHandle<SVGElement | HTMLElement>;
+    beforeAll(async () => {
+      élémentÉtatServeur = await page.waitForSelector('#état-serveur');
+    });
+    test('État initial serveur', async () => {
+      const état = JSON.parse(await élémentÉtatServeur.innerText()) as types.ÉtatServeur;
+      expect(état.état).to.equal('fermé');
+    });
+
+    test('Démarrer serveur', async () => {
+      const btnChangerServeur = await page.waitForSelector('#btn-changer-serveur');
+      await btnChangerServeur.click();
+
+      const état = JSON.parse(await élémentÉtatServeur.innerText()) as types.ÉtatServeur;
+      expect(état['état']).to.equal('actif');
+    });
   });
 });

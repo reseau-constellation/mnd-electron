@@ -16,6 +16,7 @@ import { ÉtatServeur, ÉtatServeurActif, ÉtatServeurFermé } from "./types";
 export class GestionnaireServeur {
   envoyerMessageÀServeurConstellation: typeof _envoyerMessageÀServeurConstellation;
   écouterMessagesDeServeurConstellation: typeof _écouterMessagesDeServeurConstellation;
+  état: ÉtatServeur;
 
   constructor({
     écouterMessagesDeServeurConstellation,
@@ -28,9 +29,17 @@ export class GestionnaireServeur {
       envoyerMessageÀServeurConstellation;
     this.écouterMessagesDeServeurConstellation =
       écouterMessagesDeServeurConstellation;
+
+    // On commence avec le serveur fermé
+    this.état = {
+      état: "fermé",
+    };
+    this.suivreÉtatServeur({ f: (état) => (this.état = état) });
   }
 
-  async initialiser(port?: number): Promise<{port: number, codeSecret: string}> {
+  async initialiser(
+    port?: number,
+  ): Promise<{ port: number; codeSecret: string }> {
     const messageInit: messageInitServeur = {
       type: "init",
       port,
@@ -51,30 +60,30 @@ export class GestionnaireServeur {
     return { port: portFinal, codeSecret };
   }
 
-  async suivreÉtatServeur({
-    f,
-  }: {
-    f: (r: ÉtatServeur) => void;
-  }): Promise<() => void> {
+  suivreÉtatServeur({ f }: { f: (r: ÉtatServeur) => void }): () => void {
+    console.log("ici", this.état);
+    f(this.état);
+
     const oublierÉcoute = this.écouterMessagesDeServeurConstellation(
       (message) => {
         if (message.type === "prêt") {
           const état: ÉtatServeurActif = {
-            état: 'actif',
+            état: "actif",
             détails: {
               port: message.port,
-              codeSecret: message.codeSecret
-            }
-          }
+              codeSecret: message.codeSecret,
+            },
+          };
           f(état);
         } else if (message.type === "fermé") {
           const état: ÉtatServeurFermé = {
-            état: 'fermé'
-          }
+            état: "fermé",
+          };
           f(état);
         }
       },
     );
+
     return oublierÉcoute;
   }
 
