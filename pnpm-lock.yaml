@@ -56,7 +56,7 @@ importers:
         version: 8.12.2(eslint@9.13.0)(typescript@5.5.4)
       electron:
         specifier: ^33.0.0
-        version: 33.0.2
+        version: 33.1.0
       eslint:
         specifier: ^9.13.0
         version: 9.13.0
@@ -283,7 +283,7 @@ importers:
         version: 7.0.3
       electron:
         specifier: 33.0.2
-        version: 33.0.2
+        version: 33.1.0
       electron-builder:
         specifier: 25.1.8
         version: 25.1.8(electron-builder-squirrel-windows@24.13.3)
@@ -3908,8 +3908,8 @@ packages:
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
 
-  electron@33.0.2:
-    resolution: {integrity: sha512-C2WksfP0COsMHbYXSJG68j6S3TjuGDrw/YT42B526yXalIlNQZ2GeAYKryg6AEMkIp3p8TUfDRD0+HyiyCt/nw==}
+  electron@33.1.0:
+    resolution: {integrity: sha512-7KiY6MtRo1fVFLPGyHS7Inh8yZfrbUTy43nNwUgMD2CBk729BgSwOC2WhmcptNJVlzHJpVxSWkiVi2hp9mH/bw==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -11858,7 +11858,7 @@ snapshots:
 
   '@types/dns-packet@5.6.5':
     dependencies:
-      '@types/node': 22.8.7
+      '@types/node': 22.9.0
 
   '@types/estree@1.0.6': {}
 
@@ -11903,7 +11903,7 @@ snapshots:
   '@types/multicast-dns@7.2.4':
     dependencies:
       '@types/dns-packet': 5.6.5
-      '@types/node': 22.8.7
+      '@types/node': 22.9.0
 
   '@types/murmurhash3js-revisited@3.0.3': {}
 
@@ -11970,7 +11970,7 @@ snapshots:
 
   '@types/ws@8.5.12':
     dependencies:
-      '@types/node': 22.8.7
+      '@types/node': 22.9.0
 
   '@types/ws@8.5.13':
     dependencies:
@@ -13776,7 +13776,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  electron@33.0.2:
+  electron@33.1.0:
     dependencies:
       '@electron/get': 2.0.3
       '@types/node': 20.17.6
