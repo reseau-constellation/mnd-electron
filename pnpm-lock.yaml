@@ -35,7 +35,7 @@ importers:
     devDependencies:
       '@constl/ipa':
         specifier: ^1.3.0
-        version: 1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+        version: 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^3.0.2
         version: 3.0.2
@@ -105,7 +105,7 @@ importers:
     devDependencies:
       '@constl/ipa':
         specifier: ^1.3.0
-        version: 1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+        version: 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire-electron-principal':
         specifier: workspace:^
         version: link:../principal
@@ -147,7 +147,7 @@ importers:
     dependencies:
       '@constl/ipa':
         specifier: ^1.3.1
-        version: 1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+        version: 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^3.0.2
         version: 3.0.2
@@ -162,7 +162,7 @@ importers:
         version: 2.0.13(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/vue':
         specifier: ^1.0.3
-        version: 1.0.3(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))(vue@3.5.12(typescript@5.5.4))
+        version: 1.0.3(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))(vue@3.5.12(typescript@5.5.4))
       '@esbuild-plugins/node-globals-polyfill':
         specifier: ^0.2.3
         version: 0.2.3(esbuild@0.21.5)
@@ -1122,12 +1122,8 @@ packages:
   '@constl/bohr-db@1.2.0':
     resolution: {integrity: sha512-v0v51icUjihHgMTDyZvEnGpaATvXKn3UbVurG8rAc9VjIg4nafsJMiHXuC4KxZvIy/03A1NiLI7H4/CMpdYr+g==}
 
-  '@constl/ipa@1.3.0':
-    resolution: {integrity: sha512-mYLev2rw7Nb4Nb3QW+5jBbQB/lEijeouIqoi+RaqJBAgunipQn4e2NE7rsBE4+NYa4xQm4KdAnM3hvP7DqdLjA==}
-    engines: {node: '>=20'}
-
-  '@constl/ipa@1.3.1':
-    resolution: {integrity: sha512-FIBhCCMYmLiiCEHeRoggSsVuDfdTCKGhmJaaJ4OVkqLyfI70mG6TkBa07vgCDQao76+E8Jh/t8UCP1Cu3lEe4w==}
+  '@constl/ipa@1.3.2':
+    resolution: {integrity: sha512-8NRP/l5iRN6IYcZNLCPb76UwJ+L5803oj2QWRiysmUM8XsWbkQSzpKHy2pc+JvSFEGawHSBgUQgzVvvc6tLu4A==}
     engines: {node: '>=20'}
 
   '@constl/mandataire@3.0.2':
@@ -1450,10 +1446,6 @@ packages:
     resolution: {integrity: sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==}
     engines: {node: '>=6.9.0'}
 
-  '@ipld/dag-cbor@9.2.1':
-    resolution: {integrity: sha512-nyY48yE7r3dnJVlxrdaimrbloh4RokQaNRdI//btfTkcTEZbpmSrbYcBQ4VKTf8ZxXAOUJy4VsRpkJo+y9RTnA==}
-    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
-
   '@ipld/dag-cbor@9.2.2':
     resolution: {integrity: sha512-uIEOuruCqKTP50OBWwgz4Js2+LhiBQaxc57cnP71f45b1mHEAo1OCR1Zn/TbvSW/mV1x+JqhacIktkKyaYqhCw==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
@@ -1649,20 +1641,11 @@ packages:
   '@libp2p/utils@6.1.3':
     resolution: {integrity: sha512-n1D6phOXGkqE3tuvmZwm5gaHKcGanlKwCWEBlrZqx9SSCyd5U5C58BcyQ8YH5/nb4kYMI7HyjomfQAVs2S2R9Q==}
 
-  '@libp2p/webrtc@5.0.15':
-    resolution: {integrity: sha512-/UHVx6DYxY8jn+7jNNcK57RYUH6KYfd6w8aEg+p4ggdg4eNhp0VdCrmGEbpk+i9xNWNiWtFt3E9RG6Gj2V84rg==}
-
   '@libp2p/webrtc@5.0.16':
     resolution: {integrity: sha512-+o82zclk0d8HVGfI1pNiypCvhC0boubRVIJ/5+JSyUbZFpTNDelBb6DziI7s6NPVn0OnNvlfS6xWO3cetw9qag==}
 
-  '@libp2p/websockets@9.0.10':
-    resolution: {integrity: sha512-qFbUrIbc4cf+zQtZ2bLiZrMckaFKPMMe9xT773hyVo+TDJ0TJgxrG6cIO25avhol/CSiJG8517+HeCdzER8kzQ==}
-
   '@libp2p/websockets@9.0.11':
     resolution: {integrity: sha512-GoX323NMnbOwPu4Cq49XD9AwKLJfOr/R4H5b21ZCpgPIryVGmKUUzS8tWVdBu8RlWcRwCqz7rTUGZ95TKJeVwQ==}
-
-  '@libp2p/webtransport@5.0.15':
-    resolution: {integrity: sha512-f4O7oqR/XPm8iPT6da4PZWMtOcQmmbeo6fIPDUd3QwEAsTqiHldYAOTQpazjYd3c0mf11Ubi+sc6hUJ9YfvoTw==}
 
   '@libp2p/webtransport@5.0.16':
     resolution: {integrity: sha512-0CRugE+RlqhDasn/bFq45PjiyBLNnBeTSAfwVI9sYBV0irPh1Fg8nNunxNIXkIfCptnB9UlxKS1Ho2vwwEscdg==}
@@ -1733,14 +1716,8 @@ packages:
   '@multiformats/mafmt@12.1.6':
     resolution: {integrity: sha512-tlJRfL21X+AKn9b5i5VnaTD6bNttpSpcqwKVmDmSHLwxoz97fAHaepqFOk/l1fIu94nImIXneNbhsJx/RQNIww==}
 
-  '@multiformats/multiaddr-matcher@1.3.0':
-    resolution: {integrity: sha512-D0zKDNwLp279uEjPEVQCWej3X+ugcV93JqQ7OQzve4NiML/C7pZoYefoM+Exb25VZd+6agdIshxs+4D7E5jIhg==}
-
-  '@multiformats/multiaddr-matcher@1.4.1':
-    resolution: {integrity: sha512-UFJ6SG5vCtNyiDAQ6oD/khJPwBxAO5hjhRMumC+nkrUwyfCg/1YS1o5QIDaMIe9SAaEGyUg8+w+lDNyqgH3Z5A==}
-
-  '@multiformats/multiaddr-to-uri@10.1.1':
-    resolution: {integrity: sha512-8GlXnFmLq3KXXMaGCqOBf8Zd5suTY7p8SlwPrgpdL0LzxG+PjiH2k8QcPEk9JFVjfOgY1XfPYSn3mAiliC4tZw==}
+  '@multiformats/multiaddr-matcher@1.5.0':
+    resolution: {integrity: sha512-nA6lJpzjN1TZ1G9BM5QoVIBspbnPxnlVbJMvvaAR992K0t3G5c5vKCEMuUzanAE5VRrJ1MXHDhHonTeKoT/eTg==}
 
   '@multiformats/multiaddr-to-uri@10.1.2':
     resolution: {integrity: sha512-6sicfYRjJlHJn4bwsQancs8kXncWU4dDN/+V9sMVTYp9hi8ovWgVkK75AbAv4SfhztmmI+oufVUncQ1n+SukKQ==}
@@ -1987,10 +1964,6 @@ packages:
   '@opentelemetry/api@1.9.0':
     resolution: {integrity: sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==}
     engines: {node: '>=8.0.0'}
-
-  '@orbitdb/core@2.3.0':
-    resolution: {integrity: sha512-vImvXIlE5PpPDu6eLhe2T6/tsTZK1juL/X/twzPX65L0GGuEjVy3MXk/fd7YF+6/4d6J6+eOLJqafvUiMugnfg==}
-    engines: {node: '>=20.0.0'}
 
   '@orbitdb/core@2.4.3':
     resolution: {integrity: sha512-pRHDJlODTy35nySEAPhTjzZIKQ7eedwCIoplmEXs1rW3KYqMHNQaNxrIc1uBMw9cRsPTeIGwxTUkvXfhhaf35Q==}
@@ -2553,9 +2526,6 @@ packages:
 
   '@types/webfontloader@1.6.38':
     resolution: {integrity: sha512-kUaF72Fv202suFx6yBrwXqeVRMx7hGtJTesyESZgn9sEPCUeDXm2p0SiyS1MTqW74nQP4p7JyrOCwZ7pNFns4w==}
-
-  '@types/ws@8.5.12':
-    resolution: {integrity: sha512-3tPRkv1EtkDpzlgyKyI8pGsGZAGPEaXeu0DOj5DI25Ja91bdAYddYHbADRYVrZMRbfW+1l5YwXVDKohDJNQxkQ==}
 
   '@types/ws@8.5.13':
     resolution: {integrity: sha512-osM/gWBTPKgHV8XkTunnegTRIsvF6owmf5w+JtAfOw472dptdm0dlGv4xCt6GwQRcC2XVOvvRE/0bAoQcL2QkA==}
@@ -5951,9 +5921,6 @@ packages:
   multiformats@13.1.3:
     resolution: {integrity: sha512-CZPi9lFZCM/+7oRolWYsvalsyWQGFo+GpdaTmjxXXomC+nP/W1Rnxb9sUgjvmNmRZ5bOPqRAl4nuK+Ydw/4tGw==}
 
-  multiformats@13.3.0:
-    resolution: {integrity: sha512-CBiqvsufgmpo01VT5ze94O+uc+Pbf6f/sThlvWss0sBZmAOu6GQn5usrYV2sf2mr17FWYc0rO8c/CNe2T90QAA==}
-
   multiformats@13.3.1:
     resolution: {integrity: sha512-QxowxTNwJ3r5RMctoGA5p13w5RbRT2QDkoM+yFlqfLiioBp78nhDjnRLvmSBI9+KAqN4VdgOVWM9c0CHd86m3g==}
 
@@ -9296,86 +9263,14 @@ snapshots:
       ajv: 8.17.1
       events: 3.3.0
       helia: 5.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      uuid: 11.0.2
-    transitivePeerDependencies:
-      - bufferutil
-      - react-native
-      - supports-color
-      - utf-8-validate
-
-  '@constl/ipa@1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
-    dependencies:
-      '@chainsafe/libp2p-gossipsub': 14.1.0
-      '@chainsafe/libp2p-noise': 16.0.0
-      '@chainsafe/libp2p-yamux': 7.0.1
-      '@chriscdn/promise-semaphore': 2.0.9
-      '@constl/bohr-db': 1.2.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@constl/mandataire': 3.0.2
-      '@constl/utils-ipa': 1.0.3
-      '@helia/block-brokers': 4.0.1
-      '@helia/unixfs': 4.0.0(encoding@0.1.13)
-      '@ipld/dag-cbor': 9.2.1
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
-      '@libp2p/autonat': 2.0.10
-      '@libp2p/bootstrap': 11.0.10
-      '@libp2p/circuit-relay-v2': 3.1.0
-      '@libp2p/dcutr': 2.0.10
-      '@libp2p/identify': 3.0.10
-      '@libp2p/interface-transport': 4.0.3
-      '@libp2p/kad-dht': 14.1.0
-      '@libp2p/mdns': 11.0.10
-      '@libp2p/pubsub-peer-discovery': 11.0.0
-      '@libp2p/tcp': 10.0.11
-      '@libp2p/webrtc': 5.0.15(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@libp2p/websockets': 9.0.10(bufferutil@4.0.8)
-      '@libp2p/webtransport': 5.0.15
-      '@localfirst/auth': 5.6.0
-      '@localfirst/crypto': 5.6.0
-      '@multiformats/multiaddr-matcher': 1.3.0
-      '@orbitdb/core': 2.3.0
-      '@orbitdb/feed-db': 1.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@orbitdb/ordered-keyvalue-db': 1.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@orbitdb/set-db': 1.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      ajv: 8.17.1
-      approx-string-match: 2.0.0
-      axios: 1.7.7
-      blockstore-level: 2.0.1
-      browser-fs-access: 0.35.0
-      chokidar: 4.0.1
-      crypto-js: 4.2.0
-      deep-equal: 2.2.3
-      deepcopy: 2.1.0
-      ennikkai: 2.3.2(@constl/ipa@1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
-      env-paths: 3.0.0
-      events: 3.3.0
-      file-saver: 2.0.5
-      genversion: 3.2.0
-      geojson-validation: 1.0.2
-      helia: 5.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      indexed-db-stream: 1.0.0
-      iso-constants: https://codeload.github.com/inverted-capital/iso-constants/tar.gz/2af6fdfb2cacaa03ebd58543703918783e62649f
-      it-to-buffer: 4.0.7
-      jszip: 3.10.1
-      lodash: 4.17.21
-      merge-options: 3.0.4
-      multiformats: 13.3.0
-      platform: 1.3.6
-      prom-client: 15.1.3
-      ssim: 0.0.0
-      tslib: 2.8.0
-      uint8arrays: 5.1.0
       uuid: 11.0.1
-      wherearewe: 2.0.1
-      xlsx: https://cdn.sheetjs.com/xlsx-0.19.1/xlsx-0.19.1.tgz
     transitivePeerDependencies:
       - bufferutil
-      - debug
-      - encoding
       - react-native
       - supports-color
       - utf-8-validate
 
-  '@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
+  '@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
       '@chainsafe/libp2p-gossipsub': 14.1.0
       '@chainsafe/libp2p-noise': 16.0.0
@@ -9387,7 +9282,7 @@ snapshots:
       '@helia/block-brokers': 4.0.1
       '@helia/unixfs': 4.0.0(encoding@0.1.13)
       '@ipld/dag-cbor': 9.2.2
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       '@libp2p/autonat': 2.0.10
       '@libp2p/bootstrap': 11.0.10
       '@libp2p/circuit-relay-v2': 3.1.0
@@ -9403,7 +9298,7 @@ snapshots:
       '@libp2p/webtransport': 5.0.16
       '@localfirst/auth': 5.6.0
       '@localfirst/crypto': 5.6.0
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       '@orbitdb/core': 2.4.3
       '@orbitdb/feed-db': 1.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@orbitdb/ordered-keyvalue-db': 1.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
@@ -9417,7 +9312,7 @@ snapshots:
       crypto-js: 4.2.0
       deep-equal: 2.2.3
       deepcopy: 2.1.0
-      ennikkai: 2.3.2(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      ennikkai: 2.3.2(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       env-paths: 3.0.0
       events: 3.3.0
       file-saver: 2.0.5
@@ -9428,7 +9323,7 @@ snapshots:
       iso-constants: https://codeload.github.com/inverted-capital/iso-constants/tar.gz/2af6fdfb2cacaa03ebd58543703918783e62649f
       it-to-buffer: 4.0.7
       jszip: 3.10.1
-      lodash: 4.17.21
+      lodash-es: 4.17.21
       merge-options: 3.0.4
       multiformats: 13.3.1
       platform: 1.3.6
@@ -9455,7 +9350,7 @@ snapshots:
   '@constl/serveur@2.0.13(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
       '@achingbrain/nat-port-mapper': 1.0.13
-      '@constl/ipa': 1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+      '@constl/ipa': 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       axios: 1.7.2
       bip39: 3.1.0
       bufferutil: 4.0.8
@@ -9521,16 +9416,16 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/vue@1.0.3(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))(vue@3.5.12(typescript@5.5.4))':
+  '@constl/vue@1.0.3(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))(vue@3.5.12(typescript@5.5.4))':
     dependencies:
       '@chriscdn/promise-semaphore': 2.0.9
       '@constl/utils-ipa': 1.0.3
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       '@lassi-js/kilimukku': 1.1.7(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       deep-equal: 2.2.3
-      ennikkai: 2.3.2(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      ennikkai: 2.3.2(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       lodash: 4.17.21
-      nuchabal: 3.2.7(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      nuchabal: 3.2.7(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       uuid: 10.0.0
       vue: 3.5.12(typescript@5.5.4)
     transitivePeerDependencies:
@@ -9821,7 +9716,7 @@ snapshots:
       '@libp2p/interface': 2.2.0
       '@libp2p/utils': 6.1.3
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       '@multiformats/multiaddr-to-uri': 10.1.2
       interface-blockstore: 5.3.1
       interface-store: 6.0.2
@@ -9943,11 +9838,6 @@ snapshots:
 
   '@hutson/parse-repository-url@3.0.2': {}
 
-  '@ipld/dag-cbor@9.2.1':
-    dependencies:
-      cborg: 4.2.6
-      multiformats: 13.3.0
-
   '@ipld/dag-cbor@9.2.2':
     dependencies:
       cborg: 4.2.6
@@ -10040,25 +9930,18 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lassi-js/kili@0.3.16(@constl/ipa@1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))':
+  '@lassi-js/kili@0.3.16(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))':
     dependencies:
-      '@constl/ipa': 1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@constl/utils-ipa': 1.0.3
-      '@orbitdb/core': 2.4.3
-      deepcopy: 2.1.0
-
-  '@lassi-js/kili@0.3.16(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))':
-    dependencies:
-      '@constl/ipa': 1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+      '@constl/ipa': 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/utils-ipa': 1.0.3
       '@orbitdb/core': 2.4.3
       deepcopy: 2.1.0
 
   '@lassi-js/kilimukku@1.1.7(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
-      '@constl/ipa': 1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+      '@constl/ipa': 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/utils-ipa': 1.0.3
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       uuid: 9.0.1
       wherearewe: 2.0.1
     transitivePeerDependencies:
@@ -10186,7 +10069,7 @@ snapshots:
       '@libp2p/peer-record': 8.0.10
       '@libp2p/utils': 6.1.3
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       any-signal: 4.1.1
       it-protobuf-stream: 1.1.5
       it-stream-types: 2.0.2
@@ -10215,7 +10098,7 @@ snapshots:
       '@libp2p/interface-internal': 2.0.10
       '@libp2p/utils': 6.1.3
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       delay: 6.0.0
       it-protobuf-stream: 1.1.5
       protons-runtime: 5.5.0
@@ -10230,7 +10113,7 @@ snapshots:
       '@libp2p/peer-record': 8.0.10
       '@libp2p/utils': 6.1.3
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       it-drain: 3.0.7
       it-parallel: 3.0.8
       it-protobuf-stream: 1.1.5
@@ -10553,37 +10436,6 @@ snapshots:
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
 
-  '@libp2p/webrtc@5.0.15(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
-    dependencies:
-      '@chainsafe/libp2p-noise': 16.0.0
-      '@libp2p/interface': 2.2.0
-      '@libp2p/interface-internal': 2.0.10
-      '@libp2p/peer-id': 5.0.7
-      '@libp2p/utils': 6.1.3
-      '@multiformats/mafmt': 12.1.6
-      '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.3.0
-      detect-browser: 5.3.0
-      it-length-prefixed: 9.1.0
-      it-protobuf-stream: 1.1.5
-      it-pushable: 3.2.3
-      it-stream-types: 2.0.2
-      multiformats: 13.3.0
-      node-datachannel: 0.20.0
-      p-defer: 4.0.1
-      p-event: 6.0.1
-      p-timeout: 6.1.3
-      progress-events: 1.0.1
-      protons-runtime: 5.5.0
-      race-signal: 1.1.0
-      react-native-webrtc: 124.0.4(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      uint8-varint: 2.0.4
-      uint8arraylist: 2.4.8
-      uint8arrays: 5.1.0
-    transitivePeerDependencies:
-      - react-native
-      - supports-color
-
   '@libp2p/webrtc@5.0.16(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
       '@chainsafe/libp2p-noise': 16.0.0
@@ -10593,7 +10445,7 @@ snapshots:
       '@libp2p/utils': 6.1.3
       '@multiformats/mafmt': 12.1.6
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       detect-browser: 5.3.0
       it-length-prefixed: 9.1.0
       it-protobuf-stream: 1.1.5
@@ -10615,30 +10467,12 @@ snapshots:
       - react-native
       - supports-color
 
-  '@libp2p/websockets@9.0.10(bufferutil@4.0.8)':
-    dependencies:
-      '@libp2p/interface': 2.2.0
-      '@libp2p/utils': 6.1.3
-      '@multiformats/mafmt': 12.1.6
-      '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-to-uri': 10.1.1
-      '@types/ws': 8.5.12
-      it-ws: 6.1.5(bufferutil@4.0.8)
-      p-defer: 4.0.1
-      progress-events: 1.0.1
-      race-signal: 1.1.0
-      wherearewe: 2.0.1
-      ws: 8.18.0(bufferutil@4.0.8)
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
   '@libp2p/websockets@9.0.11(bufferutil@4.0.8)':
     dependencies:
       '@libp2p/interface': 2.2.0
       '@libp2p/utils': 6.1.3
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       '@multiformats/multiaddr-to-uri': 10.1.2
       '@types/ws': 8.5.13
       it-ws: 6.1.5(bufferutil@4.0.8)
@@ -10651,21 +10485,6 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@libp2p/webtransport@5.0.15':
-    dependencies:
-      '@chainsafe/libp2p-noise': 16.0.0
-      '@libp2p/interface': 2.2.0
-      '@libp2p/peer-id': 5.0.7
-      '@libp2p/utils': 6.1.3
-      '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.3.0
-      it-stream-types: 2.0.2
-      multiformats: 13.3.0
-      progress-events: 1.0.1
-      race-signal: 1.1.0
-      uint8arraylist: 2.4.8
-      uint8arrays: 5.1.0
-
   '@libp2p/webtransport@5.0.16':
     dependencies:
       '@chainsafe/libp2p-noise': 16.0.0
@@ -10673,7 +10492,7 @@ snapshots:
       '@libp2p/peer-id': 5.0.7
       '@libp2p/utils': 6.1.3
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       it-stream-types: 2.0.2
       multiformats: 13.3.1
       progress-events: 1.0.1
@@ -10778,21 +10597,11 @@ snapshots:
     dependencies:
       '@multiformats/multiaddr': 12.3.1
 
-  '@multiformats/multiaddr-matcher@1.3.0':
-    dependencies:
-      '@chainsafe/is-ip': 2.0.2
-      '@multiformats/multiaddr': 12.3.1
-      multiformats: 13.3.0
-
-  '@multiformats/multiaddr-matcher@1.4.1':
+  '@multiformats/multiaddr-matcher@1.5.0':
     dependencies:
       '@chainsafe/is-ip': 2.0.2
       '@multiformats/multiaddr': 12.3.1
       multiformats: 13.3.1
-
-  '@multiformats/multiaddr-to-uri@10.1.1':
-    dependencies:
-      '@multiformats/multiaddr': 12.3.1
 
   '@multiformats/multiaddr-to-uri@10.1.2':
     dependencies:
@@ -11123,18 +10932,6 @@ snapshots:
 
   '@opentelemetry/api@1.9.0': {}
 
-  '@orbitdb/core@2.3.0':
-    dependencies:
-      '@ipld/dag-cbor': 9.2.1
-      '@libp2p/crypto': 5.0.6
-      it-pipe: 3.0.1
-      level: 8.0.1
-      lru: 3.1.0
-      multiformats: 12.1.3
-      p-queue: 8.0.1
-      timeout-abort-controller: 3.0.0
-      uint8arrays: 5.1.0
-
   '@orbitdb/core@2.4.3':
     dependencies:
       '@ipld/dag-cbor': 9.2.2
@@ -11159,7 +10956,7 @@ snapshots:
 
   '@orbitdb/ordered-keyvalue-db@1.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
-      '@orbitdb/core': 2.3.0
+      '@orbitdb/core': 2.4.3
       helia: 5.1.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
     transitivePeerDependencies:
       - bufferutil
@@ -11187,21 +10984,21 @@ snapshots:
       '@peculiar/asn1-x509': 2.3.13
       '@peculiar/asn1-x509-attr': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-csr@2.3.13':
     dependencies:
       '@peculiar/asn1-schema': 2.3.13
       '@peculiar/asn1-x509': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-ecc@2.3.14':
     dependencies:
       '@peculiar/asn1-schema': 2.3.13
       '@peculiar/asn1-x509': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-pfx@2.3.13':
     dependencies:
@@ -11210,14 +11007,14 @@ snapshots:
       '@peculiar/asn1-rsa': 2.3.13
       '@peculiar/asn1-schema': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-pkcs8@2.3.13':
     dependencies:
       '@peculiar/asn1-schema': 2.3.13
       '@peculiar/asn1-x509': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-pkcs9@2.3.13':
     dependencies:
@@ -11228,27 +11025,27 @@ snapshots:
       '@peculiar/asn1-x509': 2.3.13
       '@peculiar/asn1-x509-attr': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-rsa@2.3.13':
     dependencies:
       '@peculiar/asn1-schema': 2.3.13
       '@peculiar/asn1-x509': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-schema@2.3.13':
     dependencies:
       asn1js: 3.0.5
       pvtsutils: 1.3.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-x509-attr@2.3.13':
     dependencies:
       '@peculiar/asn1-schema': 2.3.13
       '@peculiar/asn1-x509': 2.3.13
       asn1js: 3.0.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/asn1-x509@2.3.13':
     dependencies:
@@ -11256,18 +11053,18 @@ snapshots:
       asn1js: 3.0.5
       ipaddr.js: 2.2.0
       pvtsutils: 1.3.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/json-schema@1.1.12':
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   '@peculiar/webcrypto@1.5.0':
     dependencies:
       '@peculiar/asn1-schema': 2.3.13
       '@peculiar/json-schema': 1.1.12
       pvtsutils: 1.3.5
-      tslib: 2.8.1
+      tslib: 2.8.0
       webcrypto-core: 1.8.1
 
   '@peculiar/x509@1.12.3':
@@ -11281,7 +11078,7 @@ snapshots:
       '@peculiar/asn1-x509': 2.3.13
       pvtsutils: 1.3.5
       reflect-metadata: 0.2.2
-      tslib: 2.8.1
+      tslib: 2.8.0
       tsyringe: 4.8.0
 
   '@pkgjs/parseargs@0.11.0':
@@ -11942,7 +11739,7 @@ snapshots:
 
   '@types/plist@3.0.5':
     dependencies:
-      '@types/node': 22.9.0
+      '@types/node': 22.8.7
       xmlbuilder: 15.1.1
     optional: true
 
@@ -11972,10 +11769,6 @@ snapshots:
   '@types/web-bluetooth@0.0.20': {}
 
   '@types/webfontloader@1.6.38': {}
-
-  '@types/ws@8.5.12':
-    dependencies:
-      '@types/node': 22.9.0
 
   '@types/ws@8.5.13':
     dependencies:
@@ -12645,7 +12438,7 @@ snapshots:
     dependencies:
       pvtsutils: 1.3.5
       pvutils: 1.1.3
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   assert-plus@1.0.0:
     optional: true
@@ -13322,7 +13115,7 @@ snapshots:
   config-file-ts@0.2.6:
     dependencies:
       glob: 10.4.5
-      typescript: 5.6.3
+      typescript: 5.5.4
 
   config-file-ts@0.2.8-rc1:
     dependencies:
@@ -13841,17 +13634,10 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  ennikkai@2.3.2(@constl/ipa@1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))):
+  ennikkai@2.3.2(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))):
     dependencies:
-      '@constl/ipa': 1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.0(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
-      deepmerge: 4.3.1
-      events: 3.3.0
-
-  ennikkai@2.3.2(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))):
-    dependencies:
-      '@constl/ipa': 1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      '@constl/ipa': 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       deepmerge: 4.3.1
       events: 3.3.0
 
@@ -15788,7 +15574,7 @@ snapshots:
       '@libp2p/utils': 6.1.3
       '@multiformats/dns': 1.0.6
       '@multiformats/multiaddr': 12.3.1
-      '@multiformats/multiaddr-matcher': 1.4.1
+      '@multiformats/multiaddr-matcher': 1.5.0
       any-signal: 4.1.1
       datastore-core: 10.0.2
       interface-datastore: 8.3.1
@@ -16439,8 +16225,6 @@ snapshots:
 
   multiformats@13.1.3: {}
 
-  multiformats@13.3.0: {}
-
   multiformats@13.3.1: {}
 
   multimatch@5.0.0:
@@ -16705,10 +16489,10 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuchabal@3.2.7(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))):
+  nuchabal@3.2.7(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))):
     dependencies:
-      '@constl/ipa': 1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.1(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
+      '@constl/ipa': 1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.3.2(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))
       deepmerge: 4.3.1
       events: 3.3.0
 
@@ -17277,7 +17061,7 @@ snapshots:
 
   pvtsutils@1.3.5:
     dependencies:
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   pvutils@1.1.3: {}
 
@@ -18762,7 +18546,7 @@ snapshots:
       '@peculiar/json-schema': 1.1.12
       asn1js: 3.0.5
       pvtsutils: 1.3.5
-      tslib: 2.8.1
+      tslib: 2.8.0
 
   webfontloader@1.6.28: {}
 
