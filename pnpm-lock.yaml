@@ -41,7 +41,7 @@ importers:
         version: 3.0.2
       '@constl/serveur':
         specifier: ^2.0.13
-        version: 2.1.0(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+        version: 2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@eslint/js':
         specifier: ^9.13.0
         version: 9.13.0
@@ -159,7 +159,7 @@ importers:
         version: link:../rendu
       '@constl/serveur':
         specifier: ^2.0.13
-        version: 2.1.0(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+        version: 2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/vue':
         specifier: ^1.0.3
         version: 1.0.3(@constl/ipa@1.3.5(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))(vue@3.5.12(typescript@5.5.4))
@@ -1126,8 +1126,8 @@ packages:
   '@constl/mandataire@3.0.2':
     resolution: {integrity: sha512-Ijr9NHTMIIHi9jPuizPlKmPXfFZur5BDPAjykZe1IfnJNv5hPrh3juKutw0LgMfUqt0PQP53g4h7e3jex33pAg==}
 
-  '@constl/serveur@2.1.0':
-    resolution: {integrity: sha512-Sz8+2Ussz6OBlqvFaNykdG/LgxgH8SB4b57h5MWYrnIYHpzdhwElU6hhnIjJOXnp4GfawlWGDaIStxZ1QOZC/w==}
+  '@constl/serveur@2.1.1':
+    resolution: {integrity: sha512-new1Dmie4puPV0g6hG0UA98ACrnWcZN2W46j4M7c1uEmC7Gv7LiSl/vH7Vw/Fg0vO/MVvBv+A+38gbuCraIZCg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -9325,7 +9325,7 @@ snapshots:
       events: 3.3.0
       uuid: 10.0.0
 
-  '@constl/serveur@2.1.0(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
+  '@constl/serveur@2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
       '@achingbrain/nat-port-mapper': 1.0.13
       '@constl/ipa': 1.3.5(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
@@ -10530,7 +10530,7 @@ snapshots:
 
   '@malept/cross-spawn-promise@2.0.0':
     dependencies:
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.5
 
   '@malept/flatpak-bundler@0.4.0':
     dependencies:
