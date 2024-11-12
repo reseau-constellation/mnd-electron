@@ -38,7 +38,7 @@ importers:
         version: 1.3.5(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^3.0.2
-        version: 3.0.2
+        version: 3.0.3
       '@constl/serveur':
         specifier: ^2.0.13
         version: 2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
@@ -95,7 +95,7 @@ importers:
     dependencies:
       '@constl/mandataire':
         specifier: ^3.0.2
-        version: 3.0.2
+        version: 3.0.3
       events:
         specifier: ^3.3.0
         version: 3.3.0
@@ -150,7 +150,7 @@ importers:
         version: 1.3.5(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/mandataire':
         specifier: ^3.0.2
-        version: 3.0.2
+        version: 3.0.3
       '@constl/mandataire-electron-principal':
         specifier: workspace:^
         version: link:../principal
@@ -1123,8 +1123,8 @@ packages:
     resolution: {integrity: sha512-wVBYrcoDPM+L37+B4zrYHCacHE+4MW/a8ED8y/zkdyGgOzPUIbzUCci3dt0GxtrcrcZqPMz9DuRKHkWtxxLIWA==}
     engines: {node: '>=20'}
 
-  '@constl/mandataire@3.0.2':
-    resolution: {integrity: sha512-Ijr9NHTMIIHi9jPuizPlKmPXfFZur5BDPAjykZe1IfnJNv5hPrh3juKutw0LgMfUqt0PQP53g4h7e3jex33pAg==}
+  '@constl/mandataire@3.0.3':
+    resolution: {integrity: sha512-J7zWtq2EOA46EIzAGjiOP/FVYvQrjvxXT7aLyKEA6chm6i/3kJnmv5pgYSF0rofGgzIyRUwsTLuzSB23DoZNyg==}
 
   '@constl/serveur@2.1.1':
     resolution: {integrity: sha512-new1Dmie4puPV0g6hG0UA98ACrnWcZN2W46j4M7c1uEmC7Gv7LiSl/vH7Vw/Fg0vO/MVvBv+A+38gbuCraIZCg==}
@@ -9214,7 +9214,7 @@ snapshots:
       '@chainsafe/libp2p-yamux': 7.0.1
       '@chriscdn/promise-semaphore': 2.0.9
       '@constl/bohr-db': 1.2.0(bufferutil@4.0.8)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
-      '@constl/mandataire': 3.0.2
+      '@constl/mandataire': 3.0.3
       '@constl/utils-ipa': 1.0.3
       '@helia/block-brokers': 4.0.1
       '@helia/unixfs': 4.0.0(encoding@0.1.13)
@@ -9279,10 +9279,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/mandataire@3.0.2':
+  '@constl/mandataire@3.0.3':
     dependencies:
       events: 3.3.0
-      uuid: 10.0.0
+      uuid: 11.0.3
 
   '@constl/serveur@2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
