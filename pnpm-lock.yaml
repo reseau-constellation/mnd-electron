@@ -41,7 +41,7 @@ importers:
         version: 3.0.2
       '@constl/serveur':
         specifier: ^2.0.13
-        version: 2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+        version: 2.1.2(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@eslint/js':
         specifier: ^9.13.0
         version: 9.14.0
@@ -159,7 +159,7 @@ importers:
         version: link:../rendu
       '@constl/serveur':
         specifier: ^2.0.13
-        version: 2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
+        version: 2.1.2(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       '@constl/vue':
         specifier: ^1.0.3
         version: 1.0.3(@constl/ipa@1.3.5(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0)))(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))(vue@3.5.12(typescript@5.5.4))
@@ -346,9 +346,6 @@ packages:
 
   7zip-bin@5.2.0:
     resolution: {integrity: sha512-ukTPVhqG4jNzMro2qA9HSCSSVJN3aN7tlb+hfqYCt3ER0yWroeA2VR38MNrOHLQ/cVj+DaIMad0kFCtWWowh/A==}
-
-  '@achingbrain/nat-port-mapper@1.0.13':
-    resolution: {integrity: sha512-B5GL6ILDek72OjoEyFGEuuNYaEOYxO06Ulhcaf/5iQ4EO8uaZWS+OkolYST7L+ecJrkjfaSNmSAsWRRuh+1Z5A==}
 
   '@achingbrain/nat-port-mapper@1.0.18':
     resolution: {integrity: sha512-B3sD+1KmD6qtmnCSdTtoMIwsw5Lj8XNDWnPakXnChm92eaFO7JRfS76oCts6iMFttJzOHq7FT0sNY7sDcbvosA==}
@@ -1126,8 +1123,8 @@ packages:
   '@constl/mandataire@3.0.2':
     resolution: {integrity: sha512-Ijr9NHTMIIHi9jPuizPlKmPXfFZur5BDPAjykZe1IfnJNv5hPrh3juKutw0LgMfUqt0PQP53g4h7e3jex33pAg==}
 
-  '@constl/serveur@2.1.1':
-    resolution: {integrity: sha512-new1Dmie4puPV0g6hG0UA98ACrnWcZN2W46j4M7c1uEmC7Gv7LiSl/vH7Vw/Fg0vO/MVvBv+A+38gbuCraIZCg==}
+  '@constl/serveur@2.1.2':
+    resolution: {integrity: sha512-coeI1UEpkOTGsiJD/oLOgvGjakOEaPn8remCZJosDWPKN2STsP/iJBOqYls378U3UJrwGZ27Zak9LMciHEpucg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1551,9 +1548,6 @@ packages:
     resolution: {integrity: sha512-jXFQ3blhFMEyQbFw/U8Glo3F/fUO5LEaX5HIdeqNpCliK+XnwTfpkcaG+WsJrcApWK4FFyUHc+GGqiWR0hAFFg==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
 
-  '@libp2p/interface@1.7.0':
-    resolution: {integrity: sha512-/zFyaIaIGW0aihhsH7/93vQdpWInUzFocxF11RO/029Y6h0SVjs24HHbils+DqaFDTqN+L7oNlBx2rM2MnmTjA==}
-
   '@libp2p/interface@2.2.0':
     resolution: {integrity: sha512-Pn3P5ixDggBjDyuULT0GvwdgD3JA426OqZ0e521mI7ysS+/M9Z9fp4Qcy8JrkJ45bLmIi9cgrNrefuU/Zu+bAQ==}
 
@@ -1570,9 +1564,6 @@ packages:
   '@libp2p/logger@2.1.1':
     resolution: {integrity: sha512-2UbzDPctg3cPupF6jrv6abQnAUTrbLybNOj0rmmrdGm1cN2HJ1o/hBu0sXuq4KF9P1h/eVRn1HIRbVIEKnEJrA==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
-
-  '@libp2p/logger@4.0.20':
-    resolution: {integrity: sha512-TTh2dhHsOTAlMPxSa9ncFPHa/0jTt+0AQxwHdlxg/OGLAgc9VRhnrhHUbJZp07Crcw4T/MOfS4KhjlxgqYgJRw==}
 
   '@libp2p/logger@5.1.3':
     resolution: {integrity: sha512-NUVWEWGbXlBDgDE5ntdm51+ZICmaKYI8mor6KrlPeB1WXDyIFxRWIBw6uzt+HgprQJWzLTojeUEGv6OPsj95Dg==}
@@ -8159,17 +8150,6 @@ snapshots:
 
   7zip-bin@5.2.0: {}
 
-  '@achingbrain/nat-port-mapper@1.0.13':
-    dependencies:
-      '@achingbrain/ssdp': 4.1.0
-      '@libp2p/logger': 4.0.20
-      default-gateway: 7.2.2
-      err-code: 3.0.1
-      it-first: 3.0.6
-      p-defer: 4.0.1
-      p-timeout: 6.1.3
-      xml2js: 0.6.2
-
   '@achingbrain/nat-port-mapper@1.0.18':
     dependencies:
       '@achingbrain/ssdp': 4.1.0
@@ -9284,9 +9264,8 @@ snapshots:
       events: 3.3.0
       uuid: 10.0.0
 
-  '@constl/serveur@2.1.1(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
+  '@constl/serveur@2.1.2(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))':
     dependencies:
-      '@achingbrain/nat-port-mapper': 1.0.13
       '@constl/ipa': 1.3.5(bufferutil@4.0.8)(encoding@0.1.13)(react-native@0.74.3(@babel/core@7.26.0)(@babel/preset-env@7.24.7(@babel/core@7.26.0))(bufferutil@4.0.8)(encoding@0.1.13)(react@18.2.0))
       axios: 1.7.7
       bip39: 3.1.0
@@ -10084,15 +10063,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@libp2p/interface@1.7.0':
-    dependencies:
-      '@multiformats/multiaddr': 12.3.1
-      it-pushable: 3.2.3
-      it-stream-types: 2.0.2
-      multiformats: 13.3.1
-      progress-events: 1.0.1
-      uint8arraylist: 2.4.8
-
   '@libp2p/interface@2.2.0':
     dependencies:
       '@multiformats/multiaddr': 12.3.1
@@ -10157,14 +10127,6 @@ snapshots:
       multiformats: 11.0.2
     transitivePeerDependencies:
       - supports-color
-
-  '@libp2p/logger@4.0.20':
-    dependencies:
-      '@libp2p/interface': 1.7.0
-      '@multiformats/multiaddr': 12.3.1
-      interface-datastore: 8.3.1
-      multiformats: 13.3.1
-      weald: 1.0.4
 
   '@libp2p/logger@5.1.3':
     dependencies:
