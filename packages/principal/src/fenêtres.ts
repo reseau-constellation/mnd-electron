@@ -162,7 +162,7 @@ export class GestionnaireFenêtres {
       m.idRequête = m.idRequête.split(":").slice(1).join(":");
 
       const fenêtre = this.fenêtres[idFenêtre];
-      fenêtre.webContents.send(CODE_MESSAGE_D_IPA, m);
+      fenêtre?.webContents.send(CODE_MESSAGE_D_IPA, m);
     } else {
       Object.values(this.fenêtres).forEach((f) =>
         f.webContents.send(CODE_MESSAGE_D_IPA, m),
