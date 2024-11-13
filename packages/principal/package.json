@@ -1,7 +1,7 @@
 {
   "name": "@constl/mandataire-electron-principal",
-  "version": "3.0.2",
-  "description": "",
+  "version": "3.0.3",
+  "description": "Pour utiliser Constellation dans vos projets Électron.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
