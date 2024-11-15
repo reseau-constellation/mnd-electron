@@ -42,7 +42,7 @@ jobs:
         run: pnpm formatter
 
       - name: Envoyer couverure à Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
 
   test:
     name: Test
@@ -82,6 +82,6 @@ jobs:
         if: matrix.os != 'ubuntu-latest'
 
       - name: Envoyer couverure à Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
