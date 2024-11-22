@@ -7,25 +7,25 @@ import type {
 } from "@constl/mandataire";
 import TypedEmitter from "typed-emitter";
 
-import type { BrowserWindow, IpcMainEvent } from "electron";
-import { app, ipcMain } from "electron";
-import { join } from "path";
-import { v4 as uuidv4 } from "uuid";
-import { Lock } from "semaphore-async-await";
-import { EventEmitter, once } from "stream";
 import {
-  messageDeServeur,
-  messagePourServeur,
-  messagePrêtDeServeur,
+  CODE_CLIENT_PRÊT,
   CODE_MESSAGE_D_IPA,
   CODE_MESSAGE_DE_SERVEUR,
   CODE_MESSAGE_POUR_IPA,
   CODE_MESSAGE_POUR_SERVEUR,
-  CODE_CLIENT_PRÊT,
   messageAuthServeur,
-  messageRequêtesConnexion,
+  messageDeServeur,
   messageFerméDeServeur,
+  messagePourServeur,
+  messagePrêtDeServeur,
+  messageRequêtesConnexion,
 } from "@/messages.js";
+import type { BrowserWindow, IpcMainEvent } from "electron";
+import { app, ipcMain } from "electron";
+import { join } from "path";
+import { Lock } from "semaphore-async-await";
+import { EventEmitter, once } from "stream";
+import { v4 as uuidv4 } from "uuid";
 
 const CODE_PRÊT = "prêt";
 

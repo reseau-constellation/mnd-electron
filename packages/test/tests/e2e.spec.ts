@@ -1,7 +1,7 @@
 import type {ElectronApplication, ElementHandle, Page} from 'playwright';
 
-import {afterAll, beforeAll, expect, test, describe} from 'vitest';
 import type {types} from '@constl/mandataire-electron-rendu';
+import {afterAll, beforeAll, describe, expect, test} from 'vitest';
 
 import {surNavig, surÉlectron} from './utils';
 

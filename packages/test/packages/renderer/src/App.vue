@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import {utiliserConstellation, utiliserServeurLocalConstellation} from './utils';
 import {obt, suivre} from '@constl/vue';
+import {utiliserConstellation, utiliserServeurLocalConstellation} from './utils';
 
 const constl = utiliserConstellation();
 const serveur = utiliserServeurLocalConstellation();

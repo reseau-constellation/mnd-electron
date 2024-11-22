@@ -4,7 +4,7 @@
 
 export {
   envoyerMessageÀConstellation,
-  écouterMessagesDeConstellation,
   envoyerMessageÀServeurConstellation,
+  écouterMessagesDeConstellation,
   écouterMessagesDeServeurConstellation,
 } from '@constl/mandataire-electron-principal';

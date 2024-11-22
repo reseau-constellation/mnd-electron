@@ -1,5 +1,5 @@
-import { ipcRenderer, IpcRendererEvent } from "electron";
 import type { MessageDIpa, MessagePourIpa } from "@constl/mandataire";
+import { ipcRenderer, IpcRendererEvent } from "electron";
 
 import {
   CODE_CLIENT_PRÊT,

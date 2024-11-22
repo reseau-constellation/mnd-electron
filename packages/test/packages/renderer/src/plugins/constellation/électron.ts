@@ -1,14 +1,14 @@
 import {
   envoyerMessageÀConstellation,
-  écouterMessagesDeConstellation,
   envoyerMessageÀServeurConstellation,
+  écouterMessagesDeConstellation,
   écouterMessagesDeServeurConstellation,
 } from '#preload';
-import type {App} from 'vue';
 import {
-  générerMandataireÉlectronPrincipal,
   GestionnaireServeur,
+  générerMandataireÉlectronPrincipal,
 } from '@constl/mandataire-electron-rendu';
+import type {App} from 'vue';
 
 export default {
   install: (app: App) => {
