@@ -28,6 +28,9 @@ export type contenuRequêteAuthServeur =
   | suivreRequêtesAuthServeur
   | approuverRequêteAuthServeur
   | refuserRequêteAuthServeur
+  | révoquerAccèsAuthServeur
+  | suivreConnexionsAuthServeur
+  | oublierConnexionsAuthServeur
   | oublierRequêtesAuthServeur;
 
 export type suivreRequêtesAuthServeur = {
@@ -50,9 +53,25 @@ export type refuserRequêteAuthServeur = {
   idRequête: string;
 };
 
+export type révoquerAccèsAuthServeur = {
+  type: "révoquerAccès";
+  idRequête: string;
+};
+
+export type suivreConnexionsAuthServeur = {
+  type: "suivreConnexions";
+  idSuivi: string;
+};
+
+export type oublierConnexionsAuthServeur = {
+  type: "oublierConnexions";
+  idSuivi: string;
+};
+
 export type messageDeServeur =
   | messagePrêtDeServeur
   | messageRequêtesConnexion
+  | messageConnexions
   | messageFerméDeServeur;
 
 export type messagePrêtDeServeur = {
@@ -64,6 +83,11 @@ export type messagePrêtDeServeur = {
 export type messageRequêtesConnexion = {
   type: "requêtesConnexion";
   requêtes: string[];
+};
+
+export type messageConnexions = {
+  type: "connexions";
+  connexions: string[];
 };
 
 export type messageFerméDeServeur = {

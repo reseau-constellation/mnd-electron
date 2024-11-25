@@ -14,6 +14,7 @@ import {
   CODE_MESSAGE_POUR_IPA,
   CODE_MESSAGE_POUR_SERVEUR,
   messageAuthServeur,
+  messageConnexions,
   messageDeServeur,
   messageFerméDeServeur,
   messagePourServeur,
@@ -282,8 +283,28 @@ export class GestionnaireFenêtres {
         break;
       }
       case "oublierRequêtes":
+      case "oublierConnexions":
         this.requêtesServeur[message.contenu.idSuivi]?.();
         delete this.requêtesServeur[message.contenu.idSuivi];
+        break;
+
+      case "suivreConnexions": {
+        const fOublierSuivi = this.connexionServeur?.suivreConnexions(
+          (connexions) => {
+            const messageRetour: messageConnexions = {
+              type: "connexions",
+              connexions,
+            };
+            this.envoyerMessageDuServeur(messageRetour);
+          },
+        );
+        if (fOublierSuivi)
+          this.requêtesServeur[message.contenu.idSuivi] = fOublierSuivi;
+        break;
+      }
+
+      case "révoquerAccès":
+        this.connexionServeur?.révoquerAccès(message.contenu.idRequête);
         break;
 
       default:

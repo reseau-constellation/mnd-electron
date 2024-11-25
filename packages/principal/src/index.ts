@@ -7,8 +7,11 @@ export type {
   messageInitServeur,
   messagePourServeur,
   messagePrêtDeServeur,
+  oublierConnexionsAuthServeur,
   oublierRequêtesAuthServeur,
   refuserRequêteAuthServeur,
+  révoquerAccèsAuthServeur,
+  suivreConnexionsAuthServeur,
   suivreRequêtesAuthServeur,
 } from "@/messages.js";
 

@@ -6,8 +6,11 @@ import type {
   messageFermerServeur,
   messageInitServeur,
   messagePrêtDeServeur,
+  oublierConnexionsAuthServeur,
   oublierRequêtesAuthServeur,
   refuserRequêteAuthServeur,
+  révoquerAccèsAuthServeur,
+  suivreConnexionsAuthServeur,
   suivreRequêtesAuthServeur,
 } from "@constl/mandataire-electron-principal";
 import { v4 as uuidv4 } from "uuid";
@@ -61,7 +64,6 @@ export class GestionnaireServeur {
   }
 
   suivreÉtatServeur({ f }: { f: (r: ÉtatServeur) => void }): () => void {
-    console.log("ici", this.état);
     f(this.état);
 
     const oublierÉcoute = this.écouterMessagesDeServeurConstellation(
@@ -145,6 +147,53 @@ export class GestionnaireServeur {
         },
       };
     this.envoyerMessageÀServeurConstellation(messageRefuserRequête);
+  }
+
+  async suivreConnexionsAuthServeur({
+    f,
+  }: {
+    f: (r: string[]) => void;
+  }): Promise<() => void> {
+    const idSuivi = uuidv4();
+    const messageSuivreRequêtes: messageAuthServeur<suivreConnexionsAuthServeur> =
+      {
+        type: "auth",
+        contenu: {
+          type: "suivreConnexions",
+          idSuivi,
+        },
+      };
+    this.envoyerMessageÀServeurConstellation(messageSuivreRequêtes);
+
+    const oublierÉcoute = this.écouterMessagesDeServeurConstellation(
+      (message) => {
+        if (message.type === "connexions") f(message.connexions);
+      },
+    );
+    const oublier = () => {
+      const messageOublierRequêtes: messageAuthServeur<oublierConnexionsAuthServeur> =
+        {
+          type: "auth",
+          contenu: {
+            type: "oublierConnexions",
+            idSuivi,
+          },
+        };
+      this.envoyerMessageÀServeurConstellation(messageOublierRequêtes);
+      oublierÉcoute();
+    };
+    return oublier;
+  }
+
+  async révoquerAccèsServeur({ idRequête }: { idRequête: string }) {
+    const messageRévoquerAccès: messageAuthServeur<révoquerAccèsAuthServeur> = {
+      type: "auth",
+      contenu: {
+        type: "révoquerAccès",
+        idRequête,
+      },
+    };
+    this.envoyerMessageÀServeurConstellation(messageRévoquerAccès);
   }
 
   async fermer() {
