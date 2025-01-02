@@ -192,8 +192,8 @@ export class GestionnaireFenêtres {
   }
 
   connecterFenêtreÀConstellation(fenêtre: BrowserWindow) {
-    const id = uuidv4();
-    this.connecterFenêtre(fenêtre, id);
+    const idFenêtre = uuidv4();
+    this.connecterFenêtre(fenêtre, idFenêtre);
 
     const fSuivreMessagesPourConstellation = async (
       _event: IpcMainEvent,
@@ -204,18 +204,19 @@ export class GestionnaireFenêtres {
       if (!this.constellation)
         throw new Error("Constellation n'est pas initialisée.");
 
-      if (message.idRequête) message.idRequête = id + ":" + message.idRequête;
+      if (message.idRequête)
+        message.idRequête = idFenêtre + ":" + message.idRequête;
       await this.constellation.gérerMessage(message);
     };
 
     ipcMain.on(CODE_MESSAGE_POUR_IPA, fSuivreMessagesPourConstellation);
 
     // Sigaler que la fenêtre est bien attachée
-    fenêtre.webContents.send(CODE_CLIENT_PRÊT);
+    fenêtre.webContents.send(CODE_CLIENT_PRÊT, { idFenêtre });
 
     const déconnecter = () => {
       ipcMain.off(CODE_MESSAGE_POUR_IPA, fSuivreMessagesPourConstellation);
-      this.déconnecterFenêtre(id);
+      this.déconnecterFenêtre(idFenêtre);
     };
     fenêtre.on("close", déconnecter);
   }

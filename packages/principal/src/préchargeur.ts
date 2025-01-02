@@ -1,5 +1,6 @@
 import type { MessageDIpa, MessagePourIpa } from "@constl/mandataire";
 import { ipcRenderer, IpcRendererEvent } from "electron";
+import { cloneDeep } from "lodash-es";
 
 import {
   CODE_CLIENT_PRÊT,
@@ -26,7 +27,9 @@ export const attendreFenêtreAttachée = (): Promise<void> => {
 export const envoyerMessageÀConstellation = async (message: MessagePourIpa) => {
   // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
   await attendreFenêtreAttachée();
-  ipcRenderer.send(CODE_MESSAGE_POUR_IPA, message);
+
+  // cloneDeep évite les erreurs avec les mandaraires d'objet réactifs dans Vue.js
+  ipcRenderer.send(CODE_MESSAGE_POUR_IPA, cloneDeep(message));
 };
 
 export const écouterMessagesDeConstellation = (

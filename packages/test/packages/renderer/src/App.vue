@@ -15,10 +15,13 @@ const ajouterNom = async () => {
 
 // Fonctionalités serveur local
 const état = suivre(serveur.suivreÉtatServeur.bind(serveur));
-const changer = () => {
-  if (état.value?.état === 'actif') serveur.fermer();
-  else serveur.initialiser();
+const changer = async () => {
+  if (état.value?.état === 'actif') await serveur.fermer();
+  else await serveur.initialiser();
 };
+
+const requêtes = suivre(serveur.suivreRequêtesAuthServeur.bind(serveur));
+const connexions = suivre(serveur.suivreConnexionsAuthServeur.bind(serveur));
 </script>
 
 <template>
@@ -55,6 +58,16 @@ const changer = () => {
     id="btn-changer-serveur"
     @click="() => changer()"
   />
+  <p>
+    <span id="requêtes">
+      {{ requêtes }}
+    </span>
+  </p>
+  <p>
+    <span id="connexions">
+      {{ connexions }}
+    </span>
+  </p>
 </template>
 
 <style></style>

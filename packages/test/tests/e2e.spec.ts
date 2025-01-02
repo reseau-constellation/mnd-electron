@@ -2,6 +2,7 @@ import type {ElectronApplication, ElementHandle, Page} from 'playwright';
 
 import type {types} from '@constl/mandataire-electron-rendu';
 import {afterAll, beforeAll, describe, expect, test} from 'vitest';
+// import {demanderAccès} from '@constl/serveur'
 
 import {surNavig, surÉlectron} from './utils';
 
@@ -101,6 +102,20 @@ describe('Test fenêtre appli', function () {
 
       const état = JSON.parse(await élémentÉtatServeur.innerText()) as types.ÉtatServeur;
       expect(état['état']).to.equal('actif');
+    });
+
+    test('Créer requête', async () => {
+      /*await demanderAccès({
+        port,
+      }),*/
+    });
+
+    test('Fermer serveur', async () => {
+      const btnChangerServeur = await page.waitForSelector('#btn-changer-serveur');
+      await btnChangerServeur.click();
+
+      const état = JSON.parse(await élémentÉtatServeur.innerText()) as types.ÉtatServeur;
+      expect(état['état']).to.equal('fermé');
     });
   });
 });
