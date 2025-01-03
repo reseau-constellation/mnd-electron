@@ -1,6 +1,6 @@
 import type { MessageDIpa, MessagePourIpa } from "@constl/mandataire";
 import { ipcRenderer, IpcRendererEvent } from "electron";
-import { cloneDeep } from "lodash-es";
+import { cloneDeep } from "lodash";
 
 import {
   CODE_CLIENT_PRÊT,
