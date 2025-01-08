@@ -12,23 +12,8 @@ import {
   messagePourServeur,
 } from "@/messages.js";
 
-let attachée = false; // À faire: selon l'ID de la fenêtre
-
-export const attendreFenêtreAttachée = (): Promise<void> => {
-  return new Promise<void>((résoudre) => {
-    if (attachée) résoudre();
-    ipcRenderer.once(CODE_CLIENT_PRÊT, () => {
-      attachée = true;
-      résoudre();
-    });
-  });
-};
-
 export const envoyerMessageÀConstellation = async (message: MessagePourIpa) => {
-  // Nécessaire parce que la fenêtre Électron peut être initialisée avant d'être connectée à Constellation
-  await attendreFenêtreAttachée();
-
-  // cloneDeep évite les erreurs avec les mandaraires d'objet réactifs dans Vue.js
+  // `cloneDeep` évite les erreurs avec les mandataires d'objet réactifs dans Vue.js
   ipcRenderer.send(CODE_MESSAGE_POUR_IPA, cloneDeep(message));
 };
 
@@ -42,10 +27,11 @@ export const écouterMessagesDeConstellation = (
   return () => ipcRenderer.off(CODE_MESSAGE_D_IPA, écouteur);
 };
 
-export const envoyerMessageÀServeurConstellation = (
+export const envoyerMessageÀServeurConstellation = async (
   message: messagePourServeur,
 ) => {
-  ipcRenderer.send(CODE_MESSAGE_POUR_SERVEUR, message);
+  // `cloneDeep` évite les erreurs avec les mandataires d'objet réactifs dans Vue.js
+  ipcRenderer.send(CODE_MESSAGE_POUR_SERVEUR, cloneDeep(message));
 };
 
 export const écouterMessagesDeServeurConstellation = (

@@ -192,7 +192,7 @@ export class GestionnaireFenêtres {
   }
 
   connecterFenêtreÀConstellation(fenêtre: BrowserWindow) {
-    const idFenêtre = uuidv4();
+    const idFenêtre = fenêtre.id.toString();
     this.connecterFenêtre(fenêtre, idFenêtre);
 
     const fSuivreMessagesPourConstellation = async (
@@ -210,9 +210,6 @@ export class GestionnaireFenêtres {
     };
 
     ipcMain.on(CODE_MESSAGE_POUR_IPA, fSuivreMessagesPourConstellation);
-
-    // Sigaler que la fenêtre est bien attachée
-    fenêtre.webContents.send(CODE_CLIENT_PRÊT, { idFenêtre });
 
     const déconnecter = () => {
       ipcMain.off(CODE_MESSAGE_POUR_IPA, fSuivreMessagesPourConstellation);

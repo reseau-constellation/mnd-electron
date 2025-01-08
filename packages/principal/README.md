@@ -33,6 +33,8 @@ fenêtre = new BrowserWindow();
 gestionnaireFenêtres.connecterFenêtreÀConstellation(fenêtre);
 ```
 
+**Très important :** appelez `connecterFenêtreÀConstellation` **avant** de naviguer à votre page d'accueil avec `browserWindow.loadURL` ou `browserWindow.loadFile`.
+
 Et surtout, n'oubliez pas de fermer Constellation lorsqu'on a fini.
 
 ```TypeScript
