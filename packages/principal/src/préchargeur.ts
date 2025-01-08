@@ -3,7 +3,6 @@ import { ipcRenderer, IpcRendererEvent } from "electron";
 import { cloneDeep } from "lodash";
 
 import {
-  CODE_CLIENT_PRÊT,
   CODE_MESSAGE_D_IPA,
   CODE_MESSAGE_DE_SERVEUR,
   CODE_MESSAGE_POUR_IPA,

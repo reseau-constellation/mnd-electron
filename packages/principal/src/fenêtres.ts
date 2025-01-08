@@ -8,7 +8,6 @@ import type {
 import TypedEmitter from "typed-emitter";
 
 import {
-  CODE_CLIENT_PRÊT,
   CODE_MESSAGE_D_IPA,
   CODE_MESSAGE_DE_SERVEUR,
   CODE_MESSAGE_POUR_IPA,
@@ -26,7 +25,6 @@ import { app, ipcMain } from "electron";
 import { join } from "path";
 import { Lock } from "semaphore-async-await";
 import { EventEmitter, once } from "stream";
-import { v4 as uuidv4 } from "uuid";
 
 const CODE_PRÊT = "prêt";
 
