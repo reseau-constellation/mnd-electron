@@ -32,7 +32,7 @@ jobs:
       - name: Préparation de Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: '22.11.0'
           cache: 'pnpm'
 
       - name: Installer
