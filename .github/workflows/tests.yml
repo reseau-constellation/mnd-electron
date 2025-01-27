@@ -11,6 +11,10 @@ on:
     paths-ignore:
         - '**.md'
 
+defaults:
+  run:
+    shell: 'bash'
+
 concurrency:
   group: tests-${{ github.ref }}
   cancel-in-progress: true
@@ -57,7 +61,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Installer pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4
         with:
           version: latest
 
@@ -69,9 +73,8 @@ jobs:
 
       - name: Installer
         run: pnpm install
-
-      - name: Installer playwright
-        run: npx playwright install
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
       - name: Vérifier les tests (Ubuntu)
         run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm test
