@@ -68,6 +68,7 @@ jobs:
       - name: Préparation de Node.js
         uses: actions/setup-node@v4
         with:
+          node-version: '22.11.0'
           cache: 'pnpm'
 
       - name: Installer
@@ -77,11 +78,11 @@ jobs:
 
       - name: Vérifier les tests (Ubuntu)
         run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm test
-        if: matrix.os == 'ubuntu-latest'
+        if: contains(matrix.os, 'ubuntu')
 
       - name: Vérifier les tests
         run: pnpm test
-        if: matrix.os != 'ubuntu-latest'
+        if: ! contains(matrix.os, 'ubuntu')
 
       - name: Envoyer couverure à Codecov
         uses: codecov/codecov-action@v5
