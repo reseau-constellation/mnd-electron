@@ -22,7 +22,7 @@ concurrency:
 jobs:
   formatter:
     name: Formatter
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       
       - name: Ouvrir la branche
