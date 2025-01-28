@@ -95,7 +95,7 @@ importers:
         version: 8.18.0(eslint@9.16.0)(typescript@5.7.3)
       typescript-transform-paths:
         specifier: ^3.5.2
-        version: 3.5.2(typescript@5.7.3)
+        version: 3.5.3(typescript@5.7.3)
 
   packages/rendu:
     dependencies:
@@ -150,7 +150,7 @@ importers:
         version: 5.7.3
       typescript-transform-paths:
         specifier: ^3.5.1
-        version: 3.5.2(typescript@5.7.3)
+        version: 3.5.3(typescript@5.7.3)
 
   packages/test:
     dependencies:
@@ -8212,8 +8212,8 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <5.8.0'
 
-  typescript-transform-paths@3.5.2:
-    resolution: {integrity: sha512-IRDVXfU7oscLwTvLabXprFrFCMUdBJbdUDtxbHFEsau9FlqrrdgS8PfwUltKDAh75vJFkQ8QdXAt/nzIWWp+fA==}
+  typescript-transform-paths@3.5.3:
+    resolution: {integrity: sha512-5y2l2iPKNHKOj08/1i+02+ljBVUhWcXQLXomiOXCmNpiTuSxIkj0dM1LUE7OOAt53+/6KidY+sFTCP781J64Eg==}
     peerDependencies:
       typescript: '>=3.6.5'
 
@@ -15435,7 +15435,7 @@ snapshots:
   config-file-ts@0.2.6:
     dependencies:
       glob: 10.4.5
-      typescript: 5.7.3
+      typescript: 5.5.4
 
   config-file-ts@0.2.8-rc1:
     dependencies:
@@ -20824,7 +20824,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  typescript-transform-paths@3.5.2(typescript@5.7.3):
+  typescript-transform-paths@3.5.3(typescript@5.7.3):
     dependencies:
       minimatch: 9.0.5
       typescript: 5.7.3
