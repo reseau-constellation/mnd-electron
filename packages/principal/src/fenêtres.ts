@@ -22,9 +22,9 @@ import {
 } from "@/messages.js";
 import type { BrowserWindow, IpcMainEvent } from "electron";
 import { app, ipcMain } from "electron";
+import { EventEmitter, once } from "events";
 import { join } from "path";
 import { Lock } from "semaphore-async-await";
-import { EventEmitter, once } from "events";
 
 const CODE_PRÊT = "prêt";
 
