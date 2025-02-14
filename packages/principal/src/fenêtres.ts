@@ -24,7 +24,7 @@ import type { BrowserWindow, IpcMainEvent } from "electron";
 import { app, ipcMain } from "electron";
 import { join } from "path";
 import { Lock } from "semaphore-async-await";
-import { EventEmitter, once } from "stream";
+import { EventEmitter, once } from "events";
 
 const CODE_PRÊT = "prêt";
 
