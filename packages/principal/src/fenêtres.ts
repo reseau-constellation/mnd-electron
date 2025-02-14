@@ -21,11 +21,12 @@ import {
   messageRequêtesConnexion,
 } from "@/messages.js";
 import type { BrowserWindow, IpcMainEvent } from "electron";
-import { app, ipcMain } from "electron";
+import electron from "electron";
 import { EventEmitter, once } from "events";
 import { join } from "path";
 import { Lock } from "semaphore-async-await";
 
+const { app, ipcMain } = electron;
 const CODE_PRÊT = "prêt";
 
 type ÉvénementsGestionnaire = {
