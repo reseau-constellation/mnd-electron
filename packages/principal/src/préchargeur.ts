@@ -1,6 +1,7 @@
 import type { MessageDIpa, MessagePourIpa } from "@constl/mandataire";
-import { ipcRenderer, IpcRendererEvent } from "electron";
-import { cloneDeep } from "lodash";
+import type { IpcRendererEvent } from "electron";
+import electron from "electron";
+import lodash from "lodash";
 
 import {
   CODE_MESSAGE_D_IPA,
@@ -10,6 +11,9 @@ import {
   messageDeServeur,
   messagePourServeur,
 } from "@/messages.js";
+
+const { cloneDeep } = lodash;
+const { ipcRenderer } = electron;
 
 export const envoyerMessageÀConstellation = async (message: MessagePourIpa) => {
   // `cloneDeep` évite les erreurs avec les mandataires d'objet réactifs dans Vue.js
