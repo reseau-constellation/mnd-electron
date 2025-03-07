@@ -58,8 +58,8 @@ importers:
         specifier: ^8.15.0
         version: 8.25.0(eslint@9.21.0)(typescript@5.8.2)
       electron:
-        specifier: ^34.0.0
-        version: 34.3.1
+        specifier: ^35.0.0
+        version: 35.0.0
       eslint:
         specifier: ^9.15.0
         version: 9.21.0
@@ -4299,8 +4299,8 @@ packages:
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
-  electron@34.3.1:
-    resolution: {integrity: sha512-Vsgxc4FDGg7hjduKyvTP5qfNDxZHTliZIiWD1HlR5hHXx3BFjyVv3db/uEH1GaCU0KKyeNsBXRwS4WAOMaSH5g==}
+  electron@35.0.0:
+    resolution: {integrity: sha512-mwNQNktYLPnUWZVR8iNkfWCBjmM5e2/CmB1rhACwE9ASDbVU7CYPgp/jLUB3bj/LyQsfSuubD82OUite6SN8Uw==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -10585,7 +10585,7 @@ snapshots:
       '@babel/parser': 7.26.3
       '@babel/template': 7.25.9
       '@babel/types': 7.26.3
-      debug: 4.3.7
+      debug: 4.4.0
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -12962,7 +12962,7 @@ snapshots:
   '@npmcli/fs@2.1.2':
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.6.3
+      semver: 7.7.1
 
   '@npmcli/fs@3.1.1':
     dependencies:
@@ -13929,7 +13929,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 20.17.23
+      '@types/node': 22.13.9
       '@types/responselike': 1.0.3
 
   '@types/d3-array@3.2.1': {}
@@ -14065,7 +14065,7 @@ snapshots:
 
   '@types/fs-extra@9.0.13':
     dependencies:
-      '@types/node': 22.8.7
+      '@types/node': 22.13.9
 
   '@types/geojson@7946.0.14': {}
 
@@ -14085,7 +14085,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 20.17.23
+      '@types/node': 22.13.9
 
   '@types/lodash@4.17.16': {}
 
@@ -14132,7 +14132,7 @@ snapshots:
 
   '@types/plist@3.0.5':
     dependencies:
-      '@types/node': 22.8.7
+      '@types/node': 22.13.9
       xmlbuilder: 15.1.1
     optional: true
 
@@ -14140,7 +14140,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 20.17.23
+      '@types/node': 22.13.9
 
   '@types/retry@0.12.2': {}
 
@@ -14179,7 +14179,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 20.17.23
+      '@types/node': 22.13.9
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.25.0(@typescript-eslint/parser@8.25.0(eslint@9.14.0)(typescript@5.5.4))(eslint@9.14.0)(typescript@5.5.4)':
@@ -15633,7 +15633,7 @@ snapshots:
   config-file-ts@0.2.6:
     dependencies:
       glob: 10.4.5
-      typescript: 5.5.4
+      typescript: 5.8.2
 
   config-file-ts@0.2.8-rc1:
     dependencies:
@@ -16160,10 +16160,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  electron@34.3.1:
+  electron@35.0.0:
     dependencies:
       '@electron/get': 2.0.3
-      '@types/node': 20.17.23
+      '@types/node': 22.13.9
       extract-zip: 2.0.1
     transitivePeerDependencies:
       - supports-color
@@ -19073,7 +19073,7 @@ snapshots:
 
   node-abi@3.71.0:
     dependencies:
-      semver: 7.6.3
+      semver: 7.7.1
 
   node-abi@3.74.0:
     dependencies:
@@ -19086,7 +19086,7 @@ snapshots:
 
   node-api-version@0.2.0:
     dependencies:
-      semver: 7.6.3
+      semver: 7.7.1
 
   node-datachannel@0.11.0:
     dependencies:
@@ -19142,7 +19142,7 @@ snapshots:
       nopt: 6.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.6.3
+      semver: 7.7.1
       tar: 6.2.1
       which: 2.0.2
     transitivePeerDependencies:
