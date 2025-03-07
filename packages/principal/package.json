@@ -34,7 +34,7 @@
     "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^8.15.0",
     "@typescript-eslint/parser": "^8.15.0",
-    "electron": "^34.0.0",
+    "electron": "^35.0.0",
     "eslint": "^9.15.0",
     "eslint-config-prettier": "^10.0.0",
     "genversion": "^3.2.0",
@@ -52,7 +52,7 @@
     "@constl/ipa": "^1.0.31",
     "@constl/mandataire": "^2.0.7 || ^3.0.0",
     "@constl/serveur": "^2.0.9",
-    "electron": "^30.0.9 || ^31.0.0 || ^33.0.0 || ^34.0.0"
+    "electron": "^30.0.9 || ^31.0.0 || ^33.0.0 || ^34.0.0 || ^35.0.0"
   },
   "dependencies": {
     "lodash": "^4.17.21",
