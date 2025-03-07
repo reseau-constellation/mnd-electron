@@ -71,10 +71,10 @@ importers:
         version: 3.2.0
       prettier:
         specifier: ^3.3.3
-        version: 3.5.2
+        version: 3.5.3
       prettier-plugin-organize-imports:
         specifier: ^4.1.0
-        version: 4.1.0(prettier@3.5.2)(typescript@5.8.2)(vue-tsc@2.1.10(typescript@5.8.2))
+        version: 4.1.0(prettier@3.5.3)(typescript@5.8.2)(vue-tsc@2.1.10(typescript@5.8.2))
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -138,10 +138,10 @@ importers:
         version: 3.2.0
       prettier:
         specifier: ^3.3.3
-        version: 3.5.2
+        version: 3.5.3
       prettier-plugin-organize-imports:
         specifier: ^4.1.0
-        version: 4.1.0(prettier@3.5.2)(typescript@5.8.2)(vue-tsc@2.1.10(typescript@5.8.2))
+        version: 4.1.0(prettier@3.5.3)(typescript@5.8.2)(vue-tsc@2.1.10(typescript@5.8.2))
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
@@ -298,7 +298,7 @@ importers:
         version: 7.0.3
       electron:
         specifier: 33.0.2
-        version: 34.3.1
+        version: 33.0.2
       electron-builder:
         specifier: 25.1.8
         version: 25.1.8(electron-builder-squirrel-windows@24.13.3)
@@ -325,10 +325,10 @@ importers:
         version: 1.48.2
       prettier:
         specifier: ^3.3.3
-        version: 3.5.2
+        version: 3.5.3
       prettier-plugin-organize-imports:
         specifier: ^4.1.0
-        version: 4.1.0(prettier@3.5.2)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4))
+        version: 4.1.0(prettier@3.5.3)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4))
       rollup-plugin-node-builtins:
         specifier: ^2.1.2
         version: 2.1.2
@@ -4294,6 +4294,11 @@ packages:
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
 
+  electron@33.0.2:
+    resolution: {integrity: sha512-C2WksfP0COsMHbYXSJG68j6S3TjuGDrw/YT42B526yXalIlNQZ2GeAYKryg6AEMkIp3p8TUfDRD0+HyiyCt/nw==}
+    engines: {node: '>= 12.20.55'}
+    hasBin: true
+
   electron@34.3.1:
     resolution: {integrity: sha512-Vsgxc4FDGg7hjduKyvTP5qfNDxZHTliZIiWD1HlR5hHXx3BFjyVv3db/uEH1GaCU0KKyeNsBXRwS4WAOMaSH5g==}
     engines: {node: '>= 12.20.55'}
@@ -7105,8 +7110,8 @@ packages:
       vue-tsc:
         optional: true
 
-  prettier@3.5.2:
-    resolution: {integrity: sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -16147,6 +16152,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  electron@33.0.2:
+    dependencies:
+      '@electron/get': 2.0.3
+      '@types/node': 20.17.23
+      extract-zip: 2.0.1
+    transitivePeerDependencies:
+      - supports-color
+
   electron@34.3.1:
     dependencies:
       '@electron/get': 2.0.3
@@ -19780,21 +19793,21 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-organize-imports@4.1.0(prettier@3.5.2)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4)):
+  prettier-plugin-organize-imports@4.1.0(prettier@3.5.3)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4)):
     dependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
       typescript: 5.5.4
     optionalDependencies:
       vue-tsc: 2.1.10(typescript@5.5.4)
 
-  prettier-plugin-organize-imports@4.1.0(prettier@3.5.2)(typescript@5.8.2)(vue-tsc@2.1.10(typescript@5.8.2)):
+  prettier-plugin-organize-imports@4.1.0(prettier@3.5.3)(typescript@5.8.2)(vue-tsc@2.1.10(typescript@5.8.2)):
     dependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
       typescript: 5.8.2
     optionalDependencies:
       vue-tsc: 2.1.10(typescript@5.8.2)
 
-  prettier@3.5.2: {}
+  prettier@3.5.3: {}
 
   pretty-format@26.6.2:
     dependencies:
