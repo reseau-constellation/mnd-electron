@@ -53,7 +53,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       
@@ -75,6 +75,10 @@ jobs:
         run: pnpm install
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+
+      # De https://github.com/microsoft/playwright/issues/34251
+      - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+        if: contains(matrix.os, 'ubuntu')
 
       - name: Vérifier les tests (Ubuntu)
         run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm test
