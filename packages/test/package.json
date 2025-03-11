@@ -30,7 +30,7 @@
     "formatter": "pnpm lint && npx prettier --write \"**/*.{js,mjs,cjs,ts,mts,cts,vue,json}\""
   },
   "devDependencies": {
-    "@constl/utils-tests": "^1.6.2",
+    "@constl/utils-tests": "^1.6.12",
     "@eslint/js": "^9.14.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@types/d3": "^7.4.3",
@@ -54,7 +54,6 @@
     "globals": "^15.12.0",
     "happy-dom": "15.8.3",
     "nano-staged": "0.8.0",
-    "node-pre-gyp": "^0.17.0",
     "playwright": "1.48.2",
     "prettier": "^3.3.3",
     "prettier-plugin-organize-imports": "^4.1.0",
@@ -71,12 +70,12 @@
     "vue-tsc": "2.1.10"
   },
   "dependencies": {
-    "@constl/ipa": "^1.3.1",
+    "@constl/ipa": "^1.5.12",
     "@constl/mandataire": "^3.0.2",
     "@constl/mandataire-electron-principal": "workspace:^",
     "@constl/mandataire-electron-rendu": "workspace:^",
-    "@constl/serveur": "^2.0.13",
-    "@constl/vue": "^1.0.3",
+    "@constl/serveur": "^2.1.7",
+    "@constl/vue": "^1.0.4",
     "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@mdi/font": "^7.4.47",
     "@vueuse/core": "^11.2.0",
