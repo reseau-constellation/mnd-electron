@@ -17,10 +17,6 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@localfirst/auth",
-      "@localfirst/crdx",
-      "@localfirst/crypto",
-      "@localfirst/shared",
       "bufferutil",
       "classic-level",
       "core-js",
@@ -33,6 +29,9 @@
       "nx",
       "simple-git-hooks",
       "vue-demi"
-    ]
+    ],
+    "overrides": {
+      "magic-string": "0.30.15"
+    }
   }
 }
