@@ -19,7 +19,7 @@ importers:
         version: 1.52.0
       vitest:
         specifier: ^3.0.0
-        version: 3.1.4(@types/debug@4.1.12)(@types/node@22.15.23)(happy-dom@15.8.3)(terser@5.40.0)(yaml@2.7.1)
+        version: 3.1.4(@types/debug@4.1.12)(@types/node@22.15.24)(happy-dom@15.8.3)(terser@5.40.0)(yaml@2.7.1)
 
   packages/principal:
     dependencies:
@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@constl/ipa':
         specifier: ^1.5.12
-        version: 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))
+        version: 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/mandataire':
         specifier: ^3.0.3
         version: 3.1.2
@@ -62,7 +62,7 @@ importers:
         version: 8.33.0(eslint@9.27.0)(typescript@5.8.3)
       electron:
         specifier: ^36.0.0
-        version: 36.3.1
+        version: 36.3.2
       eslint:
         specifier: ^9.20.1
         version: 9.27.0
@@ -114,7 +114,7 @@ importers:
     devDependencies:
       '@constl/ipa':
         specifier: ^1.5.12
-        version: 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))
+        version: 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/mandataire-electron-principal':
         specifier: workspace:^
         version: link:../principal
@@ -165,7 +165,7 @@ importers:
     dependencies:
       '@constl/ipa':
         specifier: ^1.5.12
-        version: 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
+        version: 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/mandataire':
         specifier: ^3.0.2
         version: 3.1.2
@@ -180,7 +180,7 @@ importers:
         version: 2.1.9(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/vue':
         specifier: ^1.0.4
-        version: 1.0.4(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))(vue@3.5.12(typescript@5.5.4))
+        version: 1.0.4(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))(vue@3.5.12(typescript@5.5.4))
       '@esbuild-plugins/node-globals-polyfill':
         specifier: ^0.2.3
         version: 0.2.3(esbuild@0.25.2)
@@ -271,7 +271,7 @@ importers:
         version: 4.17.17
       '@types/node':
         specifier: ^22.8.7
-        version: 22.15.23
+        version: 22.15.24
       '@types/papaparse':
         specifier: ^5.3.15
         version: 5.3.16
@@ -289,10 +289,10 @@ importers:
         version: 1.6.38
       '@vitejs/plugin-vue':
         specifier: 5.1.4
-        version: 5.1.4(vite@5.4.10(@types/node@22.15.23)(terser@5.40.0))(vue@3.5.12(typescript@5.5.4))
+        version: 5.1.4(vite@5.4.10(@types/node@22.15.24)(terser@5.40.0))(vue@3.5.12(typescript@5.5.4))
       '@vitest/coverage-istanbul':
         specifier: ^2.1.4
-        version: 2.1.9(vitest@2.1.4(@types/node@22.15.23)(happy-dom@15.8.3)(terser@5.40.0))
+        version: 2.1.9(vitest@2.1.4(@types/node@22.15.24)(happy-dom@15.8.3)(terser@5.40.0))
       '@vue/test-utils':
         specifier: 2.4.6
         version: 2.4.6
@@ -352,13 +352,13 @@ importers:
         version: 0.3.0(rollup@4.41.1)
       vite:
         specifier: 5.4.10
-        version: 5.4.10(@types/node@22.15.23)(terser@5.40.0)
+        version: 5.4.10(@types/node@22.15.24)(terser@5.40.0)
       vite-plugin-commonjs-externals:
         specifier: ^0.1.4
-        version: 0.1.4(vite@5.4.10(@types/node@22.15.23)(terser@5.40.0))
+        version: 0.1.4(vite@5.4.10(@types/node@22.15.24)(terser@5.40.0))
       vitest:
         specifier: 2.1.4
-        version: 2.1.4(@types/node@22.15.23)(happy-dom@15.8.3)(terser@5.40.0)
+        version: 2.1.4(@types/node@22.15.24)(happy-dom@15.8.3)(terser@5.40.0)
       vue-tsc:
         specifier: 2.1.10
         version: 2.1.10(typescript@5.5.4)
@@ -1164,8 +1164,8 @@ packages:
   '@constl/bohr-db@1.2.3':
     resolution: {integrity: sha512-IJXOqeMnJEOqD7DRNMowwPOY7bVKlTdQNu3DNn9zoSKj+fBzTXLzkxl4uRbKLu9vwWzjoXyxgvp2iw7vkt/amQ==}
 
-  '@constl/ipa@1.6.22':
-    resolution: {integrity: sha512-g9DVkaFtkKVNuyUVF76CfX6TfgfsbzytWDD2pGagyJyQ/rlwZex5/tbumPwOVIw6SkDNhc7HPdftzxMD42PLXA==}
+  '@constl/ipa@1.6.23':
+    resolution: {integrity: sha512-MQv7ChirEueQE+HLKntp/XYa8xOZstydCEwuKKmSjot77xZPE2FKqZCXXRVZOqAnGFrp8zkSxw/Cw7isbbiZ4w==}
     engines: {node: '>=20'}
 
   '@constl/mandataire@3.1.2':
@@ -1180,8 +1180,8 @@ packages:
     resolution: {integrity: sha512-br5uNxDQsFeVVe6WO2uE3cAF/WczOiJxXgE4yj7PlBEQ3NZp2qZqLyT3L3RofnSy4erm69GrUUjdOdUV1w4SUA==}
     engines: {node: '>=20'}
 
-  '@constl/utils-ipa@2.0.6':
-    resolution: {integrity: sha512-4XbDFuewVJD5dhATVfILEPqfef+QwIfYMjThC7f9zAFHUSbsarkm7WTI5wvQHLV4MLADzUmyh40MFE15+qPEyw==}
+  '@constl/utils-ipa@2.0.9':
+    resolution: {integrity: sha512-3ht7NJ5C2nHiPoU1oy0Osk2oQHdwVdBSYG3UXVfbN4k1tsWIzGJJKBsnnn0gTmqZavVttRwgcAM0gvdfdhbFIw==}
     engines: {node: '>=20'}
 
   '@constl/utils-tests@1.6.15':
@@ -2753,11 +2753,11 @@ packages:
   '@types/node-forge@1.3.11':
     resolution: {integrity: sha512-FQx220y22OKNTqaByeBGqHWYz4cl94tpcxeFdvBo3wjG6XPBuZ0BNgNZRV5J5TFmmcsJ4IzsLkmGRiQbnYsBEQ==}
 
-  '@types/node@20.17.51':
-    resolution: {integrity: sha512-hccptBl7C8lHiKxTBsY6vYYmqpmw1E/aGR/8fmueE+B390L3pdMOpNSRvFO4ZnXzW5+p2HBXV0yNABd2vdk22Q==}
+  '@types/node@20.17.52':
+    resolution: {integrity: sha512-2aj++KfxubvW/Lc0YyXE3OEW7Es8TWn1MsRzYgcOGyTNQxi0L8rxQUCZ7ZbyOBWZQD5I63PV9egZWMsapVaklg==}
 
-  '@types/node@22.15.23':
-    resolution: {integrity: sha512-7Ec1zaFPF4RJ0eXu1YT/xgiebqwqoJz8rYPDi/O2BcZ++Wpt0Kq9cl0eg6NN6bYbPnR67ZLo7St5Q3UK0SnARw==}
+  '@types/node@22.15.24':
+    resolution: {integrity: sha512-w9CZGm9RDjzTh/D+hFwlBJ3ziUaVw7oufKA3vOFSOZlzmW9AkZnfjPb+DLnrV6qtgL/LNmP0/2zBNCFHL3F0ng==}
 
   '@types/node@22.15.3':
     resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
@@ -3465,8 +3465,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  browserslist@4.24.5:
-    resolution: {integrity: sha512-FDToo4Wo82hIdgc1CQ+NQD0hEhmpPjrZ3hiUgwgOG6IuTdlpr8jdjyG24P6cNP1yJpTLzS5OcGgSw0xmDU1/Tw==}
+  browserslist@4.25.0:
+    resolution: {integrity: sha512-PJ8gYKeS5e/whHBh8xrwYK+dAvEj7JXtz6uTucnMRB8OiGTsKccFekoRrjajPBHV8oOY+2tI4uxeceSimKwMFA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -3576,8 +3576,8 @@ packages:
   caniuse-lite@1.0.30001706:
     resolution: {integrity: sha512-3ZczoTApMAZwPKYWmwVbQMFpXBDds3/0VciVoUwPUbldlYyVLmRVuRs/PcUZtHpbLRpzzDvrvnFuREsGt6lUug==}
 
-  caniuse-lite@1.0.30001718:
-    resolution: {integrity: sha512-AflseV1ahcSunK53NfEs9gFWgOEmzr0f+kaMFA4xiLZlr9Hzt7HxcSpIFcnNCUkz6R6dWKa54rUz3HUmI3nVcw==}
+  caniuse-lite@1.0.30001720:
+    resolution: {integrity: sha512-Ec/2yV2nNPwb4DnTANEV99ZWwm3ZWfdlfkQbWSDDt+PsXEVYwlhPH8tdMaPunYTKKmz7AnHi2oNEi1GcmKCD8g==}
 
   catering@2.1.1:
     resolution: {integrity: sha512-K7Qy8O9p76sL3/3m7/zLKbRkyOlSZAgzEaLhyj2mXS8PsCud2Eo4hAb8aLtZqHh0QGqLcb9dlJSu6lHRVENm1w==}
@@ -4165,8 +4165,8 @@ packages:
   electron-to-chromium@1.5.122:
     resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
-  electron-to-chromium@1.5.159:
-    resolution: {integrity: sha512-CEvHptWAMV5p6GJ0Lq8aheyvVbfzVrv5mmidu1D3pidoVNkB3tTBsTMVtPJ+rzRK5oV229mCLz9Zj/hNvU8GBA==}
+  electron-to-chromium@1.5.161:
+    resolution: {integrity: sha512-hwtetwfKNZo/UlwHIVBlKZVdy7o8bIZxxKs0Mv/ROPiQQQmDgdm5a+KvKtBsxM8ZjFzTaCeLoodZ8jiBE3o9rA==}
 
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
@@ -4176,8 +4176,8 @@ packages:
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
-  electron@36.3.1:
-    resolution: {integrity: sha512-LeOZ+tVahmctHaAssLCGRRUa2SAO09GXua3pKdG+WzkbSDMh+3iOPONNVPTqGp8HlWnzGj4r6mhsIbM2RgH+eQ==}
+  electron@36.3.2:
+    resolution: {integrity: sha512-v0/j7n22CL3OYv9BIhq6JJz2+e1HmY9H4bjTk8/WzVT9JwVX/T/21YNdR7xuQ6XDSEo9gP5JnqmjOamE+CUY8Q==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -8532,7 +8532,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.27.3
       '@babel/helper-validator-option': 7.27.1
-      browserslist: 4.24.5
+      browserslist: 4.25.0
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -10204,7 +10204,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))':
+  '@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))':
     dependencies:
       '@chainsafe/libp2p-gossipsub': 14.1.1
       '@chainsafe/libp2p-noise': 16.1.3
@@ -10212,7 +10212,7 @@ snapshots:
       '@chriscdn/promise-semaphore': 3.0.1
       '@constl/bohr-db': 1.2.3(bufferutil@4.0.9)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/mandataire': 3.1.2
-      '@constl/utils-ipa': 2.0.6
+      '@constl/utils-ipa': 2.0.9
       '@helia/block-brokers': 4.2.2
       '@helia/unixfs': 4.0.3(encoding@0.1.13)
       '@ipld/dag-cbor': 9.2.4
@@ -10293,7 +10293,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))':
+  '@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))':
     dependencies:
       '@chainsafe/libp2p-gossipsub': 14.1.1
       '@chainsafe/libp2p-noise': 16.1.3
@@ -10301,7 +10301,7 @@ snapshots:
       '@chriscdn/promise-semaphore': 3.0.1
       '@constl/bohr-db': 1.2.3(bufferutil@4.0.9)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/mandataire': 3.1.2
-      '@constl/utils-ipa': 2.0.6
+      '@constl/utils-ipa': 2.0.9
       '@helia/block-brokers': 4.2.2
       '@helia/unixfs': 4.0.3(encoding@0.1.13)
       '@ipld/dag-cbor': 9.2.4
@@ -10390,7 +10390,7 @@ snapshots:
 
   '@constl/serveur@2.1.9(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))':
     dependencies:
-      '@constl/ipa': 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
+      '@constl/ipa': 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
       axios: 1.8.4
       bip39: 3.1.0
       bufferutil: 4.0.9
@@ -10414,7 +10414,7 @@ snapshots:
 
   '@constl/serveur@2.1.9(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))':
     dependencies:
-      '@constl/ipa': 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))
+      '@constl/ipa': 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.27.3)(@babel/preset-env@7.26.9(@babel/core@7.27.3))(bufferutil@4.0.9)(react@19.0.0))
       axios: 1.8.4
       bip39: 3.1.0
       bufferutil: 4.0.9
@@ -10450,7 +10450,7 @@ snapshots:
       uint8arrays: 5.1.0
       wherearewe: 2.0.1
 
-  '@constl/utils-ipa@2.0.6':
+  '@constl/utils-ipa@2.0.9':
     dependencies:
       browser-fs-access: 0.37.0
       deep-equal: 2.2.3
@@ -10458,6 +10458,7 @@ snapshots:
       genversion: 3.2.0
       geojson-validation: 1.0.2
       jszip: 3.10.1
+      lodash-es: 4.17.21
       multiformats: 13.3.6
       p-queue: 8.1.0
       p-retry: 6.2.1
@@ -10497,15 +10498,15 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@constl/vue@1.0.4(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))(vue@3.5.12(typescript@5.5.4))':
+  '@constl/vue@1.0.4(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))(vue@3.5.12(typescript@5.5.4))':
     dependencies:
       '@chriscdn/promise-semaphore': 2.0.10
       '@constl/utils-ipa': 1.0.5
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
       '@lassi-js/kilimukku': 1.1.7(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
       deep-equal: 2.2.3
       ennikkai: 2.3.4
-      nuchabal: 3.2.7(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
+      nuchabal: 3.2.7(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
       uuid: 10.0.0
       vue: 3.5.12(typescript@5.5.4)
     transitivePeerDependencies:
@@ -11101,7 +11102,7 @@ snapshots:
   '@ipld/dag-json@10.2.3':
     dependencies:
       cborg: 4.2.9
-      multiformats: 13.3.2
+      multiformats: 13.3.6
 
   '@ipld/dag-json@10.2.5':
     dependencies:
@@ -11132,7 +11133,7 @@ snapshots:
       any-signal: 4.1.1
       delay: 6.0.0
       interface-datastore: 8.3.1
-      multiformats: 13.3.2
+      multiformats: 13.3.6
       uint8arrays: 5.1.0
     transitivePeerDependencies:
       - supports-color
@@ -11176,14 +11177,14 @@ snapshots:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-mock: 29.7.0
 
   '@jest/fake-timers@29.7.0':
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -11217,7 +11218,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -11243,24 +11244,24 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lassi-js/kili@0.3.16(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))':
+  '@lassi-js/kili@0.3.16(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))':
     dependencies:
-      '@constl/ipa': 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
+      '@constl/ipa': 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/utils-ipa': 1.0.5
       '@orbitdb/core': 2.5.0
       deepcopy: 2.1.0
 
   '@lassi-js/kili@0.4.5':
     dependencies:
-      '@constl/utils-ipa': 2.0.6
+      '@constl/utils-ipa': 2.0.9
       '@orbitdb/core': 2.5.0
       deepcopy: 2.1.0
 
   '@lassi-js/kilimukku@1.1.7(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))':
     dependencies:
-      '@constl/ipa': 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
+      '@constl/ipa': 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
       '@constl/utils-ipa': 1.0.5
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
       uuid: 9.0.1
       wherearewe: 2.0.1
     transitivePeerDependencies:
@@ -11464,7 +11465,7 @@ snapshots:
       '@libp2p/interface': 2.7.0
       '@noble/curves': 1.8.1
       '@noble/hashes': 1.8.0
-      multiformats: 13.3.2
+      multiformats: 13.3.6
       protons-runtime: 5.5.0
       uint8arraylist: 2.4.8
       uint8arrays: 5.1.0
@@ -11837,7 +11838,7 @@ snapshots:
       '@libp2p/interface': 2.7.0
       '@libp2p/peer-id': 5.1.0
       '@libp2p/utils': 6.6.0
-      multiformats: 13.3.2
+      multiformats: 13.3.6
 
   '@libp2p/peer-collections@6.0.27':
     dependencies:
@@ -13404,7 +13405,7 @@ snapshots:
 
   '@types/dns-packet@5.6.5':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/estree@1.0.6': {}
 
@@ -13414,13 +13415,13 @@ snapshots:
 
   '@types/fs-extra@9.0.13':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/geojson@7946.0.16': {}
 
   '@types/graceful-fs@4.1.9':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/http-cache-semantics@4.0.4': {}
 
@@ -13451,17 +13452,17 @@ snapshots:
   '@types/multicast-dns@7.2.4':
     dependencies:
       '@types/dns-packet': 5.6.5
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/node-forge@1.3.11':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
-  '@types/node@20.17.51':
+  '@types/node@20.17.52':
     dependencies:
       undici-types: 6.19.8
 
-  '@types/node@22.15.23':
+  '@types/node@22.15.24':
     dependencies:
       undici-types: 6.21.0
 
@@ -13473,13 +13474,13 @@ snapshots:
 
   '@types/papaparse@5.3.16':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/platform@1.3.6': {}
 
   '@types/plist@3.0.5':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       xmlbuilder: 15.1.1
     optional: true
 
@@ -13512,11 +13513,11 @@ snapshots:
 
   '@types/ws@8.18.0':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -13701,12 +13702,12 @@ snapshots:
       '@typescript-eslint/types': 8.33.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitejs/plugin-vue@5.1.4(vite@5.4.10(@types/node@22.15.23)(terser@5.40.0))(vue@3.5.12(typescript@5.5.4))':
+  '@vitejs/plugin-vue@5.1.4(vite@5.4.10(@types/node@22.15.24)(terser@5.40.0))(vue@3.5.12(typescript@5.5.4))':
     dependencies:
-      vite: 5.4.10(@types/node@22.15.23)(terser@5.40.0)
+      vite: 5.4.10(@types/node@22.15.24)(terser@5.40.0)
       vue: 3.5.12(typescript@5.5.4)
 
-  '@vitest/coverage-istanbul@2.1.9(vitest@2.1.4(@types/node@22.15.23)(happy-dom@15.8.3)(terser@5.40.0))':
+  '@vitest/coverage-istanbul@2.1.9(vitest@2.1.4(@types/node@22.15.24)(happy-dom@15.8.3)(terser@5.40.0))':
     dependencies:
       '@istanbuljs/schema': 0.1.3
       debug: 4.4.0
@@ -13718,7 +13719,7 @@ snapshots:
       magicast: 0.3.5
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.4(@types/node@22.15.23)(happy-dom@15.8.3)(terser@5.40.0)
+      vitest: 2.1.4(@types/node@22.15.24)(happy-dom@15.8.3)(terser@5.40.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -13736,21 +13737,21 @@ snapshots:
       chai: 5.2.0
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@2.1.4(vite@5.4.10(@types/node@22.15.23)(terser@5.40.0))':
+  '@vitest/mocker@2.1.4(vite@5.4.10(@types/node@22.15.24)(terser@5.40.0))':
     dependencies:
       '@vitest/spy': 2.1.4
       estree-walker: 3.0.3
       magic-string: 0.30.15
     optionalDependencies:
-      vite: 5.4.10(@types/node@22.15.23)(terser@5.40.0)
+      vite: 5.4.10(@types/node@22.15.24)(terser@5.40.0)
 
-  '@vitest/mocker@3.1.4(vite@6.2.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1))':
+  '@vitest/mocker@3.1.4(vite@6.2.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1))':
     dependencies:
       '@vitest/spy': 3.1.4
       estree-walker: 3.0.3
       magic-string: 0.30.15
     optionalDependencies:
-      vite: 6.2.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1)
+      vite: 6.2.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1)
 
   '@vitest/pretty-format@2.1.4':
     dependencies:
@@ -14623,12 +14624,12 @@ snapshots:
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
-  browserslist@4.24.5:
+  browserslist@4.25.0:
     dependencies:
-      caniuse-lite: 1.0.30001718
-      electron-to-chromium: 1.5.159
+      caniuse-lite: 1.0.30001720
+      electron-to-chromium: 1.5.161
       node-releases: 2.0.19
-      update-browserslist-db: 1.1.3(browserslist@4.24.5)
+      update-browserslist-db: 1.1.3(browserslist@4.25.0)
 
   bs58@6.0.0:
     dependencies:
@@ -14785,7 +14786,7 @@ snapshots:
 
   caniuse-lite@1.0.30001706: {}
 
-  caniuse-lite@1.0.30001718: {}
+  caniuse-lite@1.0.30001720: {}
 
   catering@2.1.1: {}
 
@@ -14839,7 +14840,7 @@ snapshots:
 
   chrome-launcher@0.15.2:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -14848,7 +14849,7 @@ snapshots:
 
   chromium-edge-launcher@0.2.0:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       escape-string-regexp: 4.0.0
       is-wsl: 2.2.0
       lighthouse-logger: 1.4.2
@@ -15084,7 +15085,7 @@ snapshots:
 
   core-js-compat@3.42.0:
     dependencies:
-      browserslist: 4.24.5
+      browserslist: 4.25.0
 
   core-js@3.41.0: {}
 
@@ -15456,7 +15457,7 @@ snapshots:
 
   electron-to-chromium@1.5.122: {}
 
-  electron-to-chromium@1.5.159: {}
+  electron-to-chromium@1.5.161: {}
 
   electron-updater@6.3.9:
     dependencies:
@@ -15474,12 +15475,12 @@ snapshots:
   electron@33.0.2:
     dependencies:
       '@electron/get': 2.0.3
-      '@types/node': 20.17.51
+      '@types/node': 20.17.52
       extract-zip: 2.0.1
     transitivePeerDependencies:
       - supports-color
 
-  electron@36.3.1:
+  electron@36.3.2:
     dependencies:
       '@electron/get': 2.0.3
       '@types/node': 22.15.3
@@ -16742,7 +16743,7 @@ snapshots:
       '@libp2p/logger': 5.1.13
       cborg: 4.2.9
       interface-datastore: 8.3.1
-      multiformats: 13.3.2
+      multiformats: 13.3.6
       protons-runtime: 5.5.0
       timestamp-nano: 1.0.1
       uint8arraylist: 2.4.8
@@ -17214,7 +17215,7 @@ snapshots:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-mock: 29.7.0
       jest-util: 29.7.0
 
@@ -17224,7 +17225,7 @@ snapshots:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -17251,7 +17252,7 @@ snapshots:
   jest-mock@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-util: 29.7.0
 
   jest-regex-util@29.6.3: {}
@@ -17259,7 +17260,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -17276,7 +17277,7 @@ snapshots:
 
   jest-worker@29.7.0:
     dependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -18436,10 +18437,10 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuchabal@3.2.7(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))):
+  nuchabal@3.2.7(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))):
     dependencies:
-      '@constl/ipa': 1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
-      '@lassi-js/kili': 0.3.16(@constl/ipa@1.6.22(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
+      '@constl/ipa': 1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0))
+      '@lassi-js/kili': 0.3.16(@constl/ipa@1.6.23(bufferutil@4.0.9)(encoding@0.1.13)(react-native@0.78.1(@babel/core@7.26.10)(@babel/preset-env@7.26.9(@babel/core@7.26.10))(bufferutil@4.0.9)(react@19.0.0)))
       deepmerge: 4.3.1
       events: 3.3.0
 
@@ -20231,9 +20232,9 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  update-browserslist-db@1.1.3(browserslist@4.24.5):
+  update-browserslist-db@1.1.3(browserslist@4.25.0):
     dependencies:
-      browserslist: 4.24.5
+      browserslist: 4.25.0
       escalade: 3.2.0
       picocolors: 1.1.1
 
@@ -20283,12 +20284,12 @@ snapshots:
       extsprintf: 1.4.1
     optional: true
 
-  vite-node@2.1.4(@types/node@22.15.23)(terser@5.40.0):
+  vite-node@2.1.4(@types/node@22.15.24)(terser@5.40.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       pathe: 1.1.2
-      vite: 5.4.10(@types/node@22.15.23)(terser@5.40.0)
+      vite: 5.4.10(@types/node@22.15.24)(terser@5.40.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -20300,13 +20301,13 @@ snapshots:
       - supports-color
       - terser
 
-  vite-node@3.1.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1):
+  vite-node@3.1.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 6.2.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1)
+      vite: 6.2.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -20321,38 +20322,38 @@ snapshots:
       - tsx
       - yaml
 
-  vite-plugin-commonjs-externals@0.1.4(vite@5.4.10(@types/node@22.15.23)(terser@5.40.0)):
+  vite-plugin-commonjs-externals@0.1.4(vite@5.4.10(@types/node@22.15.24)(terser@5.40.0)):
     dependencies:
       acorn: 8.14.1
       es-module-lexer: 1.6.0
       magic-string: 0.30.15
-      vite: 5.4.10(@types/node@22.15.23)(terser@5.40.0)
+      vite: 5.4.10(@types/node@22.15.24)(terser@5.40.0)
 
-  vite@5.4.10(@types/node@22.15.23)(terser@5.40.0):
+  vite@5.4.10(@types/node@22.15.24)(terser@5.40.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.3
       rollup: 4.41.1
     optionalDependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       fsevents: 2.3.3
       terser: 5.40.0
 
-  vite@6.2.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1):
+  vite@6.2.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1):
     dependencies:
       esbuild: 0.25.2
       postcss: 8.5.3
       rollup: 4.41.1
     optionalDependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       fsevents: 2.3.3
       terser: 5.40.0
       yaml: 2.7.1
 
-  vitest@2.1.4(@types/node@22.15.23)(happy-dom@15.8.3)(terser@5.40.0):
+  vitest@2.1.4(@types/node@22.15.24)(happy-dom@15.8.3)(terser@5.40.0):
     dependencies:
       '@vitest/expect': 2.1.4
-      '@vitest/mocker': 2.1.4(vite@5.4.10(@types/node@22.15.23)(terser@5.40.0))
+      '@vitest/mocker': 2.1.4(vite@5.4.10(@types/node@22.15.24)(terser@5.40.0))
       '@vitest/pretty-format': 2.1.9
       '@vitest/runner': 2.1.4
       '@vitest/snapshot': 2.1.4
@@ -20368,11 +20369,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
-      vite: 5.4.10(@types/node@22.15.23)(terser@5.40.0)
-      vite-node: 2.1.4(@types/node@22.15.23)(terser@5.40.0)
+      vite: 5.4.10(@types/node@22.15.24)(terser@5.40.0)
+      vite-node: 2.1.4(@types/node@22.15.24)(terser@5.40.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       happy-dom: 15.8.3
     transitivePeerDependencies:
       - less
@@ -20385,10 +20386,10 @@ snapshots:
       - supports-color
       - terser
 
-  vitest@3.1.4(@types/debug@4.1.12)(@types/node@22.15.23)(happy-dom@15.8.3)(terser@5.40.0)(yaml@2.7.1):
+  vitest@3.1.4(@types/debug@4.1.12)(@types/node@22.15.24)(happy-dom@15.8.3)(terser@5.40.0)(yaml@2.7.1):
     dependencies:
       '@vitest/expect': 3.1.4
-      '@vitest/mocker': 3.1.4(vite@6.2.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1))
+      '@vitest/mocker': 3.1.4(vite@6.2.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1))
       '@vitest/pretty-format': 3.1.4
       '@vitest/runner': 3.1.4
       '@vitest/snapshot': 3.1.4
@@ -20405,12 +20406,12 @@ snapshots:
       tinyglobby: 0.2.13
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 6.2.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1)
-      vite-node: 3.1.4(@types/node@22.15.23)(terser@5.40.0)(yaml@2.7.1)
+      vite: 6.2.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1)
+      vite-node: 3.1.4(@types/node@22.15.24)(terser@5.40.0)(yaml@2.7.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/debug': 4.1.12
-      '@types/node': 22.15.23
+      '@types/node': 22.15.24
       happy-dom: 15.8.3
     transitivePeerDependencies:
       - jiti
