@@ -16,7 +16,7 @@ importers:
         version: 8.2.2(encoding@0.1.13)
       playwright:
         specifier: ^1.44.1
-        version: 1.53.0
+        version: 1.53.1
       vitest:
         specifier: ^3.0.0
         version: 3.2.3(@types/debug@4.1.12)(@types/node@24.0.3)(happy-dom@15.8.3)(terser@5.43.1)(yaml@2.7.1)
@@ -4282,8 +4282,8 @@ packages:
   electron-to-chromium@1.5.122:
     resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
-  electron-to-chromium@1.5.170:
-    resolution: {integrity: sha512-GP+M7aeluQo9uAyiTCxgIj/j+PrWhMlY7LFVj8prlsPljd0Fdg9AprlfUi+OCSFWy9Y5/2D/Jrj9HS8Z4rpKWA==}
+  electron-to-chromium@1.5.171:
+    resolution: {integrity: sha512-scWpzXEJEMrGJa4Y6m/tVotb0WuvNmasv3wWVzUAeCgKU0ToFOhUW6Z+xWnRQANMYGxN4ngJXIThgBJOqzVPCQ==}
 
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
@@ -6859,8 +6859,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright-core@1.53.0:
-    resolution: {integrity: sha512-mGLg8m0pm4+mmtB7M89Xw/GSqoNC+twivl8ITteqvAndachozYe2ZA7srU6uleV1vEdAHYqjq+SV8SNxRRFYBw==}
+  playwright-core@1.53.1:
+    resolution: {integrity: sha512-Z46Oq7tLAyT0lGoFx4DOuB1IA9D1TPj0QkYxpPVUnGDqHHvDpCftu1J2hM2PiWsNMoZh8+LQaarAWcDfPBc6zg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6869,8 +6869,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.53.0:
-    resolution: {integrity: sha512-ghGNnIEYZC4E+YtclRn4/p6oYbdPiASELBIYkBXfaTVKreQUYbMUYQDwS12a8F0/HtIjr/CkGjtwABeFPGcS4Q==}
+  playwright@1.53.1:
+    resolution: {integrity: sha512-LJ13YLr/ocweuwxyGf1XNFWIU4M2zUSo149Qbp+A4cpwDjsxRPj7k6H25LBrEHiEwxvRbD8HdwvQmRMSvquhYw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -14846,7 +14846,7 @@ snapshots:
   browserslist@4.25.0:
     dependencies:
       caniuse-lite: 1.0.30001723
-      electron-to-chromium: 1.5.170
+      electron-to-chromium: 1.5.171
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.0)
 
@@ -15676,7 +15676,7 @@ snapshots:
 
   electron-to-chromium@1.5.122: {}
 
-  electron-to-chromium@1.5.170: {}
+  electron-to-chromium@1.5.171: {}
 
   electron-updater@6.3.9:
     dependencies:
@@ -19074,7 +19074,7 @@ snapshots:
 
   playwright-core@1.48.2: {}
 
-  playwright-core@1.53.0: {}
+  playwright-core@1.53.1: {}
 
   playwright@1.48.2:
     dependencies:
@@ -19082,9 +19082,9 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.2
 
-  playwright@1.53.0:
+  playwright@1.53.1:
     dependencies:
-      playwright-core: 1.53.0
+      playwright-core: 1.53.1
     optionalDependencies:
       fsevents: 2.3.2
 
