@@ -4282,8 +4282,8 @@ packages:
   electron-to-chromium@1.5.122:
     resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
-  electron-to-chromium@1.5.174:
-    resolution: {integrity: sha512-HE43yYdUUiJVjewV2A9EP8o89Kb4AqMKplMQP2IxEPUws1Etu/ZkdsgUDabUZ/WmbP4ZbvJDOcunvbBUPPIfmw==}
+  electron-to-chromium@1.5.175:
+    resolution: {integrity: sha512-Nqpef9mOVo7pZfl9NIUhj7tgtRTsMzCzRTJDP1ccim4Wb4YHOz3Le87uxeZq68OCNwau2iQ/X7UwdAZ3ReOkmg==}
 
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
@@ -4681,8 +4681,8 @@ packages:
   flow-enums-runtime@0.0.6:
     resolution: {integrity: sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==}
 
-  flow-parser@0.274.0:
-    resolution: {integrity: sha512-pwmoGcWUSyamhv1DWhSFBROYqBfVJ/XAjqAdcrKSaisn5vI5dQ0Ni0Lawrp03TE2ZPC69vseFdeWkYlpCAqxtw==}
+  flow-parser@0.274.1:
+    resolution: {integrity: sha512-36beNwzemgBeQafXqMOajET0iMWVF0AcW5zQi6Dy1B/GurBFCj3s4aT2DQbd4yhMt9onvR1eFhfIEDZ49pvBmQ==}
     engines: {node: '>=0.4.0'}
 
   follow-redirects@1.15.9:
@@ -14853,7 +14853,7 @@ snapshots:
   browserslist@4.25.1:
     dependencies:
       caniuse-lite: 1.0.30001726
-      electron-to-chromium: 1.5.174
+      electron-to-chromium: 1.5.175
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.1)
 
@@ -15683,7 +15683,7 @@ snapshots:
 
   electron-to-chromium@1.5.122: {}
 
-  electron-to-chromium@1.5.174: {}
+  electron-to-chromium@1.5.175: {}
 
   electron-updater@6.3.9:
     dependencies:
@@ -16236,7 +16236,7 @@ snapshots:
 
   flow-enums-runtime@0.0.6: {}
 
-  flow-parser@0.274.0: {}
+  flow-parser@0.274.1: {}
 
   follow-redirects@1.15.9(debug@4.4.1):
     optionalDependencies:
@@ -17547,7 +17547,7 @@ snapshots:
       '@babel/preset-flow': 7.27.1(@babel/core@7.27.4)
       '@babel/preset-typescript': 7.27.1(@babel/core@7.27.4)
       '@babel/register': 7.27.1(@babel/core@7.27.4)
-      flow-parser: 0.274.0
+      flow-parser: 0.274.1
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       neo-async: 2.6.2
@@ -17572,7 +17572,7 @@ snapshots:
       '@babel/preset-flow': 7.27.1(@babel/core@7.27.4)
       '@babel/preset-typescript': 7.27.1(@babel/core@7.27.4)
       '@babel/register': 7.27.1(@babel/core@7.27.4)
-      flow-parser: 0.274.0
+      flow-parser: 0.274.1
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       neo-async: 2.6.2
