@@ -4282,8 +4282,8 @@ packages:
   electron-to-chromium@1.5.122:
     resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
-  electron-to-chromium@1.5.176:
-    resolution: {integrity: sha512-2nDK9orkm7M9ZZkjO3PjbEd3VUulQLyg5T9O3enJdFvUg46Hzd4DUvTvAuEgbdHYXyFsiG4A5sO9IzToMH1cDg==}
+  electron-to-chromium@1.5.177:
+    resolution: {integrity: sha512-7EH2G59nLsEMj97fpDuvVcYi6lwTcM1xuWw3PssD8xzboAW7zj7iB3COEEEATUfjLHrs5uKBLQT03V/8URx06g==}
 
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
@@ -14865,7 +14865,7 @@ snapshots:
   browserslist@4.25.1:
     dependencies:
       caniuse-lite: 1.0.30001726
-      electron-to-chromium: 1.5.176
+      electron-to-chromium: 1.5.177
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.1)
 
@@ -15695,7 +15695,7 @@ snapshots:
 
   electron-to-chromium@1.5.122: {}
 
-  electron-to-chromium@1.5.176: {}
+  electron-to-chromium@1.5.177: {}
 
   electron-updater@6.3.9:
     dependencies:
