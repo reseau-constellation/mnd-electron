@@ -62,7 +62,7 @@ importers:
         version: 8.38.0(eslint@9.31.0)(typescript@5.8.3)
       electron:
         specifier: ^36.0.0
-        version: 36.7.0
+        version: 36.7.1
       eslint:
         specifier: ^9.20.1
         version: 9.31.0
@@ -301,7 +301,7 @@ importers:
         version: 7.0.3
       electron:
         specifier: 33.0.2
-        version: 33.0.2
+        version: 36.7.1
       electron-builder:
         specifier: 25.1.8
         version: 25.1.8(electron-builder-squirrel-windows@25.1.8)
@@ -2777,17 +2777,11 @@ packages:
   '@types/node-forge@1.3.13':
     resolution: {integrity: sha512-zePQJSW5QkwSHKRApqWCVKeKoSOt4xvEnLENZPjyvm9Ezdf/EyDeJM7jqLzOwjVICQQzvLZ63T55MKdJB5H6ww==}
 
-  '@types/node@20.19.7':
-    resolution: {integrity: sha512-1GM9z6BJOv86qkPvzh2i6VW5+VVrXxCLknfmTkWEqz+6DqosiY28XUWCTmBcJ0ACzKqx/iwdIREfo1fwExIlkA==}
-
   '@types/node@22.15.29':
     resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
 
-  '@types/node@22.16.2':
-    resolution: {integrity: sha512-Cdqa/eJTvt4fC4wmq1Mcc0CPUjp/Qy2FGqLza3z3pKymsI969TcZ54diNJv8UYUgeWxyb8FSbCkhdR6WqmUFhA==}
-
-  '@types/node@24.0.13':
-    resolution: {integrity: sha512-Qm9OYVOFHFYg3wJoTSrz80hoec5Lia/dPp84do3X7dZvLikQvM1YpmvTBEdIr/e+U8HTkFjLHLnl78K/qjf+jQ==}
+  '@types/node@22.16.5':
+    resolution: {integrity: sha512-bJFoMATwIGaxxx8VJPeM8TonI8t579oRvgAuT8zFugJsJZgzqv0Fu8Mhp68iecjzG7cnN3mO2dJQ5uUM2EFrgQ==}
 
   '@types/node@24.0.15':
     resolution: {integrity: sha512-oaeTSbCef7U/z7rDeJA138xpG3NuKc64/rZ2qmUFkFJmnMsAPaluIifqyWd8hSSMxyP9oie3dLAqYPblag9KgA==}
@@ -4206,19 +4200,14 @@ packages:
   electron-to-chromium@1.5.122:
     resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
-  electron-to-chromium@1.5.188:
-    resolution: {integrity: sha512-pfEx5CBFAocOKNrc+i5fSvhDaI1Vr9R9aT5uX1IzM3hhdL6k649wfuUcdUd9EZnmbE1xdfA51CwqQ61CO3Xl3g==}
+  electron-to-chromium@1.5.189:
+    resolution: {integrity: sha512-y9D1ntS1ruO/pZ/V2FtLE+JXLQe28XoRpZ7QCCo0T8LdQladzdcOVQZH/IWLVJvCw12OGMb6hYOeOAjntCmJRQ==}
 
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
 
-  electron@33.0.2:
-    resolution: {integrity: sha512-C2WksfP0COsMHbYXSJG68j6S3TjuGDrw/YT42B526yXalIlNQZ2GeAYKryg6AEMkIp3p8TUfDRD0+HyiyCt/nw==}
-    engines: {node: '>= 12.20.55'}
-    hasBin: true
-
-  electron@36.7.0:
-    resolution: {integrity: sha512-KQA/abWa+aGWDuEJn9hL5Lo0BYJIUYJ6iON8xoxcpnnNxIvj1VsuowcE1p9j4V9OWVCfOkRc9/NaxLwg7HK0zw==}
+  electron@36.7.1:
+    resolution: {integrity: sha512-vkih7vbmWT6O8+VWFt3a9FMLUZn0O4piR20nTX0IL/d9tz9RjpzoMvHqpI2CE1Rxew9bCzrg7FpgtcTdY6dlyw==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -13369,7 +13358,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 22.16.2
+      '@types/node': 22.16.5
       '@types/responselike': 1.0.3
 
   '@types/chai@5.2.2':
@@ -13503,7 +13492,7 @@ snapshots:
 
   '@types/dns-packet@5.6.5':
     dependencies:
-      '@types/node': 24.0.13
+      '@types/node': 24.0.15
 
   '@types/estree@1.0.8': {}
 
@@ -13535,7 +13524,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 22.16.2
+      '@types/node': 22.16.5
 
   '@types/lodash@4.17.17': {}
 
@@ -13548,27 +13537,19 @@ snapshots:
   '@types/multicast-dns@7.2.4':
     dependencies:
       '@types/dns-packet': 5.6.5
-      '@types/node': 24.0.13
+      '@types/node': 24.0.15
 
   '@types/node-forge@1.3.13':
     dependencies:
       '@types/node': 24.0.15
 
-  '@types/node@20.19.7':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@22.15.29':
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.16.2':
+  '@types/node@22.16.5':
     dependencies:
       undici-types: 6.21.0
-
-  '@types/node@24.0.13':
-    dependencies:
-      undici-types: 7.8.0
 
   '@types/node@24.0.15':
     dependencies:
@@ -13592,7 +13573,7 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 22.16.2
+      '@types/node': 22.16.5
 
   '@types/retry@0.12.2': {}
 
@@ -13621,7 +13602,7 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 24.0.13
+      '@types/node': 24.0.15
 
   '@types/yargs-parser@21.0.3': {}
 
@@ -13631,7 +13612,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.16.2
+      '@types/node': 22.16.5
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.38.0(@typescript-eslint/parser@8.38.0(eslint@9.14.0)(typescript@5.5.4))(eslint@9.14.0)(typescript@5.5.4)':
@@ -14765,7 +14746,7 @@ snapshots:
   browserslist@4.25.1:
     dependencies:
       caniuse-lite: 1.0.30001727
-      electron-to-chromium: 1.5.188
+      electron-to-chromium: 1.5.189
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.1)
 
@@ -15589,7 +15570,7 @@ snapshots:
 
   electron-to-chromium@1.5.122: {}
 
-  electron-to-chromium@1.5.188: {}
+  electron-to-chromium@1.5.189: {}
 
   electron-updater@6.3.9:
     dependencies:
@@ -15604,18 +15585,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  electron@33.0.2:
+  electron@36.7.1:
     dependencies:
       '@electron/get': 2.0.3
-      '@types/node': 20.19.7
-      extract-zip: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
-
-  electron@36.7.0:
-    dependencies:
-      '@electron/get': 2.0.3
-      '@types/node': 22.16.2
+      '@types/node': 22.16.5
       extract-zip: 2.0.1
     transitivePeerDependencies:
       - supports-color
