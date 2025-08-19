@@ -62,7 +62,7 @@ importers:
         version: 8.40.0(eslint@9.33.0)(typescript@5.9.2)
       electron:
         specifier: ^36.0.0
-        version: 36.8.0
+        version: 36.8.1
       eslint:
         specifier: ^9.20.1
         version: 9.33.0
@@ -301,7 +301,7 @@ importers:
         version: 7.0.3
       electron:
         specifier: 33.0.2
-        version: 33.0.2
+        version: 36.8.1
       electron-builder:
         specifier: 25.1.8
         version: 25.1.8(electron-builder-squirrel-windows@25.1.8)
@@ -2777,9 +2777,6 @@ packages:
   '@types/node-forge@1.3.13':
     resolution: {integrity: sha512-zePQJSW5QkwSHKRApqWCVKeKoSOt4xvEnLENZPjyvm9Ezdf/EyDeJM7jqLzOwjVICQQzvLZ63T55MKdJB5H6ww==}
 
-  '@types/node@20.19.11':
-    resolution: {integrity: sha512-uug3FEEGv0r+jrecvUUpbY8lLisvIjg6AAic6a2bSP5OEOLeJsDSnvhCDov7ipFFMXS3orMpzlmi0ZcuGkBbow==}
-
   '@types/node@22.15.29':
     resolution: {integrity: sha512-LNdjOkUDlU1RZb8e1kOIUpN1qQUlzGkEtbVNo53vbrwDg5om6oduhm4SiUaPW5ASTXhAiP0jInWG8Qx9fVlOeQ==}
 
@@ -3510,8 +3507,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
-  browserslist@4.25.2:
-    resolution: {integrity: sha512-0si2SJK3ooGzIawRu61ZdPCO1IncZwS8IzuX73sPZsXW6EQ/w/DAfPyKI8l1ETTCr2MnvqWitmlCUxgdul45jA==}
+  browserslist@4.25.3:
+    resolution: {integrity: sha512-cDGv1kkDI4/0e5yON9yM5G/0A5u8sf5TnmdX5C9qHzI9PPu++sQ9zjm1k9NiOrf3riY4OkK0zSGqfvJyJsgCBQ==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -4203,19 +4200,14 @@ packages:
   electron-to-chromium@1.5.122:
     resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
-  electron-to-chromium@1.5.203:
-    resolution: {integrity: sha512-uz4i0vLhfm6dLZWbz/iH88KNDV+ivj5+2SA+utpgjKaj9Q0iDLuwk6Idhe9BTxciHudyx6IvTvijhkPvFGUQ0g==}
+  electron-to-chromium@1.5.204:
+    resolution: {integrity: sha512-s9VbBXWxfDrl67PlO4avwh0/GU2vcwx8Fph3wlR8LJl7ySGYId59EFE17VWVcuC3sLWNPENm6Z/uGqKbkPCcXA==}
 
   electron-updater@6.3.9:
     resolution: {integrity: sha512-2PJNONi+iBidkoC5D1nzT9XqsE8Q1X28Fn6xRQhO3YX8qRRyJ3mkV4F1aQsuRnYPqq6Hw+E51y27W75WgDoofw==}
 
-  electron@33.0.2:
-    resolution: {integrity: sha512-C2WksfP0COsMHbYXSJG68j6S3TjuGDrw/YT42B526yXalIlNQZ2GeAYKryg6AEMkIp3p8TUfDRD0+HyiyCt/nw==}
-    engines: {node: '>= 12.20.55'}
-    hasBin: true
-
-  electron@36.8.0:
-    resolution: {integrity: sha512-OqTscsCl90jE6gYba9bTVzvEgBfBVBTZpmQLplkhOOsTUBu87o2SsGiPaWzQkhDBjQ8SCNMB5G3nYy4eNK90sA==}
+  electron@36.8.1:
+    resolution: {integrity: sha512-honaH58/cyCb9QAzIvD+WXWuNIZ0tW9zfBqMz5wZld/rXB+LCTEDb2B3TAv8+pDmlzPlkPio95RkUe86l6MNjg==}
     engines: {node: '>= 12.20.55'}
     hasBin: true
 
@@ -8610,7 +8602,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.28.0
       '@babel/helper-validator-option': 7.27.1
-      browserslist: 4.25.2
+      browserslist: 4.25.3
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -13567,10 +13559,6 @@ snapshots:
     dependencies:
       '@types/node': 24.3.0
 
-  '@types/node@20.19.11':
-    dependencies:
-      undici-types: 6.21.0
-
   '@types/node@22.15.29':
     dependencies:
       undici-types: 6.21.0
@@ -14771,12 +14759,12 @@ snapshots:
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
-  browserslist@4.25.2:
+  browserslist@4.25.3:
     dependencies:
       caniuse-lite: 1.0.30001735
-      electron-to-chromium: 1.5.203
+      electron-to-chromium: 1.5.204
       node-releases: 2.0.19
-      update-browserslist-db: 1.1.3(browserslist@4.25.2)
+      update-browserslist-db: 1.1.3(browserslist@4.25.3)
 
   bs58@6.0.0:
     dependencies:
@@ -15232,7 +15220,7 @@ snapshots:
 
   core-js-compat@3.45.0:
     dependencies:
-      browserslist: 4.25.2
+      browserslist: 4.25.3
 
   core-js@3.41.0: {}
 
@@ -15598,7 +15586,7 @@ snapshots:
 
   electron-to-chromium@1.5.122: {}
 
-  electron-to-chromium@1.5.203: {}
+  electron-to-chromium@1.5.204: {}
 
   electron-updater@6.3.9:
     dependencies:
@@ -15613,15 +15601,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  electron@33.0.2:
-    dependencies:
-      '@electron/get': 2.0.3
-      '@types/node': 20.19.11
-      extract-zip: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
-
-  electron@36.8.0:
+  electron@36.8.1:
     dependencies:
       '@electron/get': 2.0.3
       '@types/node': 22.17.2
@@ -20413,9 +20393,9 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  update-browserslist-db@1.1.3(browserslist@4.25.2):
+  update-browserslist-db@1.1.3(browserslist@4.25.3):
     dependencies:
-      browserslist: 4.25.2
+      browserslist: 4.25.3
       escalade: 3.2.0
       picocolors: 1.1.1
 
