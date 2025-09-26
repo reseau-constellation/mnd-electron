@@ -20,7 +20,7 @@
   "dependencies": {
     "@constl/mandataire": "^3.0.3",
     "events": "^3.3.0",
-    "uuid": "^11.0.5"
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@constl/ipa": "^1.5.12",
