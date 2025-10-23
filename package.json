@@ -13,7 +13,7 @@
   "devDependencies": {
     "lerna": "^9.0.0",
     "playwright": "^1.44.1",
-    "vitest": "^3.0.0"
+    "vitest": "^4.0.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
