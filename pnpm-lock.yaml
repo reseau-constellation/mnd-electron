@@ -74,10 +74,10 @@ importers:
         version: 3.2.0
       prettier:
         specifier: ^3.5.1
-        version: 3.7.3
+        version: 3.7.4
       prettier-plugin-organize-imports:
         specifier: ^4.1.0
-        version: 4.3.0(prettier@3.7.3)(typescript@5.9.3)(vue-tsc@2.1.10(typescript@5.9.3))
+        version: 4.3.0(prettier@3.7.4)(typescript@5.9.3)(vue-tsc@2.1.10(typescript@5.9.3))
       rimraf:
         specifier: ^6.0.1
         version: 6.1.2
@@ -141,10 +141,10 @@ importers:
         version: 3.2.0
       prettier:
         specifier: ^3.5.1
-        version: 3.7.3
+        version: 3.7.4
       prettier-plugin-organize-imports:
         specifier: ^4.1.0
-        version: 4.3.0(prettier@3.7.3)(typescript@5.9.3)(vue-tsc@2.1.10(typescript@5.9.3))
+        version: 4.3.0(prettier@3.7.4)(typescript@5.9.3)(vue-tsc@2.1.10(typescript@5.9.3))
       rimraf:
         specifier: ^6.0.1
         version: 6.1.2
@@ -325,10 +325,10 @@ importers:
         version: 1.48.2
       prettier:
         specifier: ^3.3.3
-        version: 3.7.3
+        version: 3.7.4
       prettier-plugin-organize-imports:
         specifier: ^4.1.0
-        version: 4.3.0(prettier@3.7.3)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4))
+        version: 4.3.0(prettier@3.7.4)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4))
       rollup-plugin-node-builtins:
         specifier: ^2.1.2
         version: 2.1.2
@@ -3840,8 +3840,8 @@ packages:
   caniuse-lite@1.0.30001706:
     resolution: {integrity: sha512-3ZczoTApMAZwPKYWmwVbQMFpXBDds3/0VciVoUwPUbldlYyVLmRVuRs/PcUZtHpbLRpzzDvrvnFuREsGt6lUug==}
 
-  caniuse-lite@1.0.30001757:
-    resolution: {integrity: sha512-r0nnL/I28Zi/yjk1el6ilj27tKcdjLsNqAOZr0yVjWPrSQyHgKI2INaEWw21bAQSv2LXRt1XuCS/GomNpWOxsQ==}
+  caniuse-lite@1.0.30001759:
+    resolution: {integrity: sha512-Pzfx9fOKoKvevQf8oCXoyNRQ5QyxJj+3O0Rqx2V5oxT61KGx8+n6hV/IUyJeifUci2clnmmKVpvtiqRzgiWjSw==}
 
   catering@2.1.1:
     resolution: {integrity: sha512-K7Qy8O9p76sL3/3m7/zLKbRkyOlSZAgzEaLhyj2mXS8PsCud2Eo4hAb8aLtZqHh0QGqLcb9dlJSu6lHRVENm1w==}
@@ -4841,8 +4841,8 @@ packages:
   flow-enums-runtime@0.0.6:
     resolution: {integrity: sha512-3PYnM29RFXwvAN6Pc/scUfkI7RwhQ/xqyLUyPNlXUp9S40zI8nup9tUSrTLSVnWGBN38FNiGWbwZOB6uR4OGdw==}
 
-  flow-parser@0.291.0:
-    resolution: {integrity: sha512-MLqjFn72Dvndqrkjy280HaIs4AV9Z6nxVRmNPO3TjbYcipg4hR7QX7tEYZYsVvaaZWZPGe6Mithluk2aPGlDOw==}
+  flow-parser@0.292.0:
+    resolution: {integrity: sha512-H7TRIkLYQucAszvp1DhsUMGrlu0ImgKV7eBLQ/wiOqQGDzsllBCWGgaPyw/n1CAw615VRCcRYf6TCYIpemenzw==}
     engines: {node: '>=0.4.0'}
 
   follow-redirects@1.15.11:
@@ -6608,8 +6608,8 @@ packages:
     resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
     engines: {node: '>= 6.13.0'}
 
-  node-forge@1.3.2:
-    resolution: {integrity: sha512-6xKiQ+cph9KImrRh0VsjH2d8/GXA4FIMlgU4B757iI1ApvcyA9VlouP0yZJha01V+huImO+kKMU7ih+2+E14fw==}
+  node-forge@1.3.3:
+    resolution: {integrity: sha512-rLvcdSyRCyouf6jcOIPe/BgwG/d7hKjzMKOas33/pHEr6gbq18IK9zV7DiPvzsz0oBJPme6qr6H6kGZuI9/DZg==}
     engines: {node: '>= 6.13.0'}
 
   node-gyp-build@4.8.4:
@@ -7159,8 +7159,8 @@ packages:
       vue-tsc:
         optional: true
 
-  prettier@3.7.3:
-    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
+  prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -15328,7 +15328,7 @@ snapshots:
   browserslist@4.28.0:
     dependencies:
       baseline-browser-mapping: 2.8.32
-      caniuse-lite: 1.0.30001757
+      caniuse-lite: 1.0.30001759
       electron-to-chromium: 1.5.263
       node-releases: 2.0.27
       update-browserslist-db: 1.1.4(browserslist@4.28.0)
@@ -15502,7 +15502,7 @@ snapshots:
 
   caniuse-lite@1.0.30001706: {}
 
-  caniuse-lite@1.0.30001757: {}
+  caniuse-lite@1.0.30001759: {}
 
   catering@2.1.1: {}
 
@@ -16724,7 +16724,7 @@ snapshots:
 
   flow-enums-runtime@0.0.6: {}
 
-  flow-parser@0.291.0: {}
+  flow-parser@0.292.0: {}
 
   follow-redirects@1.15.11: {}
 
@@ -18049,7 +18049,7 @@ snapshots:
       '@babel/preset-flow': 7.27.1(@babel/core@7.28.5)
       '@babel/preset-typescript': 7.28.5(@babel/core@7.28.5)
       '@babel/register': 7.28.3(@babel/core@7.28.5)
-      flow-parser: 0.291.0
+      flow-parser: 0.292.0
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       neo-async: 2.6.2
@@ -18074,7 +18074,7 @@ snapshots:
       '@babel/preset-flow': 7.27.1(@babel/core@7.28.5)
       '@babel/preset-typescript': 7.28.5(@babel/core@7.28.5)
       '@babel/register': 7.28.3(@babel/core@7.28.5)
-      flow-parser: 0.291.0
+      flow-parser: 0.292.0
       graceful-fs: 4.2.11
       micromatch: 4.0.8
       neo-async: 2.6.2
@@ -19056,7 +19056,7 @@ snapshots:
 
   node-forge@1.3.1: {}
 
-  node-forge@1.3.2: {}
+  node-forge@1.3.3: {}
 
   node-gyp-build@4.8.4: {}
 
@@ -19719,21 +19719,21 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-organize-imports@4.3.0(prettier@3.7.3)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4)):
+  prettier-plugin-organize-imports@4.3.0(prettier@3.7.4)(typescript@5.5.4)(vue-tsc@2.1.10(typescript@5.5.4)):
     dependencies:
-      prettier: 3.7.3
+      prettier: 3.7.4
       typescript: 5.5.4
     optionalDependencies:
       vue-tsc: 2.1.10(typescript@5.5.4)
 
-  prettier-plugin-organize-imports@4.3.0(prettier@3.7.3)(typescript@5.9.3)(vue-tsc@2.1.10(typescript@5.9.3)):
+  prettier-plugin-organize-imports@4.3.0(prettier@3.7.4)(typescript@5.9.3)(vue-tsc@2.1.10(typescript@5.9.3)):
     dependencies:
-      prettier: 3.7.3
+      prettier: 3.7.4
       typescript: 5.9.3
     optionalDependencies:
       vue-tsc: 2.1.10(typescript@5.9.3)
 
-  prettier@3.7.3: {}
+  prettier@3.7.4: {}
 
   pretty-format@29.7.0:
     dependencies:
@@ -20344,7 +20344,7 @@ snapshots:
   selfsigned@2.4.1:
     dependencies:
       '@types/node-forge': 1.3.14
-      node-forge: 1.3.2
+      node-forge: 1.3.3
 
   semaphore-async-await@1.5.1: {}
 
